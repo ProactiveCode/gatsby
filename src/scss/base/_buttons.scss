@@ -1,0 +1,49 @@
+.btn {
+    padding: 14px 22px;
+    display: inline-block;
+    color: $white;
+    background: $btn-bg;
+    @include font-size(16);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.25s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-sm) {
+        display: inline-block;
+    }
+    &:hover {
+        color: $btn-text-hover;
+        text-decoration: none;
+        background-color: $btn-bg-hover;
+    }
+
+    &--smaller {
+        padding: 7px 11px;
+        @include font-size(14);
+    }
+
+    &--ghost {
+        background-color: transparent;
+        border: 3px solid $brand-color;
+        color: $brand-color;
+
+        &:hover {
+            background-color: $brand-color;
+            color: $white;
+        }
+    }
+}
+
+.link {
+    color: $base-color;
+    @include font-size(18);
+    font-weight: 700;
+    transition: text-decoration 0.3s ease;
+
+    &:hover {
+        transition: color 0.25s ease-in-out;
+        color: $btn-bg-hover;
+    }
+}

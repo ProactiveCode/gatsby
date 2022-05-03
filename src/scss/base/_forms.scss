@@ -1,0 +1,176 @@
+/**
+ * Blanket input styles for normalisation
+ */
+
+input,
+select,
+textarea {
+    background-color: $base-background-color;
+    border: solid 1px $base-color;
+    border-radius: 0;
+    color: $base-color;
+    height: calc($sp-unit * 1.5);
+    padding: 0 calc($sp-unit / 2);
+    width: 100%;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    font-family: $base-font-family;
+}
+
+textarea {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    background: transparent;
+    border: 0;
+    line-height: normal;
+    height: auto;
+    width: auto;
+}
+
+input[type="file"] {
+    line-height: normal;
+    height: auto;
+    padding: calc($sp-unit / 4) calc($sp-unit / 2);
+}
+
+input[type="submit"] {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 14px 22px;
+    display: inline-block;
+    color: $white;
+    background: $btn-bg;
+    @include font-size(16);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.25s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+    height: auto;
+    cursor: pointer;
+
+    &:hover {
+        color: $btn-text-hover;
+        text-decoration: none;
+        background-color: $btn-bg-hover;
+    }
+}
+
+input[disabled] {
+    background-color: whitesmoke;
+    cursor: not-allowed;
+}
+
+select {
+    line-height: normal;
+    padding: 0;
+    padding-left: calc($sp-unit / 2);
+}
+
+textarea {
+    min-height: calc($sp-unit * 4);
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.single textarea {
+    min-height: auto;
+    height: auto;
+    font-size: 16px;
+}
+
+/**
+ * Form utility classes
+ */
+
+.checkbox,
+.radio {
+    display: block;
+    padding-left: $sp-unit;
+    &.inline {
+        display: inline-block;
+    }
+    >input {
+        float: left;
+        margin-left: -calc($sp-unit);
+        margin-top: 4px;
+    }
+}
+
+.form__group {
+    display: block;
+    margin-bottom: $sp-unit;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: calc($sp-unit / 2);
+}
+
+
+/**
+ * Input Group
+ *
+ * Allows for prepend/append of elements 
+ * (such as icons) on an input.
+ */
+
+.input-group {
+    position: relative;
+    >input {
+        padding: 0 calc($sp-unit * 2);
+    }
+    .input-group__addon {
+        line-height: calc($sp-unit * 1.5);
+        height: calc($sp-unit * 1.5);
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: calc($sp-unit * 1.5);
+        &:first-child {
+            left: 0;
+        }
+        &:last-child {
+            right: 0;
+        }
+    }
+}
+
+.search-form {
+    // margin: 0 0 $sp-unit*2;
+}
+
+.search-wrap {
+    @extend %clearfix;
+    .screen-reader-text {
+        display: block;
+    }
+    .search-field {
+        margin: 0 0 calc($sp-unit/2);
+        @media screen and (min-width: $breakpoint-md) {
+            width: 75%;
+            margin: 0;
+            float: left;
+        }
+    }
+    .search-button {
+        padding: 0;
+        border: 0;
+        border-radius: 2px;
+        // background-image: url('../../images/search.svg');
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: center center;
+        text-indent: -9999px;
+        @media screen and (min-width: $breakpoint-md) {
+            width: 20%;
+            float: right;
+        }
+    }
+}

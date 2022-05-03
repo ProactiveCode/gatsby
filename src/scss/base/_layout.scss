@@ -1,0 +1,121 @@
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 0 20px;
+
+    &--hidden {
+        overflow: hidden;
+    }
+
+    &--900 {
+        max-width: 900px !important;
+    }
+
+    &--1000 {
+        max-width: 1000px !important;
+    }
+
+    &--600 {
+        max-width: 600px !important;
+    }
+
+    &--800 {
+        max-width: 800px !important;
+    }
+
+    &--1920 {
+        max-width: 1920px !important;
+    }
+
+    .container {
+        padding: 0;
+    }
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mtb-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.align-left {
+    text-align: left;
+
+    .two-col__column-title,
+    .two-col__column-text,
+    .three-col__column-title,
+    .three-col__column-text {
+        text-align: left;
+    }
+}
+
+.entry-content {
+    img {
+        filter: drop-shadow(1px 2px 8px rgba(#6AB5FB, 0.9));
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+
+.entry-content li a {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.image-mask {
+    -webkit-mask-image: url('https://setupawebsite.co.uk/wp-content/uploads/2022/04/blob.svg');
+    mask-image: url('https://setupawebsite.co.uk/wp-content/uploads/2022/04/blob.svg');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-size: 100% 100%;
+    mask-position: center;
+    display: inline-block; 
+}
+
+.home-link {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__left,
+    &__right {
+        width: 100%;
+        margin-bottom: 40px;
+
+        @media(min-width: $lg) {
+            width: calc(50% - 20px);
+            margin-bottom: 0;
+        }
+
+        img {
+            filter: none !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 900;
+            
+            @media(min-width: $md) {
+                @include font-size(25);
+            }
+
+            @media(min-width: $lg) {
+                @include font-size(35);
+            }
+        }
+    }
+}
