@@ -5,27 +5,27 @@
     margin-right:auto;
     padding: 0 20px;
 
-    &--hidden {
+    &Hidden {
         overflow: hidden;
     }
 
-    &--900 {
+    &900 {
         max-width: 900px !important;
     }
 
-    &--1000 {
+    &1000 {
         max-width: 1000px !important;
     }
 
-    &--600 {
+    &600 {
         max-width: 600px !important;
     }
 
-    &--800 {
+    &800 {
         max-width: 800px !important;
     }
 
-    &--1920 {
+    &1920 {
         max-width: 1920px !important;
     }
 
@@ -46,76 +46,96 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.align-left {
-    text-align: left;
 
-    .two-col__column-title,
-    .two-col__column-text,
-    .three-col__column-title,
-    .three-col__column-text {
-        text-align: left;
+
+.pink {
+    background-color: $sec-brand-color;
+
+    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+        color: $white;
     }
 }
 
-.entry-content {
-    img {
-        filter: drop-shadow(1px 2px 8px rgba(#6AB5FB, 0.9));
-        border-radius: 10px;
-        margin-bottom: 25px;
+.grey {
+    background-color: $grey;
+
+    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+        color: $white;
     }
 }
 
+.black {
+    background-color: #000;
 
-.entry-content li a {
-    margin-bottom: 10px;
-    display: block;
+    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+        color: $white;
+    }
 }
 
-.image-mask {
-    -webkit-mask-image: url('https://setupawebsite.co.uk/wp-content/uploads/2022/04/blob.svg');
-    mask-image: url('https://setupawebsite.co.uk/wp-content/uploads/2022/04/blob.svg');
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-position: center;
-    mask-size: 100% 100%;
-    mask-position: center;
-    display: inline-block; 
+.blue {
+    background-color: $brand-color;
+
+    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+        color: $white;
+    }
 }
 
-.home-link {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.carbon {
+    p {
+        margin-top: 60px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 1.1;
+    }
+}
 
-    &__left,
-    &__right {
-        width: 100%;
-        margin-bottom: 40px;
+.logo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 40px;
 
-        @media(min-width: $lg) {
-            width: calc(50% - 20px);
-            margin-bottom: 0;
+    @media(min-width: $md) {
+        width: calc(50% - 40px);
+        max-width: none;
+        margin: 0 20px 40px;
+    }
+
+    @media(min-width: $lg) {
+        width: calc(25% - 40px);
+    }
+}
+
+.svganim {
+    svg {
+        .st0{
+            fill:none;
+            stroke:red;
+            stroke-width:34px;
+            animation: H-mid-move 1s ease forwards;
+            animation-iteration-count: 3;
         }
-
-        img {
-            filter: none !important;
-            border-radius: 0 !important;
-            margin: 0 !important;
+        .st1{
+            fill:none;
+            stroke:red;
+            stroke-width:0;
         }
+    }
+}
 
-        h2 {
-            text-transform: uppercase;
-            font-weight: 900;
-            
-            @media(min-width: $md) {
-                @include font-size(25);
-            }
-
-            @media(min-width: $lg) {
-                @include font-size(35);
-            }
-        }
+@keyframes H-mid-move {
+    0% {
+        stroke: red;
+    }
+    25% {
+        stroke: transparent;
+    }
+    50% {
+        stroke: blue;
+    }
+    75% {
+        stroke: transparent;
+    }
+    100% {
+        stroke: red;
     }
 }

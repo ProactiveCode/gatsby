@@ -9,6 +9,7 @@
     top: 0;
     z-index: 10000;
     width: calc(100% - 40px);
+    pointer-events: none;
 
     @media(min-height: 650px) and (min-width: $md) {
         width: 100%;
@@ -23,6 +24,7 @@
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
+        pointer-events: all;
 
         @media(min-height: 650px) and (min-width: $md) {
             flex-direction: column;
@@ -105,12 +107,12 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 55%;
+        width: 50%;
         transition: transform 0.3s ease;
     }
 
     .burgerRight {
-        right: 0;
+        right: 0.5px;
         left: auto;
     }
 
@@ -127,14 +129,21 @@
             color: $white;
             text-decoration: none;
             font-weight: 300;
+            display: block;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $sec-brand-color;
+            }
         }
     }
 
     .linkRight {
-        left: auto;
-        right: 0;
+        width: 100%;
+        left: 45px;
         top: auto;
-        bottom: 15px;
+        bottom: 30px;
+        transform: translateY(100%);
     }
 
     .getInTouch {
@@ -194,7 +203,13 @@
             display: block;
 
             @media(min-height: 650px) and (min-width: $md) {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            img {
+                width: 30px;
+                margin: 0 auto;
             }
         }
     }
@@ -202,41 +217,23 @@
     .lowerLinks {
         @media(min-height: 650px) and (min-width: $md) {
             display: table;
-            height: 260px;
+            height: 280px;
             margin-top: -75px;
         }
 
-        .linka { 
+        p { 
             color: $white;
             font-weight: 700;
             font-size: 20px;
             display: block;
             text-decoration: none;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: $sec-brand-color;
-            }
-        }
-
-        .linkaSmall {
-            color: $white;
-            display: block;
-            font-weight: 300;
-            font-size: 12px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: $sec-brand-color;
-            }
         }
 
         .lowerRotate {
             @media(min-height: 650px) and (min-width: $md) {
                 transform-origin: bottom right;
                 transform: rotate(-90deg) translate(-50%);
-                margin-top: -50%;
+                margin-top: 0;
                 white-space: nowrap;
             }
         }
@@ -246,11 +243,11 @@
 
 .burgerOpen {
     .burgerRight {
-        transform: translateY(-15px);
+        transform: translateY(-18px);
     }
 
     .burgerLeft {
-        transform: translateY(15px);
+        transform: translateY(17.5px);
     }
 
     .linkLeft,

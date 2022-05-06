@@ -1,0 +1,67 @@
+@import "../../../src/scss/utils/variables";
+
+.title {
+    .right {
+        text-align: right;
+    }
+}
+.linePink {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40vw;
+        height: 8px;
+        background-color: $sec-brand-color;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transform: translateY(25px);
+        transition: width 0.3s ease;
+
+        @media(min-width: $md) {
+            width: 20vw;
+        }
+    
+        @media(min-width: $lg) {
+            width: 30vw;
+        }
+
+        @media(min-width: $xlg) {
+            width: 35vw;
+        }
+    }
+
+    &:hover {
+        &:before {
+            @media(min-width: $md) {
+                width: 50vw;
+            }
+        
+            @media(min-width: $lg) {
+                width: 55vw;
+            }
+    
+            @media(min-width: $xlg) {
+                width: 65vw;
+            }
+        }
+    }
+}
+
+.right {
+    &.linePink {
+        position: relative;
+    
+        &:before {
+            left: auto;
+            right: 0;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+}

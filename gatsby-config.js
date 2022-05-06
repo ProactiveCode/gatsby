@@ -28,5 +28,13 @@ module.exports = {
       path: `${__dirname}/blog/`,
     },
   },
-  "gatsby-plugin-mdx",]
+  "gatsby-plugin-mdx",
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `markdown-pages`,
+      path: `${__dirname}/src/markdown-pages`,
+    },
+  },
+  `gatsby-transformer-remark`,]
 };

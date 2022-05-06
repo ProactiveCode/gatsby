@@ -1,0 +1,8 @@
+@import "../../../src/scss/utils/variables";
+
+.twoCol {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}

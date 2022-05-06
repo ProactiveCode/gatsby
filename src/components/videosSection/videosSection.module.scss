@@ -1,0 +1,75 @@
+@import "../../../src/scss/utils/variables";
+
+.videoText {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $grey;
+
+    &.pink {
+        background-color: $sec-brand-color;
+    }
+
+    &.blue {
+        background-color: $brand-color;
+    }
+}
+
+.videoTextWrap {
+    max-width: 350px;
+
+    h1,h2,h3,h4,h5,h6,p,li,span {
+        color: $white;
+    }
+}
+
+.videosWrap {
+    margin-top: -100px;
+}
+
+
+.videosTexts {
+    margin-top: -100vh;
+}
+
+.videos {
+    left: max(50%,600px);
+    top: 0;
+    display: flex;
+    position: sticky;
+    height: 100vh;
+    max-width: max(50vw,600px);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.videosInner {
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        position: absolute;
+        z-index: 2;
+        left: 6px;
+        top: 0;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        transform-origin: bottom;
+    }
+}

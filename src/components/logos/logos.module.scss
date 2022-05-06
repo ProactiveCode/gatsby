@@ -1,0 +1,13 @@
+@import "../../../src/scss/utils/variables";
+
+.logosWrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    .logo {
+        width: calc(25% - 40px);
+        margin: 0 20px 40px;
+    }
+}

@@ -1,15 +1,16 @@
 .btn {
-    padding: 14px 22px;
+    padding: 9px 22px 12px;
     display: inline-block;
     color: $white;
     background: $btn-bg;
-    @include font-size(16);
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 2px;
+    @include font-size(18);
+    font-weight: 500;
+    border-radius: 25px;
     transition: background-color 0.25s ease-in-out;
     text-decoration: none;
     text-align: center;
+    line-height: 1;
+
     @media screen and (min-width: $breakpoint-sm) {
         display: inline-block;
     }

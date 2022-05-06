@@ -1,14 +1,12 @@
 import * as React from 'react'
-import { fullHero, fullWidthGI } from './fullHero.module.scss'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
+import * as Styles from './fullHero.module.scss'
+import c from 'classnames'
 
 const FullHero = ({ bgcolour, image }) => {
-	console.log('image: ' + image);
-	const imageSrc = getImage(image);
-	console.log(imageSrc);
   	return (
-		<div className={fullHero} style={{backgroundColor: bgcolour}}>
-			<GatsbyImage className={fullWidthGI} image={imageSrc} width={250} alt={"Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"} />
+		<div className={c(Styles.fullHero, bgcolour)}>
+			<StaticImage className={Styles.fullWidthGI} width={200} alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera" src="../../images/digital-energy-logo-final.svg" />
 		</div>
   	)
 }

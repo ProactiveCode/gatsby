@@ -1,0 +1,33 @@
+@import "../../../src/scss/utils/variables";
+
+.column {
+    width: 100%;
+
+    @media(min-width: $md) {
+        width: calc(50% - 20px);
+    }
+
+    &.col40 {
+        @media(min-width: $lg) {
+            width: calc(40% - 60px);
+        }
+    }
+
+    &.col60 {
+        @media(min-width: $lg) {
+            width: calc(60% - 60px);
+        }
+    }
+
+    h1 {
+        margin-bottom: 25px;
+
+        @media(min-width: $md) {
+            margin-bottom: 40px;
+        }
+
+        @media(min-width: $lg) {
+            margin-bottom: 60px;
+        }
+    }
+}
