@@ -13,17 +13,16 @@ const Layout = ({ pageTitle, children }) => {
 				<div className={c(Styles.burger, {[Styles.burgerOpen]:burgerOpen})}>
 					<button className={Styles.burgerWrap}  onClick={() => {setBurgerOpen(!burgerOpen);}}>
 						<div className={Styles.burgerLeft}>
-							<StaticImage width={50} alt="Menu left side" src="images/burger-left.svg" />
+							<StaticImage width={50} alt="Menu left side" src="../../images/burger-left.svg" />
 						</div>
 						<div className={Styles.burgerRight}>
-							<StaticImage width={50} alt="Menu right side" src="images/burger-right.svg" />
+							<StaticImage width={50} alt="Menu right side" src="../../images/burger-right.svg" />
 						</div>
 					</button>
 					<div className={c(Styles.link, Styles.linkLeft)}>
 						<Link to="/" className={Styles.a}>Home</Link>
 					</div>
 					<div className={c(Styles.link, Styles.linkRight)}>
-						<Link to="/" className={Styles.a}>right</Link>
 						<Link to="/" className={Styles.linkaSmall}>Who Gets Us</Link>
 						<Link to="/" className={Styles.linkaSmall}>Hello From Us</Link>
 						<Link to="/" className={Styles.linkaSmall}>Our Passion</Link>
@@ -43,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
 					</div>
 					<div className={Styles.getInTouch}>
 						<div className={Styles.getInTouchWrap}>
-							<Link to="/" className={Styles.linka}>Get In Touch</Link>
+							<Link to="/contact" className={Styles.linka}>Get In Touch</Link>
 						</div>
 					</div>
 					<div className={Styles.lowerLinks}>

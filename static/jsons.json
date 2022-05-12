@@ -1,0 +1,279 @@
+{
+    "sections": [
+        {
+            "__typename": "TitleBlock",
+			"sectionInfo": [
+				{
+					"size": "tiny",
+					"bgColor": "grey",
+					"identifier": "Title-1",
+					"image": "https://images.ctfassets.net/74ncoczcn9dm/3LYB2S8NlLhjJp110D1mcu/5507de18d1df1eeb2f538bde026ccb0b/ADB92565A3DBDFD4.png"
+				}
+			],
+            "line": "pink",
+            "content": "<h3>Test title goes here</h3>",
+            "alignment": "right",
+            "containerSize": "800"
+        },
+        {
+            "__typename": "FullHero",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "home-hero",
+					"image": ""
+				}
+			],
+            "contentImage": "https://images.ctfassets.net/74ncoczcn9dm/3LYB2S8NlLhjJp110D1mcu/5507de18d1df1eeb2f538bde026ccb0b/ADB92565A3DBDFD4.png",
+			"contentImageAlt": "Alt text",
+			"contentVideo": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+            "__typename": "MultiColumns",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "pink",
+					"identifier": "Flipdowns",
+					"image": ""
+				}
+			],
+            "containerSize": "1000",
+            "columns": [
+                {
+                    "class": "col40",
+                    "content": "<h1>Our energy, your passion</h1><p>We're a passionate digital agency that connects with you to create your digital vision in an intuitive way that delivers engaging results.</p>",
+                    "block": ""
+                },
+                {
+                    "class": "col60",
+                    "content": "",
+                    "block": "FlipDown",
+                    "blockContent": [
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        },
+                        {
+                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
+                            "flipDownFrontAlt": "alt front",
+                            "flipDownBack": "https://via.placeholder.com/100x50",
+                            "flipDownBackAlt": "alt back"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "__typename": "Generic",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "generic",
+					"image": ""
+				}
+			],
+            "size": "1000",
+            "extra_class": "svganim",
+            "content": "<svg viewBox='0 0 365 365'> <g id='H-letter'> <line class='st0' x1='17' y1='0' x2='17' y2='124'/> <line class='st0' x1='33' y1='62' x2='68' y2='62'/> <line class='st0' x1='84' y1='0' x2='84' y2='124'/> </g> <g id='E-letter'> <line class='st0' x1='138' y1='0' x2='138' y2='124'/> <line class='st0' x1='154' y1='17' x2='201' y2='17'/> <line class='st0' x1='154' y1='62' x2='196' y2='62'/> <line class='st0' x1='154' y1='107' x2='201' y2='107'/> </g> <g id='L-one-letter'> <line class='st0' x1='243' y1='0' x2='243' y2='124'/> <line class='st0' x1='237' y1='107' x2='281' y2='107'/> </g> <g id='L-two-letter'> <line class='st0' x1='319' y1='-1' x2='319' y2='123'/> <line class='st0' x1='310' y1='107' x2='354' y2='107'/> </g> <g id='O-letter'> <circle class='st1' cx='183' cy='246.9' r='48'/> </g> </svg>"
+        },
+        {
+            "__typename": "Videos",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "",
+					"identifier": "videos",
+					"image": ""
+				}
+			]
+        },
+        {
+            "__typename": "Logos",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "logos",
+					"image": ""
+				}
+			],
+            "size": "800",
+            "extra_class": "logos",
+            "content": [
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                },
+                {
+                    "logoUrl": "https://via.placeholder.com/200x100",
+                    "logoAlt": "Logo of company"
+                }
+            ]
+        }
+    ]
+}

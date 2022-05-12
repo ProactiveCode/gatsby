@@ -1,0 +1,73 @@
+@import "../../../src/scss/utils/variables";
+
+
+.formWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .form50 {
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 20px);
+        }
+
+        @media(min-width: $lg) {
+            width: calc(50% - 40px);
+        }
+    }
+
+    .form100 {
+        width: 100%;
+        margin-bottom: 10px;
+
+        p.formNm {
+            margin: 0;
+        }
+    }
+
+    .formItem {
+        p {
+            margin-bottom: 0px;
+
+            &.formMt {
+                margin-top: 10px;
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px dashed $white;
+            border-radius: 0;
+            color: $white;
+        }
+
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            background-size: 100% 100%, 100% 100%, 100% 31px;
+            border: none;
+            color: $white;
+            border-radius: 0;
+            padding: 0px;
+            font-size: 16px;
+            line-height: 1.8em;
+            background: repeating-linear-gradient(to right , transparent 0 3px,$grey 0 5px),
+            repeating-linear-gradient(to bottom, transparent 0 calc(1.8em - 1px),$white 0 1.8em) $grey;
+            
+            &:focus {
+                outline: none;
+            }
+            
+        }
+    }
+}
+
+
+.formSubmit {
+    width: 100%;
+    text-align: right;
+}

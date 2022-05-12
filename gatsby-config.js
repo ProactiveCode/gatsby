@@ -22,6 +22,13 @@ module.exports = {
     __key: "images"
   },
   {
+    resolve: "gatsby-source-contentful",
+    options: {
+      spaceId: "74ncoczcn9dm",
+      accessToken: "RaBpqvATs2YyTaae1W7nv1viNHO0c9Khww_Vl81H7_Q",
+    },
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `blog`,

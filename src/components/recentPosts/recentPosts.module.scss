@@ -1,0 +1,76 @@
+@import "../../../src/scss/utils/variables";
+
+.recentPosts {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 60px;
+    z-index: 5;
+}
+
+.recentPostsWrap {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    margin-left: 20px;
+
+    @media(min-width: $md) {
+        max-width: 70%;
+    }
+
+    article {
+        width: 100%;
+        min-width: 80%;
+        padding-left: 20px;
+
+        p {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -20px;
+                top: 0;
+                width: 5px;
+                height: 90px;
+                background-color: $sec-brand-color;
+                border-radius: 10px;
+            }
+        }
+
+        @media(min-width: 500px) {
+            min-width: 50%;
+            margin-right: 50px;
+        }
+
+        @media(min-width: $lg) {
+            min-width: 30%;
+        }
+
+        a {
+            text-decoration: none;
+
+            h3 {
+                color: $white;
+                transition: all 0.3s ease;
+                margin-bottom: 50px;
+
+                @media(min-width: $lg) {
+                    font-size: 40px;
+                }
+            }
+
+            &:hover {
+
+                h3 {
+                    color: $sec-brand-color;
+
+                    @media(min-width: $lg) {
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

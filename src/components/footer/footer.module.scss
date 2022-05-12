@@ -1,0 +1,126 @@
+
+@import "../../../src/scss/utils/variables";
+
+.footer {
+    background-color: $grey;
+    border-top: 1px solid $white;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 100001;
+}
+
+.footerWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footerLogoSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @media(min-width: $md) {
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+
+.footerLogo {
+    margin-right: 10px;
+    margin-top: 15px;
+
+    img {
+        width: 100%;
+        max-width: 75px;
+    }
+}
+
+.footerInfo {
+    p {
+        color: $white;
+        font-size: 12px;
+        margin: 0;
+
+        &.mt {
+            margin-top: 15px;
+        }
+    }
+}
+
+.footerPages,
+.footerServices,
+.footerCase {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 20px);
+
+    @media(min-width: 400px) {
+        width: calc(33.33333% - 20px);
+        margin-bottom: 0;
+    }
+
+    @media(min-width: $md) {
+        width: 80px;
+    }
+
+    a, p {
+        color: $white;
+        font-size: 14px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.footerCase {
+    margin-top: 40px;
+    width: 100%;
+
+    @media(min-width: 400px) {
+        width: calc(33.33333% - 20px);
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    @media(min-width: $md) {
+        width: 80px;
+    }
+
+}
+
+.footerWild {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media(min-width: $lg) {
+        width: auto;
+        margin-top: 0;
+    }
+
+
+    a, p {
+        color: $white;
+        font-size: 14px;
+        max-width: 200px;
+        line-height: 1.2;
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.footerWildLogo {
+    margin-left: 10px;
+
+    img {
+        width: 100%;
+        max-width: 75px;
+    }
+}

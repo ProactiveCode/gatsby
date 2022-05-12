@@ -1,13 +1,16 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import * as Styles from './fullHero.module.scss'
 import c from 'classnames'
 
-const FullHero = ({ bgcolour, image }) => {
+const FullHero = ({ section }) => {
   	return (
-		<div className={c(Styles.fullHero, bgcolour)}>
-			<StaticImage className={Styles.fullWidthGI} width={200} alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera" src="../../images/digital-energy-logo-final.svg" />
-		</div>
+		<section data-id={section.sectionInfo[0].identifier} className={c(section.sectionInfo[0].bgColor)} 
+		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
+			<div className={c(Styles.fullHero)}>
+				<video loading="lazy" src={section.contentVideo} loop={true} aria-hidden="true" autoPlay={true} muted={true}></video>
+				<img src={section.contentImage} alt={section.contentImageAlt} loading="lazy"></img>
+			</div>
+		</section>
   	)
 }
 
