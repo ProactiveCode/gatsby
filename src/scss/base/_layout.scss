@@ -130,22 +130,6 @@
     }
 }
 
-.logo {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 40px;
-
-    @media(min-width: $md) {
-        width: calc(50% - 40px);
-        max-width: none;
-        margin: 0 20px 40px;
-    }
-
-    @media(min-width: $lg) {
-        width: calc(25% - 40px);
-    }
-}
-
 .svganim {
     svg {
         .st0{
@@ -163,6 +147,14 @@
     }
 }
 
+.rel {
+    position: relative;
+}
+
+.contact-white {
+    color: white !important;
+}
+
 @keyframes H-mid-move {
     0% {
         stroke: red;
@@ -178,70 +170,6 @@
     }
     100% {
         stroke: red;
-    }
-}
-
-.blogHome {
-    p {
-        margin-top: 100px;
-        margin-bottom: 70px;
-        max-width: 600px;
-    }
-}
-
-.blogArticles {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 80px;
-
-    article {
-        width: 100%;
-        margin-bottom: 40px;
-
-        @media(min-width: $md) {
-            width: calc(50% - 20px);
-        }
-
-        @media(min-width: $lg) {
-            width: calc(33.33333% - 20px);
-        }
-
-        // @media(min-width: $xlg) {
-        //     width: calc(25% - 20px);
-        // }
-
-        a {
-            text-decoration: none;
-
-            h3 {
-                color: $white;
-                transition: all 0.3s ease;
-                margin-bottom: 20px;
-            }
-
-            &:hover {
-
-                h3 {
-                    color: $sec-brand-color;
-                }
-            }
-        }
-
-        p {
-            margin-bottom: 10px;
-        }
-
-        .articleInfo {
-            border-top: 1px solid $sec-brand-color;
-            padding-top: 10px;
-
-            p {
-                margin: 0;
-                line-height: 1.4;
-                color: $sec-brand-color;
-            }
-        }
     }
 }
 
@@ -304,6 +232,27 @@
     @media(min-width: $xlg) {
         padding-top: 25px;
         padding-bottom: 25px;
+    }
+}
+
+.sectionNone,
+.section_none {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    @media(min-width: $md) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    @media(min-width: $lg) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    @media(min-width: $xlg) {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
 

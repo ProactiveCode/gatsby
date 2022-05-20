@@ -20,12 +20,12 @@ const Layout = ({ pageTitle, children }) => {
 						</div>
 					</button>
 					<div className={c(Styles.link, Styles.linkLeft)}>
-						<Link to="/" className={Styles.a}>Home</Link>
+						<Link to="/">Home</Link>
 					</div>
 					<div className={c(Styles.link, Styles.linkRight)}>
-						<Link to="/" className={Styles.linkaSmall}>Who Gets Us</Link>
-						<Link to="/" className={Styles.linkaSmall}>Hello From Us</Link>
-						<Link to="/" className={Styles.linkaSmall}>Our Passion</Link>
+						<Link to="/">Who Gets Us</Link>
+						<Link to="/">Hello From Us</Link>
+						<Link to="/">Our Passion</Link>
 					</div>
 				</div>
 				<div className={Styles.innerHeaderWrap}>
@@ -41,14 +41,14 @@ const Layout = ({ pageTitle, children }) => {
 						</a>
 					</div>
 					<div className={Styles.getInTouch}>
-						<div className={Styles.getInTouchWrap}>
-							<Link to="/contact" className={Styles.linka}>Get In Touch</Link>
+						<div className={"getInTouchWrap"}>
+							<Link to="/contact" className={'contact-link'}>Get In Touch</Link>
 						</div>
 					</div>
 					<div className={Styles.lowerLinks}>
-						<div className={Styles.lowerLinksWrap}>
+						<div className={"lowerLinksWrap"}>
 							<div className={Styles.lowerRotate}>
-								<p>Because We Care</p>
+								<p class="page-locator">Because We Care</p>
 							</div>
 						</div>
 					</div>

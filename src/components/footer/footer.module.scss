@@ -34,7 +34,7 @@
 
     img {
         width: 100%;
-        max-width: 75px;
+        max-width: 65px;
     }
 }
 
@@ -76,6 +76,21 @@
     }
 }
 
+.footerServices {
+    width: 100%;
+
+    @media(min-width: 400px) {
+        width: calc(33.33333% - 20px);
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    @media(min-width: $md) {
+        width: 120px;
+    }
+
+}
+
 .footerCase {
     margin-top: 40px;
     width: 100%;
@@ -87,7 +102,7 @@
     }
 
     @media(min-width: $md) {
-        width: 80px;
+        width: 180px;
     }
 
 }

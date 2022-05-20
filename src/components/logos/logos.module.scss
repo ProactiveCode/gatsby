@@ -4,4 +4,20 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    .logo {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 40px;
+
+        @media(min-width: $md) {
+            width: calc(50% - 40px);
+            max-width: none;
+            margin: 0 20px 60px;
+        }
+
+        @media(min-width: $lg) {
+            width: calc(25% - 40px);
+        }
+    }
 }

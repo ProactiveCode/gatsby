@@ -9,7 +9,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 			<div className={c("container", "container1200", Styles.footerWrap)}>
 				<div className={Styles.footerLogoSection}>
 					<div className={Styles.footerLogo}>
-						<img src="https://via.placeholder.com/100" alt="Digital Energy logo" />
+						<img src="https://images.ctfassets.net/74ncoczcn9dm/BjTTMmbDsuVLBxIkwdmyH/e47fb9e2346b93ba3edd44582af80263/logo-no-text.svg" alt="Digital Energy logo" />
 					</div>
 					<div className={Styles.footerInfo}>
 						<p><strong>Digital Energy</strong></p>
@@ -24,31 +24,31 @@ const Layout = ({ line, children, containerSize, align }) => {
 					</div>
 				</div>
 				<div className={Styles.footerPages}>
-					<Link to="/" className={Styles.a}>Contact Us</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
+					<Link to="/contact">Contact Us</Link>
+					<Link to="/blog">Blog</Link>
 				</div>
 				<div className={Styles.footerServices}>
 					<p>Services</p>
-					<Link to="/" className={Styles.a}>Contact Us</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
-					<Link to="/" className={Styles.a}>Contact Us</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
+					<Link to="/">Web Development</Link>
+					<Link to="/">SEO</Link>
+					<Link to="/">Design</Link>
+					<Link to="/">Video Editing</Link>
+					<Link to="/">Hosting</Link>
 				</div>
 				<div className={Styles.footerCase}>
 					<p>Case Studies</p>
-					<Link to="/" className={Styles.a}>Contact Us</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
-					<Link to="/" className={Styles.a}>Contact Us</Link>
-					<Link to="/" className={Styles.a}>Blog</Link>
+					<Link to="/">Great Green Systems</Link>
+					<Link to="/">Yorkshire Children’s Centre</Link>
+					<Link to="/">Powher</Link>
+					<Link to="/">Field Gibson Media</Link>
 				</div>
 				<div className={Styles.footerWild}>
-					<div className={Styles.footerWildInfo}>
+					<div className={"footerWildInfo"}>
 						<p>Digital Energy is 100% Carbon Offset and partnered with:</p>	
-						<a href="http://" target="_blank" rel="noopener noreferrer">Make It Wild</a>
+						<a href="https://www.makeitwild.co.uk/" target="_blank" rel="noopener noreferrer">Make It Wild</a>
 					</div>
 					<div className={Styles.footerWildLogo}>
-						<img src="https://via.placeholder.com/100" alt="Digital Energy logo" />
+						<img src="https://images.ctfassets.net/74ncoczcn9dm/5LwEAUBTfyz1w7ZTFMktXS/0323e372479842cef89974aaa1426652/carbon-offset-logo.png?h=250" alt="Digital Energy logo" />
 					</div>
 				</div>
 			</div>

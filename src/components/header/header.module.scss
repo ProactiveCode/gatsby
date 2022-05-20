@@ -8,32 +8,40 @@
     position: fixed;
     top: 0;
     z-index: 10000;
-    width: calc(100% - 40px);
+    // width: calc(100% - 40px);
     pointer-events: none;
+    width: 100%;
 
-    @media(min-height: 650px) and (min-width: $md) {
-        width: 100%;
+    @media(min-height: 650px) and (min-width: $xlg) {
+        // width: 100%;
     }
 
     .headerWrap {
         position: fixed;
         left: 0;
-        top: 10px;
+        // top: 10px;
+        top: 0;
         z-index: 10;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         width: 100%;
         pointer-events: all;
+        background-color: $grey;
+        padding: 10px;
 
-        @media(min-height: 650px) and (min-width: $md) {
+        @media(min-height: 650px) and (min-width: $xlg) {
             flex-direction: column;
             height: 100%;
             justify-content: center;
+            align-items: flex-end;
             width: auto;
             margin-left: -40px;
             bottom: 0;
             top: auto;
+            background-color: transparent;
+            padding: 0;
+            transform: translateY(-100px);
         }
 
         @media(min-height: 650px) and (min-width: 1400px) {
@@ -42,13 +50,7 @@
     }
 
     .innerHeaderWrap {
-        display: flex;
-        align-items: flex-end;
-        position: relative;
-        justify-content: space-between;
-        padding-right: 10px;
-
-        @media(max-height: 650px) and (min-width: $md) {
+        @media(max-height: 650px) and (min-width: $xlg) {
             width: 70%;
         }
 
@@ -60,11 +62,16 @@
             width: calc(50% - 100px);
         }
 
-        @media(min-height: 650px) and (min-width: $md) {
+        @media(min-height: 650px) and (min-width: $xlg) {
             flex-direction: column;
             width: auto;
             justify-content: center;
             padding-right: 0;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            // justify-content: space-between;
+            // padding-right: 10px;
         }
 
         &:before {
@@ -76,14 +83,16 @@
             height: 1px;
             transform: translateX(-50%);
             background-color: $white;
+            display: none;
 
-            @media(min-height: 650px) and (min-width: $md) {
+            @media(min-height: 650px) and (min-width: $xlg) {
                 right: -25px;
                 left: auto;
                 top: 50%;
                 bottom: auto;
                 width: 1px;
                 height: calc(100% + 20px);
+                display: block;
                 transform: translateY(-50%);
             }
         }
@@ -92,13 +101,13 @@
     .burgerWrap {
         position: relative;
         width: 70px;
-        height: 70px;
+        height: 50px;
     }
 
     .burger {
         position: relative;
 
-        @media(min-height: 650px) and (min-width: $md) {
+        @media(min-height: 650px) and (min-width: $xlg) {
             margin-bottom: 10vh;
         }
     }
@@ -119,7 +128,7 @@
     .linkLeft,
     .linkRight {
         position: absolute;
-        top: -10px;
+        top: -20px;
         left: 0;
         font-size: 11px;
         opacity: 0;
@@ -143,18 +152,18 @@
         width: 100%;
         left: 45px;
         top: auto;
-        bottom: 30px;
+        bottom: 10px;
         transform: translateY(100%);
     }
 
     .getInTouch {
         margin-right: 50px;
 
-        @media(max-height: 650px) and (min-width: $md) {
+        @media(max-height: 650px) and (min-width: $xlg) {
             margin-right: 0;
         }
 
-        @media(min-height: 650px) and (min-width: $md) {
+        @media(min-height: 650px) and (min-width: $xlg) {
             display: table;
             height: 150px;
             margin-right: 0;
@@ -172,7 +181,7 @@
                 color: $white;
             }
 
-            @media(min-height: 650px) and (min-width: $md) {
+            @media(min-height: 650px) and (min-width: $xlg) {
                 transform-origin: bottom right;
                 transform: rotate(-90deg) translate(-50%);
                 margin-top: -50%;
@@ -183,19 +192,19 @@
 
     .getInTouchWrap,
     .lowerLinksWrap {
-        @media(min-height: 650px) and (min-width: $md) {
-            height: 0;
+        @media(min-height: 650px) and (min-width: $xlg) {
+            // height: 0;
         }
     }
 
     .socials {
         display: none;
 
-        @media(max-height: 650px) and (min-width: $md) {
+        @media(max-height: 650px) and (min-width: $xlg) {
             display: flex;
         }
 
-        @media(min-height: 650px) and (min-width: $md) {
+        @media(min-height: 650px) and (min-width: $xlg) {
             display: block;
         }
 
@@ -203,7 +212,7 @@
             margin-right: 10px;
             display: block;
 
-            @media(min-height: 650px) and (min-width: $md) {
+            @media(min-height: 650px) and (min-width: $xlg) {
                 margin-bottom: 20px;
                 margin-right: 0;
             }
@@ -216,10 +225,11 @@
     }
 
     .lowerLinks {
-        @media(min-height: 650px) and (min-width: $md) {
-            display: table;
-            height: 280px;
-            margin-top: -75px;
+        display: none;
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            display: block;
+            min-width: 160px;
         }
 
         p { 
@@ -231,10 +241,11 @@
         }
 
         .lowerRotate {
-            @media(min-height: 650px) and (min-width: $md) {
+            @media(min-height: 650px) and (min-width: $xlg) {
                 transform-origin: bottom right;
-                transform: rotate(-90deg) translate(-50%);
+                transform: rotate(-90deg);
                 margin-top: 0;
+                text-align: right;
                 white-space: nowrap;
             }
         }
