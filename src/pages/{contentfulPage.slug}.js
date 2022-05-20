@@ -25,12 +25,6 @@ const Page = ({ data }) => {
 	const [goingUp, setGoingUp] = useState(false);
 	console.log(data);
 
-	const elements = document.querySelectorAll(".section");
-	Array.from(elements).forEach((element, index) => {
-		var distance = element.getBoundingClientRect().top;
-		console.log(distance);
-	});
-
 	useEffect(() => {
 	  const handleScroll = () => {
 		const current = window.location.pathname;
