@@ -15,6 +15,7 @@
     overflow: hidden;
     perspective: 1000px;
     padding-bottom: 50%;
+    position: relative;
 
     img {
         width: 100%;
@@ -22,14 +23,14 @@
     }
 }
 
-.hovered {
+.hovered,.flipped {
     .flipdownItemWrap {
         transform: rotateX(180deg);
     }
 }
 
 .flipdownItemWrap {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -45,6 +46,9 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
   
 .flipdownItemBack {

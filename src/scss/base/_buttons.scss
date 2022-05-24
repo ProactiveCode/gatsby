@@ -36,6 +36,36 @@
             color: $white;
         }
     }
+
+    &--alt {
+        color: $white;
+        background: $sec-brand-color;
+
+        &:hover {
+            color: $btn-text-hover;
+            background-color: $brand-color;
+        }
+    }
+
+    &--to-white {
+        color: $white;
+        background: $btn-bg;
+
+        &:hover {
+            color: $brand-color;
+            background-color: $white;
+        }
+    }
+
+    &--alt-white {
+        color: $white;
+        background: $sec-brand-color;
+
+        &:hover {
+            color: $brand-color;
+            background-color: $white;
+        }
+    }
 }
 
 .link {

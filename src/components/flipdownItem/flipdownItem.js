@@ -9,13 +9,13 @@ const Layout = ({ val }) => {
 	const toggleHover = () => setHovered(!hovered);
 	
 	return (
-		<div className={c(Styles.flipdownItem, {[Styles.hovered]:hovered})} onMouseEnter={toggleHover}>
+		<div className={c(Styles.flipdownItem, 'flipdownItemSelector', {[Styles.hovered]:hovered})} onMouseEnter={toggleHover}>
 			<div className={Styles.flipdownItemWrap}>
-				<div className={Styles.flipdownItemFront}>
-					<img src={val.flipDownFront} alt={val.flipDownFrontAlt}></img>
+				<div className={Styles.flipdownItemFront} style={{backgroundImage: "url(" + val.flipDownFront + ")"}}>
+					{/* <img src={val.flipDownFront} alt={val.flipDownFrontAlt}></img> */}
 				</div>
-				<div className={Styles.flipdownItemBack}>
-					<img src={val.flipDownBack} alt={val.flipDownBackAlt}></img>
+				<div className={Styles.flipdownItemBack} style={{backgroundImage: "url(" + val.flipDownBack + ")"}}>
+					{/* <img src={val.flipDownBack} alt={val.flipDownBackAlt}></img> */}
 				</div>
 			</div>
 		</div>

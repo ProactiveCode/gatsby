@@ -11,15 +11,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BlogPost = ({data}) => {
 	const blog = data.contentfulBlogPost;
-	console.log(blog.Blogcontent.raw);
+	console.log(data);
 	const richText = blog.Blogcontent;
-	console.log(richText);
-	// const pageData = JSON.parse(data.contentfulBlogPost.mainContent.internal.content);
-	// console.log(pageData);
-	// const title = data.contentfulBlogPost.metaTitle;
-	// const desc = data.contentfulBlogPost.metaDescription;
-	// const sections = pageData['sections'];
-	// console.log(sections);
+	const title = data.contentfulBlogPost.metaTitle;
+	const desc = data.contentfulBlogPost.metaDescription;
 
 	const options = {
 		renderMark: {
@@ -54,10 +49,10 @@ const BlogPost = ({data}) => {
 	return (
 		<main className={c('grey')}>
 			<Helmet>
-				{/* <title>{title}</title>
-				<meta name="title" content={title}></meta>
-				<meta name="description" content={desc}></meta>
-				<meta name="keywords" content="keywords"></meta> */}
+				<title>{title ? title : 'Blog | Digital Energy'}</title>
+				<meta name="title" content={title ? title : 'Blog | Digital Energy'}></meta>
+				<meta name="description" content={desc ? desc : 'Blog | Digital Energy'}></meta>
+				<meta name="keywords" content="keywords"></meta>
 			</Helmet>
 			<Header></Header>
 				<div className={Styles.blogContentTitle}>
@@ -74,7 +69,7 @@ const BlogPost = ({data}) => {
 							<div className={Styles.blogContentMetaInner}>
 								{blog.author ? 		
 									<div className={Styles.blogContentAuthor}>
-										<img src="https://via.placeholder.com/300" alt="Author" />
+										<img src={blog.author.authorImage ? blog.author.authorImage.url : "https://via.placeholder.com/300"} alt="Author" />
 										<p><strong>{blog.author.name}</strong></p>
 										<p><em>{blog.author.position}</em></p>
 									</div> : ''
@@ -107,10 +102,17 @@ export const data = graphql`
 			id
 			blogTitle
 			slug
+			metaTitle
+			metaDescription {
+			  metaDescription
+			}
 			author {
 				id
 				name
 				position
+				authorImage {
+					url
+				}
 			}
 			Blogcontent {
 				raw

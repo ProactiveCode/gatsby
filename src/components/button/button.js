@@ -9,7 +9,7 @@ const Layout = ({ classes, link, text, hoverText}) => {
 
 
 	return (
-		<a href="javascript:void(0);" className={c(classes)} onMouseEnter={() => setBtnText(hoverText)} onMouseLeave={() => setBtnText(text)}>{BtnText}</a>
+		<a href={link} className={c(classes)} onMouseEnter={() => setBtnText(hoverText)} onMouseLeave={() => setBtnText(text)}>{BtnText}</a>
 	)
 }
 

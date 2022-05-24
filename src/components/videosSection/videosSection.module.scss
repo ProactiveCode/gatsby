@@ -1,10 +1,22 @@
 @import "../../../src/scss/utils/variables";
 
 .videoText {
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     align-items: center;
     background-color: $grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media(min-width: $md) {
+        height: 60vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media(min-width: $lg) {
+        height: 100vh;
+    }
 
     &.pink {
         background-color: $sec-brand-color;
@@ -15,17 +27,26 @@
     }
 
     &.videoText1 {
-        height: calc(100vh - 100px);
+        // height: calc(100vh - 100px);
+
+        @media(min-width: $md) {
+            height: calc(60vh - 100px);
+        }
+    
+        @media(min-width: $lg) {
+            height: calc(100vh - 100px);
+        }
 
         .videoTextWrap {
-            margin-top: -100px;
+            @media(min-width: $md) {
+                margin-top: -100px;
+            }
         }
     }
 }
 
 .videoTextWrap {
     max-width: 350px;
-    // margin-top: -100px;
 
     h1,h2,h3,h4,h5,h6,p,li,span {
         color: $white;
@@ -33,14 +54,9 @@
 }
 
 .videosWrap {
-    // margin-top: -100px;
     position: relative;
 }
 
-
-// .videosTexts {
-//     margin-top: -100vh;
-// }
 
 .videos {
     right:0;
@@ -54,6 +70,17 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    display: none;
+
+    @media(min-width: $md) {
+        height: 60vh;
+        display: flex;
+    }
+
+    @media(min-width: $lg) {
+        height: 100vh;
+    }
+    
 }
 
 .videosInner {
@@ -85,5 +112,18 @@
         object-fit: cover;
         transform-origin: bottom;
         margin-top: 30px;
+    }
+}
+
+.videoMobile {
+    width: 100%;
+    margin-top: 40px;
+    
+    @media(min-width: $md) {
+        display: none;
+    }
+
+    video {
+        width: 100%;
     }
 }
