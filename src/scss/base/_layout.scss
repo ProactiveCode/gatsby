@@ -130,23 +130,6 @@
     }
 }
 
-.svganim {
-    svg {
-        .st0{
-            fill:none;
-            stroke:red;
-            stroke-width:34px;
-            animation: H-mid-move 1s ease forwards;
-            animation-iteration-count: 3;
-        }
-        .st1{
-            fill:none;
-            stroke:red;
-            stroke-width:0;
-        }
-    }
-}
-
 .rel {
     position: relative;
 }
@@ -155,23 +138,172 @@
     color: white !important;
 }
 
-@keyframes H-mid-move {
-    0% {
-        stroke: red;
-    }
-    25% {
-        stroke: transparent;
-    }
-    50% {
-        stroke: blue;
-    }
-    75% {
-        stroke: transparent;
-    }
-    100% {
-        stroke: red;
+.defaultflicker,
+.defaultflickerwhite,
+.phone,
+.phonewhite,
+.timed,
+.timedwhite,
+.timed2,
+.timed2white,
+.timed3,
+.timed3white,
+.seemore,
+.seemorewhite,
+.bcmain,
+.blogsvg,
+.contactsvg {
+    opacity: 0;
+}
+
+.blogsvgwrap {
+    transform: rotate(-5deg);
+}
+
+.blogsvg,
+.contactsvg {
+    animation: default 4s forwards step-end 1s; 
+}
+
+.blogsvgwhite,
+.contactsvgwhite {
+    opacity: 0.2;
+    animation: defaultwhite 4s forwards step-end 1s; 
+}
+
+.bcmainOn {
+    animation: default 4s forwards step-end; 
+}
+
+.bcmainwhiteOn {
+    animation: defaultwhite 4s forwards step-end; 
+}
+
+.defaultflickerOn {
+    animation: default 2s forwards step-end; 
+}
+
+.defaultflickerwhiteOn {
+    animation: defaultwhite 2s forwards step-end; 
+}
+
+.seemoreOn {
+    animation: default 2s forwards step-end 4.5s; 
+}
+
+.seemorewhiteOn {
+    animation: defaultwhite 2s forwards step-end 4.5s; 
+}
+
+.seemorelink {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: -50px;
+
+    a {
+        width: 100%;
+        max-width: 50%;
+        display: block;
+
+        svg {
+            width: 100%;
+        }
     }
 }
+
+
+.phoneOn {
+    animation: default 2s forwards step-end 2.5s; 
+}
+
+.phonewhiteOn {
+    animation: defaultwhite 2s forwards step-end 2.5s; 
+}
+
+.timedOn {
+    animation: timed 6s forwards step-end 4.5s; 
+}
+
+.timed2On {
+    animation: timed 6s forwards step-end 5s; 
+}
+
+.timed3On {
+    animation: timed 6s forwards step-end 5.5s; 
+}
+
+.timedwhiteOn {
+    animation: timedwhite 6s forwards step-end 4.5s; 
+}
+
+.timed2whiteOn {
+    animation: timedwhite 6s forwards step-end 5s; 
+}
+
+.timed3whiteOn {
+    animation: timedwhite 6s forwards step-end 5.5s; 
+}
+
+@keyframes timed{
+    0%    { opacity: 0; }
+    20%    { opacity: 1; }
+    40%    { opacity: 0; }
+    60%    { opacity: 1; }
+    80%    { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@keyframes timedwhite {
+    0%    { opacity: 0;fill: white; }
+    20%    { opacity: 1;fill: white; }
+    40%    { opacity: 0;fill: white; }
+    60%    { opacity: 1;fill: white; }
+    80%    { opacity: 0;fill: white; }
+    100%    { opacity: 1;fill: white; }
+}
+
+@keyframes default{
+    0%    { opacity: 1; }
+    6%    { opacity: 0.5; }
+    9%    { opacity: 1; }
+    14%    { opacity: 0.5; }
+    17%    { opacity: 1; }
+    20%    { opacity: 0.5; }
+    23%   { opacity: 1; }
+    36%    { opacity: 0.5; }
+    40%    { opacity: 1; }
+    89%   { opacity: 1; }
+    90%   { opacity: 0.5; }
+    100%  { opacity: 1; }
+  }
+
+  @keyframes defaultwhite{
+    0%    { opacity: 1;
+    fill: white; }
+    6%    { opacity: 0.5;
+    fill: white; }
+    9%    { opacity: 1;
+    fill: white; }
+    14%    { opacity: 0.5;
+    fill: white; }
+    17%    { opacity: 1;
+    fill: white; }
+    20%    { opacity: 0.5;
+    fill: white; }
+    23%   { opacity: 1;
+    fill: white; }
+    36%    { opacity: 0.5;
+    fill: white; }
+    40%    { opacity: 1;
+    fill: white; }
+    89%   { opacity: 1;
+    fill: white; }
+    90%   { opacity: 0.5;
+    fill: white; }
+    100%  { opacity: 1;
+    fill: white; }
+  }
 
 .section {
     padding-top: 50px;

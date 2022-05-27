@@ -19,6 +19,7 @@ const Layout = ({ val }) => {
 				</div>
 			</div>
 		</div>
+
 	)
 }
 

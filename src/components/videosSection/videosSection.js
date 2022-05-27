@@ -19,7 +19,6 @@ const Layout = ({ line, children, containerSize, align }) => {
 			  trigger: ".videoHeight",
 			  end: "bottom-=" + height + " center",
 			  scrub: true,
-			  markers: true,
 			  pin: ".vidInner",
 			},
 		  });

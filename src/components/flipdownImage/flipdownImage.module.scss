@@ -8,3 +8,14 @@
     background-color: $sec-brand-color;
     padding: 10px;
 }
+
+.flipper {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        width: 100%;
+        max-width: 40px;
+        display: block;
+    }
+}

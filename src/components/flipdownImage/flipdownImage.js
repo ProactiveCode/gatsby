@@ -40,7 +40,7 @@ const Layout = ({ section }) => {
 					))
 				}
 			</div>
-			<a href="javascript:void(0);" onClick={toggleFlipped}>test</a>
+			<a href="javascript:void(0);" className={Styles.flipper} onClick={toggleFlipped}><img src='https://images.ctfassets.net/74ncoczcn9dm/4E7ONoBBFVbhvfvP7VnlOR/0bc77ccd446750deaf7ff800d444fc04/flip-blue-vert.svg' alt="Click to flip image"></img></a>
 		</div>
 	)
 }

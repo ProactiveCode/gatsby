@@ -61,6 +61,30 @@ const Page = ({ data }) => {
 					} else {
 						document.getElementsByClassName('contact-link')[0].classList.remove("contact-white");
 					}
+
+					if(sectionID === "Our Energy") {
+						setTimeout(() => {
+							document.querySelectorAll('.bcmain').forEach(x=>x.classList.add('bcmainOn'));
+							document.querySelectorAll('.bcmainwhite').forEach(x=>x.classList.add('bcmainwhiteOn'));
+							document.querySelectorAll('.seemore').forEach(x=>x.classList.add('seemoreOn'));
+							document.querySelectorAll('.seemorewhite').forEach(x=>x.classList.add('seemorewhiteOn'));
+						}, 1000);
+					}
+
+					if(sectionID === "Let's talk") {
+						setTimeout(() => {
+							document.querySelectorAll('.defaultflicker').forEach(x=>x.classList.add('defaultflickerOn'));
+							document.querySelectorAll('.defaultflickerwhite').forEach(x=>x.classList.add('defaultflickerwhiteOn'));
+							document.querySelectorAll('.phone').forEach(x=>x.classList.add('phoneOn'));
+							document.querySelectorAll('.phonewhite').forEach(x=>x.classList.add('phonewhiteOn'));
+							document.querySelectorAll('.timed').forEach(x=>x.classList.add('timedOn'));
+							document.querySelectorAll('.timedwhite').forEach(x=>x.classList.add('timedwhiteOn'));
+							document.querySelectorAll('.timed2').forEach(x=>x.classList.add('timed2On'));
+							document.querySelectorAll('.timed2white').forEach(x=>x.classList.add('timed2whiteOn'));
+							document.querySelectorAll('.timed3').forEach(x=>x.classList.add('timed3On'));
+							document.querySelectorAll('.timed3white').forEach(x=>x.classList.add('timed3whiteOn'));
+						}, 1000);
+					}
 				}
 			});
 		} else {
