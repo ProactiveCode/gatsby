@@ -1,8 +1,7 @@
 import * as React from 'react'
 import * as Styles from './faqs.module.scss'
 import c from 'classnames'
-import { useState } from "react"
-import FaqSingle from '../../components/FaqSingle/FaqSingle'
+import FaqSingle from '../../components/faqSingle/faqSingle'
 
 const Layout = ({ section }) => {
 	const questions = section.items;
