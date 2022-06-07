@@ -47,155 +47,31 @@
                     "block": ""
                 },
                 {
-                    "class": "col60",
-                    "content": "",
-                    "block": "FlipDown",
-                    "blockContent": [
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        },
-                        {
-                            "flipDownFront": "https://via.placeholder.com/100x50/ff0000",
-                            "flipDownFrontAlt": "alt front",
-                            "flipDownBack": "https://via.placeholder.com/100x50",
-                            "flipDownBackAlt": "alt back"
-                        }
-                    ]
+                    "class": "col40",
+                    "content": "<h1>Our energy, your passion</h1><p>We're a passionate digital agency that connects with you to create your digital vision in an intuitive way that delivers engaging results.</p>",
+                    "block": ""
+                }
+            ]
+        },
+        {
+            "__typename": "Faqs",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "pink",
+					"identifier": "FAQS",
+					"image": ""
+				}
+			],
+            "containerSize": "1000",
+            "items": [
+                {
+                    "question": "test",
+                    "answer": "<p>We're a passionate digital agency that connects with you to create your digital vision in an intuitive way that delivers engaging results.</p>"
+                },
+                {
+                    "question": "test 2",
+                    "answer": "<p>We're a passionate digital agency that connects with you to create your digital vision in an intuitive way that delivers engaging results 2.</p>"
                 }
             ]
         },

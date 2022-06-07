@@ -1,0 +1,67 @@
+@import "../../../src/scss/utils/variables";
+
+.faq {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &Question {
+        a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0; 
+                height: 0; 
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid $brand-color;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 0.3s ease;
+            }
+            
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+
+    &Answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-top: 20px;
+
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.bg_pink {
+
+   &.faqQuestion a:after {
+        border-top: 10px solid $white !important;
+    }
+}
+
+.faqOpen {
+    .faqAnswer {
+        max-height: 1000px;
+    }
+
+    .faqQuestion {
+        a {
+            &:after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}

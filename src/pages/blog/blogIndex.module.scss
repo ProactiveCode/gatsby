@@ -108,9 +108,12 @@
         }
 
         &:hover {
-
             h3 {
                 color: $sec-brand-color;
+
+                @media(min-width: $lg) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -159,7 +162,12 @@
 
                 h3 {
                     color: $sec-brand-color;
+
+                    @media(min-width: $lg) {
+                        font-size: 34px;
+                    }
                 }
+                
             }
         }
 

@@ -50,6 +50,10 @@
     margin-bottom: 40px;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 .mtb-40 {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -62,6 +66,10 @@
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
         color: $white;
     }
+
+    .faqQuestion a:after {
+        border-top: 10px solid $white !important;
+    }
 }
 
 .grey {
@@ -69,6 +77,10 @@
 
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
         color: $white;
+    }
+
+    .faqQuestion a:after {
+        border-top: 10px solid $white !important;
     }
 }
 
@@ -78,6 +90,10 @@
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
         color: $white;
     }
+
+    .faqQuestion a:after {
+        border-top: 10px solid $white !important;
+    }
 }
 
 .blue {
@@ -85,6 +101,10 @@
 
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
         color: $white;
+    }
+
+    .faqQuestion a:after {
+        border-top: 10px solid $white !important;
     }
 }
 
@@ -98,13 +118,17 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 40%;
+        height: 70%;
         z-index: 1;
         background-color: $grey;
     }
 
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
         color: $white;
+    }
+
+    .faqQuestion a:after {
+        border-top: 10px solid $white !important;
     }
 }
 
@@ -162,7 +186,7 @@
 
 .blogsvg,
 .contactsvg {
-    animation: default 4s forwards step-end 1s; 
+    animation: defaultanim 4s forwards step-end 1s; 
 }
 
 .blogsvgwhite,
@@ -172,7 +196,7 @@
 }
 
 .bcmainOn {
-    animation: default 4s forwards step-end; 
+    animation: defaultanim 4s forwards step-end; 
 }
 
 .bcmainwhiteOn {
@@ -180,15 +204,19 @@
 }
 
 .defaultflickerOn {
-    animation: default 2s forwards step-end; 
+    animation: defaultanim 2s forwards step-end; 
 }
 
 .defaultflickerwhiteOn {
     animation: defaultwhite 2s forwards step-end; 
 }
 
+.center {
+    text-align: center;
+}
+
 .seemoreOn {
-    animation: default 2s forwards step-end 4.5s; 
+    animation: defaultanim 2s forwards step-end 4.5s; 
 }
 
 .seemorewhiteOn {
@@ -212,9 +240,18 @@
     }
 }
 
+.fillwhite {
+    fill: $white;
+}
+
+.homelogosvg {
+    opacity: 0;
+    animation: defaultanim 4s forwards step-end; 
+}
+
 
 .phoneOn {
-    animation: default 2s forwards step-end 2.5s; 
+    animation: defaultanim 2s forwards step-end 2.5s; 
 }
 
 .phonewhiteOn {
@@ -263,29 +300,21 @@
     100%    { opacity: 1;fill: white; }
 }
 
-@keyframes default{
+@keyframes defaultanim{
     0%    { opacity: 1; }
-    6%    { opacity: 0.5; }
-    9%    { opacity: 1; }
-    14%    { opacity: 0.5; }
+    10%    { opacity: 0.5; }
     17%    { opacity: 1; }
     20%    { opacity: 0.5; }
     23%   { opacity: 1; }
     36%    { opacity: 0.5; }
     40%    { opacity: 1; }
-    89%   { opacity: 1; }
-    90%   { opacity: 0.5; }
     100%  { opacity: 1; }
   }
 
   @keyframes defaultwhite{
     0%    { opacity: 1;
     fill: white; }
-    6%    { opacity: 0.5;
-    fill: white; }
-    9%    { opacity: 1;
-    fill: white; }
-    14%    { opacity: 0.5;
+    10%    { opacity: 0.5;
     fill: white; }
     17%    { opacity: 1;
     fill: white; }
@@ -296,10 +325,6 @@
     36%    { opacity: 0.5;
     fill: white; }
     40%    { opacity: 1;
-    fill: white; }
-    89%   { opacity: 1;
-    fill: white; }
-    90%   { opacity: 0.5;
     fill: white; }
     100%  { opacity: 1;
     fill: white; }
@@ -404,4 +429,24 @@
         padding-top: 100px;
         padding-bottom: 100px;
     }
+}
+
+.header {
+    &.posAbs {
+        @media(min-height: 650px) and (min-width: $xlg) {
+            position: absolute;
+            bottom: 320px;
+            top: auto;
+        }
+
+        @media(min-height: 750px) and (min-width: $xlg) {
+            position: absolute;
+            bottom: 250px;
+            top: auto;
+        }
+    }
+}
+
+.rotatesvg {
+    transform: rotate(-5deg);
 }

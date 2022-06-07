@@ -8,7 +8,7 @@ import c from 'classnames'
 const Layout = ({ pageTitle, children }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
 	return (
-		<header className={c(Styles.header, "container")}>
+		<header className={c(Styles.header, "container", "header")}>
 			<div className={Styles.headerWrap}>
 				<div className={c(Styles.burger, {[Styles.burgerOpen]:burgerOpen})}>
 					<button className={Styles.burgerWrap}  onClick={() => {setBurgerOpen(!burgerOpen);}}>
@@ -42,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
 					</div>
 					<div className={Styles.getInTouch}>
 						<div className={"getInTouchWrap"}>
-							<Link to="/contact" className={'contact-link'}>Get In Touch</Link>
+							<Link to="/contact" className={'contact-link'}>Speak To Us</Link>
 						</div>
 					</div>
 					<div className={Styles.lowerLinks}>

@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 const Layout = ({ line, children, containerSize, align }) => {
 	return (
-		<footer className={Styles.footer}>
+		<footer className={c(Styles.footer, 'footer')}>
 			<div className={c("container", "container1200", Styles.footerWrap)}>
 				<div className={Styles.footerLogoSection}>
 					<div className={Styles.footerLogo}>
@@ -29,7 +29,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 				</div>
 				<div className={Styles.footerServices}>
 					<p>Services</p>
-					<Link to="/">Web Development</Link>
+					<Link to="/web-development">Web Development</Link>
 					<Link to="/">SEO</Link>
 					<Link to="/">Design</Link>
 					<Link to="/">Video Editing</Link>
@@ -37,10 +37,10 @@ const Layout = ({ line, children, containerSize, align }) => {
 				</div>
 				<div className={Styles.footerCase}>
 					<p>Case Studies</p>
-					<Link to="/">Great Green Systems</Link>
-					<Link to="/">Yorkshire Children’s Centre</Link>
-					<Link to="/">Powher</Link>
-					<Link to="/">Field Gibson Media</Link>
+					<Link to="/coming-soon">Great Green Systems</Link>
+					<Link to="/coming-soon">Yorkshire Children’s Centre</Link>
+					<Link to="/coming-soon">Powher</Link>
+					<Link to="/coming-soon">Field Gibson Media</Link>
 				</div>
 				<div className={Styles.footerWild}>
 					<div className={"footerWildInfo"}>

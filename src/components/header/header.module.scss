@@ -88,12 +88,12 @@
             @media(min-height: 650px) and (min-width: $xlg) {
                 right: -25px;
                 left: auto;
-                top: 50%;
+                top: -10px;
                 bottom: auto;
                 width: 1px;
-                height: calc(100% + 20px);
+                height: calc(100% + 150px);
                 display: block;
-                transform: translateY(-50%);
+                // transform: translateY(-50%);
             }
         }
     }
@@ -129,8 +129,8 @@
     .linkRight {
         position: absolute;
         top: -20px;
-        left: 0;
-        font-size: 11px;
+        left: -10px;
+        font-size: 13px;
         opacity: 0;
         transition: opacity 0.3s ease;
 
@@ -150,6 +150,7 @@
 
     .linkRight {
         width: 100%;
+        min-width: 100px;
         left: 45px;
         top: auto;
         bottom: 10px;
@@ -255,7 +256,7 @@
 
 .burgerOpen {
     .burgerRight {
-        transform: translateY(-18px);
+        transform: translateY(-14.8px);
     }
 
     .burgerLeft {

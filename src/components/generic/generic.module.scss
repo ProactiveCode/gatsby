@@ -34,3 +34,13 @@
         z-index: 2;
     }
 }
+
+ul, ol {
+    li {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
