@@ -23,7 +23,7 @@ const Page = ({ data }) => {
 	console.log(sections);
 	let playedBC = 0;
 	let playedPhone = 0;
-	var audio = new Audio('https://www.w3schools.com/html/horse.mp3');
+	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://www.w3schools.com/html/horse.mp3'));
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
