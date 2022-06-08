@@ -137,6 +137,8 @@ const Page = ({ data }) => {
   
 	  return () => window.removeEventListener("scroll", handleScroll);
 	}, [goingUp]);
+
+	const path = window.location.pathname;
 	
 	const LoadSection = ({ val }) => {
 		switch (val.__typename) {
@@ -172,7 +174,7 @@ const Page = ({ data }) => {
 				<meta name="keywords" content="keywords"></meta>
 			</Helmet>
 			<Header></Header>
-			{  window.location.pathname == "/" && <a href="javascript:void(0);" onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></a> }
+			{  path == "/" && <a href="javascript:void(0);" onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></a> }
 			{
 				sections.map((section, i) => (
 					<LoadSection val={section} key={i} />
