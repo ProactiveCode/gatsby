@@ -100,8 +100,8 @@
 
     .burgerWrap {
         position: relative;
-        width: 70px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     .burger {
@@ -114,22 +114,22 @@
     
     .burgerLeft, .burgerRight {
         position: absolute;
-        left: 0;
+        left: 4px;
         top: 0;
         width: 50%;
         transition: transform 0.3s ease;
     }
 
     .burgerRight {
-        right: 0.5px;
+        right: 4px;
         left: auto;
     }
 
     .linkLeft,
     .linkRight {
         position: absolute;
-        top: -20px;
-        left: -10px;
+        top: -10px;
+        left: -24px;
         font-size: 13px;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -137,7 +137,7 @@
         a {
             color: $white;
             text-decoration: none;
-            font-weight: 300;
+            font-weight: 500;
             display: block;
             transition: color 0.3s ease;
             pointer-events: none;
@@ -151,9 +151,9 @@
     .linkRight {
         width: 100%;
         min-width: 100px;
-        left: 45px;
+        left: 30px;
         top: auto;
-        bottom: 10px;
+        bottom: 20px;
         transform: translateY(100%);
     }
 
@@ -256,11 +256,11 @@
 
 .burgerOpen {
     .burgerRight {
-        transform: translateY(-14.8px);
+        transform: translateY(-8px);
     }
 
     .burgerLeft {
-        transform: translateY(17.5px);
+        transform: translateY(10.5px);
     }
 
     .linkLeft,

@@ -3,7 +3,7 @@
 .flipdownContainer {
     display: grid;
     column-gap: 2px;
-    row-gap: 2px;
+    row-gap: 1px;
     grid-template-columns: auto auto auto auto;
     background-color: $sec-brand-color;
     padding: 10px;

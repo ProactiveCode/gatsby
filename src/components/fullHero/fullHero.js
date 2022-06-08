@@ -12,28 +12,28 @@ const FullHero = ({ section }) => {
 				 */}
 				<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300">
 					<defs>
-					<filter id='glow' width='200%' height='200%' x='-50%' y='-50%' filterUnits='objectBoundingBox'> <feOffset in='SourceAlpha' result='shadowOffsetOuter1' /> <feGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='5' /> <feColorMatrix in='shadowBlurOuter1' result='shadowMatrixOuter1' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 1 0' /> <feOffset dy='1' in='SourceAlpha' result='shadowOffsetOuter2' /> <feGaussianBlur in='shadowOffsetOuter2' result='shadowBlurOuter2' stdDeviation='7' /> <feColorMatrix in='shadowBlurOuter2' result='shadowMatrixOuter2' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.9 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter3' /> <feGaussianBlur in='shadowOffsetOuter3' result='shadowBlurOuter3' stdDeviation='10' /> <feColorMatrix in='shadowBlurOuter3' result='shadowMatrixOuter3' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.8 0' /> <feOffset dx='2' dy='2' in='SourceAlpha' result='shadowOffsetOuter4' /> <feGaussianBlur in='shadowOffsetOuter4' result='shadowBlurOuter4' stdDeviation='1' /> <feColorMatrix in='shadowBlurOuter4' result='shadowMatrixOuter4' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.69678442 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter5' /> <feGaussianBlur in='shadowOffsetOuter5' result='shadowBlurOuter5' stdDeviation='8' /> <feColorMatrix in='shadowBlurOuter5' result='shadowMatrixOuter5' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.649371603 0' /> <feMerge> <feMergeNode in='shadowMatrixOuter1' /> <feMergeNode in='shadowMatrixOuter2' /> <feMergeNode in='shadowMatrixOuter3' /> <feMergeNode in='shadowMatrixOuter4' /> <feMergeNode in='shadowMatrixOuter5' /> </feMerge> </filter>
+					<filter id='glowHero' width='200%' height='200%' x='-50%' y='-50%' filterUnits='objectBoundingBox'> <feOffset in='SourceAlpha' result='shadowOffsetOuter1' /> <feGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='5' /> <feColorMatrix in='shadowBlurOuter1' result='shadowMatrixOuter1' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 1 0' /> <feOffset dy='1' in='SourceAlpha' result='shadowOffsetOuter2' /> <feGaussianBlur in='shadowOffsetOuter2' result='shadowBlurOuter2' stdDeviation='7' /> <feColorMatrix in='shadowBlurOuter2' result='shadowMatrixOuter2' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.9 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter3' /> <feGaussianBlur in='shadowOffsetOuter3' result='shadowBlurOuter3' stdDeviation='10' /> <feColorMatrix in='shadowBlurOuter3' result='shadowMatrixOuter3' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.8 0' /> <feOffset dx='2' dy='2' in='SourceAlpha' result='shadowOffsetOuter4' /> <feGaussianBlur in='shadowOffsetOuter4' result='shadowBlurOuter4' stdDeviation='1' /> <feColorMatrix in='shadowBlurOuter4' result='shadowMatrixOuter4' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.69678442 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter5' /> <feGaussianBlur in='shadowOffsetOuter5' result='shadowBlurOuter5' stdDeviation='8' /> <feColorMatrix in='shadowBlurOuter5' result='shadowMatrixOuter5' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.649371603 0' /> <feMerge> <feMergeNode in='shadowMatrixOuter1' /> <feMergeNode in='shadowMatrixOuter2' /></feMerge> </filter>
 					</defs>
 				<g>
 					<g>
 						<g>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)' d="M111.9,165L111.9,165l-0.7,0C111.4,165,111.6,165,111.9,165z"/>
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)' d="M111.9,165L111.9,165l-0.7,0C111.4,165,111.6,165,111.9,165z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M111.9,165L111.9,165l-0.7,0C111.4,165,111.6,165,111.9,165z"/>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)' d="M111.9,225.3v42.8H70.8c-28.8,0-53.2-17.5-64.1-42.8H111.9z"/>
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)' d="M111.9,225.3v42.8H70.8c-28.8,0-53.2-17.5-64.1-42.8H111.9z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M111.9,225.3v42.8H70.8c-28.8,0-53.2-17.5-64.1-42.8H111.9z"/>
-							<path  fill='#000' class='homelogosvg' filter='url(#glow)'d="M111.9,212.5H2.5c-1.3-5.5-2-11.3-2-17.3c0-6,0.7-11.7,2-17.3h109.4V212.5z"/>
+							<path  fill='#000' class='homelogosvg' filter='url(#glowHero)'d="M111.9,212.5H2.5c-1.3-5.5-2-11.3-2-17.3c0-6,0.7-11.7,2-17.3h109.4V212.5z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M111.9,212.5H2.5c-1.3-5.5-2-11.3-2-17.3c0-6,0.7-11.7,2-17.3h109.4V212.5z"/>
 						</g>
 						<g>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)'d="M175.3,61.9c-11-25.2-35.3-42.8-64.1-42.8H70.1v42.8H175.3z"/>
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)'d="M175.3,61.9c-11-25.2-35.3-42.8-64.1-42.8H70.1v42.8H175.3z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M175.3,61.9c-11-25.2-35.3-42.8-64.1-42.8H70.1v42.8H175.3z"/>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)' d="M175.3,122.2c-10.9,25.1-34.9,42.6-63.4,42.8c-0.2,0-0.4,0-0.7,0H6.7c10.9-25,34.9-42.6,63.4-42.8
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)' d="M175.3,122.2c-10.9,25.1-34.9,42.6-63.4,42.8c-0.2,0-0.4,0-0.7,0H6.7c10.9-25,34.9-42.6,63.4-42.8
 								c0.2,0,0.4,0,0.7,0H175.3z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M175.3,122.2c-10.9,25.1-34.9,42.6-63.4,42.8c-0.2,0-0.4,0-0.7,0H6.7c10.9-25,34.9-42.6,63.4-42.8
 								c0.2,0,0.4,0,0.7,0H175.3z"/>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)' d="M70.8,122.2c-0.2,0-0.5,0-0.7,0v0H70.8z"/>
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)' d="M70.8,122.2c-0.2,0-0.5,0-0.7,0v0H70.8z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M70.8,122.2c-0.2,0-0.5,0-0.7,0v0H70.8z"/>
-							<path fill='#000' class='homelogosvg' filter='url(#glow)' d="M70.1,109.3h109.4c1.3-5.5,2-11.3,2-17.3c0-6-0.7-11.7-2-17.3H70.1V109.3z"/>
+							<path fill='#000' class='homelogosvg' filter='url(#glowHero)' d="M70.1,109.3h109.4c1.3-5.5,2-11.3,2-17.3c0-6-0.7-11.7-2-17.3H70.1V109.3z"/>
 							<path fill='#1160A8' class='homelogosvgblue' d="M70.1,109.3h109.4c1.3-5.5,2-11.3,2-17.3c0-6-0.7-11.7-2-17.3H70.1V109.3z"/>
 						</g>
 					</g>

@@ -36,11 +36,18 @@
 }
 
 ul, ol {
+    margin-left: 20px;
+
     li {
         margin-bottom: 20px;
 
         &:last-of-type {
             margin-bottom: 0;
         }
+    }
+
+    ul {
+        margin-left: 10px;
+        margin-top: 15px;
     }
 }

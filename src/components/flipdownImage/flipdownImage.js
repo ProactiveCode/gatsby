@@ -10,24 +10,24 @@ const Layout = ({ section }) => {
 	const toggleFlipped = () => {
 		const elements = document.querySelectorAll(".flipdownItemSelector");
 		let timeout = 0;
-		var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+		var audio = new Audio('https://assets.ctfassets.net/74ncoczcn9dm/5L7gkZ5Ps2pPDPz81TEhuM/1332da0f440e404249d2757ee05ff1db/CardFlip_BW.48003.wav');
 
 		if(flipped == false) {
 			setFlipped(true);
 			Array.from(elements).forEach((element, index) => {
-				timeout+=50;
+				timeout+=100;
 				setTimeout(() => {
 					element.classList.add("flipdownItem-module--hovered--XuJQn");
-					audio.play();
+					audio.cloneNode(true).play();
 				}, timeout);
 			});
 		} else {
 			setFlipped(false);
 			Array.from(elements).forEach((element, index) => {
-				timeout+=50;
+				timeout+=100;
 				setTimeout(() => {
 					element.classList.remove("flipdownItem-module--hovered--XuJQn");
-					audio.play();
+					audio.cloneNode(true).play();
 				}, timeout);
 			});
 		}

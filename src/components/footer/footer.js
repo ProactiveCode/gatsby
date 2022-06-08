@@ -30,7 +30,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 				<div className={Styles.footerServices}>
 					<p>Services</p>
 					<Link to="/web-development">Web Development</Link>
-					<Link to="/">SEO</Link>
+					<Link to="/seo">SEO</Link>
 					<Link to="/">Design</Link>
 					<Link to="/">Video Editing</Link>
 					<Link to="/">Hosting</Link>

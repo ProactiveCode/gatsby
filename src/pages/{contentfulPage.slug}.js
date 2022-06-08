@@ -21,10 +21,35 @@ const Page = ({ data }) => {
 	const desc = data.contentfulPage.metaDescription;
 	const sections = pageData['sections'];
 	console.log(sections);
+	let playedBC = 0;
+	let playedPhone = 0;
+	var audio = new Audio('https://www.w3schools.com/html/horse.mp3');
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
 	console.log(data);
+	let volOn = 0;
+	const [volume, setVolume] = useState(false);
+	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
+	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
+
+	const toggleVolume = () => {
+		const vol = document.querySelectorAll(".homevolume")[0];
+
+		if(volOn == 0) {
+			// setVolume(true);
+			vol.src = on;
+			volOn = 1;
+		} else {
+			// setVolume(false);
+			vol.src = off;
+			volOn = 0;
+			console.log('pause');
+			console.log(audio);
+			audio.pause();
+			audio.currentTime = 0;
+		}
+	}
 
 	useEffect(() => {
 	  const handleScroll = () => {
@@ -74,6 +99,10 @@ const Page = ({ data }) => {
 					if (current === '/') {
 						if(sectionID === "Our Energy") {
 							setTimeout(() => {
+								if(playedBC === 0 && volOn === 1) {
+									audio.cloneNode(true).play();
+								}
+								playedBC = 1;
 								document.querySelectorAll('.bcmain').forEach(x=>x.classList.add('bcmainOn'));
 								document.querySelectorAll('.bcmainwhite').forEach(x=>x.classList.add('bcmainwhiteOn'));
 								document.querySelectorAll('.seemore').forEach(x=>x.classList.add('seemoreOn'));
@@ -83,6 +112,10 @@ const Page = ({ data }) => {
 
 						if(sectionID === "Let's talk") {
 							setTimeout(() => {
+								if(playedPhone === 0 && volOn === 1) {
+									audio.cloneNode(true).play();
+								}
+								playedPhone = 1;
 								document.querySelectorAll('.defaultflicker').forEach(x=>x.classList.add('defaultflickerOn'));
 								document.querySelectorAll('.defaultflickerwhite').forEach(x=>x.classList.add('defaultflickerwhiteOn'));
 								document.querySelectorAll('.phone').forEach(x=>x.classList.add('phoneOn'));
@@ -139,6 +172,7 @@ const Page = ({ data }) => {
 				<meta name="keywords" content="keywords"></meta>
 			</Helmet>
 			<Header></Header>
+			{  window.location.pathname == "/" && <a href="javascript:void(0);" onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></a> }
 			{
 				sections.map((section, i) => (
 					<LoadSection val={section} key={i} />
