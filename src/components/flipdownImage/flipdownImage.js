@@ -6,7 +6,7 @@ import { useState } from "react"
 const Layout = ({ section }) => {
 	const images = section.blockContent;
 	const [flipped, setFlipped] = useState(false);
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/5L7gkZ5Ps2pPDPz81TEhuM/1332da0f440e404249d2757ee05ff1db/CardFlip_BW.48003.wav'));
+	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/7N1qebAy0OYcr41PwuM0dX/f28a9f7fcab8e5dd68f3d0e34fa1a714/FLIP.wav'));
 
 	const toggleFlipped = () => {
 		const elements = document.querySelectorAll(".flipdownItemSelector");
