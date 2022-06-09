@@ -24,23 +24,23 @@ const Layout = ({ line, children, containerSize, align }) => {
 					</div>
 				</div>
 				<div className={Styles.footerPages}>
-					<Link to="/contact">Contact Us</Link>
-					<Link to="/blog">Blog</Link>
+					<a href="/contact">Contact Us</a>
+					<a href="/blog">Blog</a>
 				</div>
 				<div className={Styles.footerServices}>
 					<p>Services</p>
-					<Link to="/web-development">Web Development</Link>
-					<Link to="/seo">SEO</Link>
-					<Link to="/web-design">Design</Link>
-					<Link to="/">Video Editing</Link>
-					<Link to="/">Hosting</Link>
+					<a href="/web-development">Web Development</a>
+					<a href="/seo">SEO</a>
+					<a href="/web-design">Design</a>
+					<a href="/">Video Editing</a>
+					<a href="/">Hosting</a>
 				</div>
 				<div className={Styles.footerCase}>
 					<p>Case Studies</p>
-					<Link to="/coming-soon">Great Green Systems</Link>
-					<Link to="/coming-soon">Yorkshire Children’s Centre</Link>
-					<Link to="/coming-soon">Powher</Link>
-					<Link to="/coming-soon">Field Gibson Media</Link>
+					<a href="/coming-soon">Great Green Systems</a>
+					<a href="/coming-soon">Yorkshire Children’s Centre</a>
+					<a href="/coming-soon">Powher</a>
+					<a href="/coming-soon">Field Gibson Media</a>
 				</div>
 				<div className={Styles.footerWild}>
 					<div className={"footerWildInfo"}>

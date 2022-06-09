@@ -28,12 +28,12 @@ const Layout = ({ section }) => {
 				<div className={c(Styles.recentPosts, 'container', 'container1000')}>
 					<div className={c(Styles.recentPostsWrap)}>
 						{data.allContentfulBlogPost.nodes.map((node) => (
-							<Link className={Styles.articleWrap} to={`/blog/${node.slug}`}>
+							<a className={Styles.articleWrap} href={`/blog/${node.slug}`}>
 								<article key={node.id}>
 									<h3>{node.blogTitle}</h3>
 									<p>Read this</p>
 								</article>
-							</Link>
+							</a>
 						))}
 					</div>
 				</div>
