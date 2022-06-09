@@ -31,7 +31,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 					<p>Services</p>
 					<Link to="/web-development">Web Development</Link>
 					<Link to="/seo">SEO</Link>
-					<Link to="/">Design</Link>
+					<Link to="/web-design">Design</Link>
 					<Link to="/">Video Editing</Link>
 					<Link to="/">Hosting</Link>
 				</div>

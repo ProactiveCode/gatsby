@@ -3,7 +3,7 @@ import * as Styles from './flipdownImage.module.scss'
 import FlipdownItem from '../../components/flipdownItem/flipdownItem'
 import { useState } from "react"
 
-const Layout = ({ section }) => {
+const Layout = ({ section, vol }) => {
 	const images = section.blockContent;
 	const [flipped, setFlipped] = useState(false);
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/7N1qebAy0OYcr41PwuM0dX/f28a9f7fcab8e5dd68f3d0e34fa1a714/FLIP.wav'));
@@ -15,19 +15,28 @@ const Layout = ({ section }) => {
 		if(flipped == false) {
 			setFlipped(true);
 			Array.from(elements).forEach((element, index) => {
-				timeout+=100;
-				setTimeout(() => {
-					element.classList.add("flipdownItem-module--hovered--XuJQn");
-					audio.cloneNode(true).play();
-				}, timeout);
+				if(!element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
+					timeout+=100;
+				}
+					setTimeout(() => {
+						if(!element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
+							element.classList.add("flipdownItem-module--hovered--XuJQn");
+							audio.cloneNode(true).play();
+						}
+					}, timeout);
 			});
 		} else {
 			setFlipped(false);
 			Array.from(elements).forEach((element, index) => {
-				timeout+=100;
+				if(element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
+					timeout+=100;
+				}
 				setTimeout(() => {
-					element.classList.remove("flipdownItem-module--hovered--XuJQn");
-					audio.cloneNode(true).play();
+					if(element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
+						element.classList.remove("flipdownItem-module--hovered--XuJQn");
+						audio.cloneNode(true).play();
+						console.log('fasel has it');
+					}
 				}, timeout);
 			});
 		}
@@ -39,7 +48,7 @@ const Layout = ({ section }) => {
 			<div className={Styles.flipdownContainer}>
 				{
 					images.map((section, i) => (
-						<FlipdownItem val={section} key={i} />
+						<FlipdownItem val={section} key={i} vol={vol} flipped={flipped} />
 					))
 				}
 			</div>

@@ -33,5 +33,9 @@
 
     img {
         margin: 0 auto;
+
+        @media(min-width: $md) {
+            margin: 0;
+        }
     }
 }

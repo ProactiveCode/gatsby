@@ -2,7 +2,7 @@ body {
     color: $base-color;
     font-family: $base-font-family;
     @include font-size($base-font-size);
-    line-height: $base-line-height;
+    line-height: 1.4;
     -webkit-text-size-adjust: none;
     font-weight: 400;
     @media(min-width: $breakpoint-sm) {

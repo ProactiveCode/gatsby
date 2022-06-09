@@ -11,7 +11,7 @@ module.exports = {
   }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/maskable_icon.png"
+      "icon": "src/images/favicon.png"
     }
   }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
@@ -32,7 +32,7 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "src/images/maskable_icon.png",
+        icon: "src/images/favicon.png",
         icon_options: {
           // For all the options available,
           // please see the section "Additional Resources" below.

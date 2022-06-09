@@ -3,11 +3,11 @@ import * as Styles from './column.module.scss'
 import c from 'classnames'
 import Flipdown from '../../components/flipdownImage/flipdownImage'
 
-const Layout = ({ val }) => {
+const Layout = ({ val, vol }) => {
 	const LoadSection = ({ colBlock }) => {
 		switch (colBlock.block) {
 			case "FlipDown" :
-				return <Flipdown section={colBlock} />;
+				return <Flipdown section={colBlock} vol={vol} />;
 		  default:
 			return "foo";
 		}

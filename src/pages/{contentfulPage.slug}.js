@@ -23,7 +23,9 @@ const Page = ({ data }) => {
 	console.log(sections);
 	let playedBC = 0;
 	let playedPhone = 0;
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://www.w3schools.com/html/horse.mp3'));
+	let playedPop = 0;
+	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1GNZNa1wH3o5VXcrHJQUQJ/5540569e06293500d02e9a3f41057abd/neon.wav'));
+	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
@@ -37,15 +39,13 @@ const Page = ({ data }) => {
 		const vol = document.querySelectorAll(".homevolume")[0];
 
 		if(volOn == 0) {
-			// setVolume(true);
+			setVolume(true);
 			vol.src = on;
 			volOn = 1;
 		} else {
-			// setVolume(false);
+			setVolume(false);
 			vol.src = off;
 			volOn = 0;
-			console.log('pause');
-			console.log(audio);
 			audio.pause();
 			audio.currentTime = 0;
 		}
@@ -127,6 +127,20 @@ const Page = ({ data }) => {
 								document.querySelectorAll('.timed3').forEach(x=>x.classList.add('timed3On'));
 								document.querySelectorAll('.timed3white').forEach(x=>x.classList.add('timed3whiteOn'));
 							}, 1000);
+							setTimeout(() => {
+								document.querySelectorAll('.timed').forEach(x=>x.classList.remove('timedOn'));
+								document.querySelectorAll('.timedwhite').forEach(x=>x.classList.remove('timedwhiteOn'));
+								document.querySelectorAll('.timed2').forEach(x=>x.classList.remove('timed2On'));
+								document.querySelectorAll('.timed2white').forEach(x=>x.classList.remove('timed2whiteOn'));
+								document.querySelectorAll('.timed3').forEach(x=>x.classList.remove('timed3On'));
+								document.querySelectorAll('.timed3white').forEach(x=>x.classList.remove('timed3whiteOn'));
+								if(playedPop === 0 && volOn === 1) {
+									pop.cloneNode(true).play();
+								}
+								playedPop = 1;
+								document.querySelectorAll('.willbreak')[0].classList.add('hide');
+								document.querySelectorAll('.brokenPart')[0].classList.add('show');
+							}, 14500);
 						}
 					}
 				}
@@ -145,7 +159,7 @@ const Page = ({ data }) => {
 			case "FullHero" :
 				return <FullHero section={val} />;
 			case "MultiColumns" :
-				return <TwoCol section={val} />;
+				return <TwoCol section={val} vol={volume} />;
 			case "Generic" :
 				return <Generic section={val} />;
 			case "Videos" :
