@@ -32,15 +32,14 @@ const Layout = ({ line, children, containerSize, align }) => {
 					<a href="/web-development">Web Development</a>
 					<a href="/seo">SEO</a>
 					<a href="/web-design">Design</a>
-					<a href="/">Video Editing</a>
-					<a href="/">Hosting</a>
+					<a href="/web-hosting">Hosting</a>
 				</div>
 				<div className={Styles.footerCase}>
 					<p>Case Studies</p>
-					<a href="/coming-soon">Great Green Systems</a>
-					<a href="/coming-soon">Yorkshire Children’s Centre</a>
-					<a href="/coming-soon">Powher</a>
-					<a href="/coming-soon">Field Gibson Media</a>
+					<a href="/great-green-systems">Great Green Systems</a>
+					<a href="/yorkshire-childrens-centre">Yorkshire Children’s Centre</a>
+					<a href="/powher">Powher</a>
+					<a href="/field-gibson-media">Field Gibson Media</a>
 				</div>
 				<div className={Styles.footerWild}>
 					<div className={"footerWildInfo"}>

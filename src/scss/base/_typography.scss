@@ -140,3 +140,9 @@ h6 {
 strong {
     font-weight: bold;
 }
+
+p {
+    &.larger {
+        @include font-size(22);
+    }
+}

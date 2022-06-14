@@ -101,7 +101,11 @@
     .burgerWrap {
         position: relative;
         width: 40px;
-        height: 40px;
+        height: 31px;
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            height: 40px;
+        }
     }
 
     .burger {
@@ -148,17 +152,37 @@
         }
     }
 
+    .linkLeft {
+        display: none;
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            display: block;
+        }
+    }
+
+    .mobileLink {
+        display: block;
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            display: none !important;
+        }
+    }
+
     .linkRight {
         width: 100%;
         min-width: 100px;
         left: 30px;
         top: auto;
-        bottom: 20px;
+        bottom: 10px;
         transform: translateY(100%);
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            bottom: 20px;
+        }
     }
 
     .getInTouch {
-        margin-right: 50px;
+        // margin-right: 50px;
 
         @media(max-height: 650px) and (min-width: $xlg) {
             margin-right: 0;

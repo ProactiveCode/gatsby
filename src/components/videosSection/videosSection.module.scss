@@ -39,7 +39,7 @@
 
         .videoTextWrap {
             @media(min-width: $md) {
-                margin-top: -100px;
+                margin-top: -50px;
             }
         }
     }
@@ -55,6 +55,7 @@
 
 .videosWrap {
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -99,7 +100,7 @@
         aspect-ratio: 16/9;
         position: absolute;
         z-index: 2;
-        left: 6px;
+        left: 0px;
         top: 0;
         border-top-left-radius: 40px;
     }

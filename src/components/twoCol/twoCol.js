@@ -9,6 +9,9 @@ const Layout = ({ section, vol }) => {
 	return (
 		<section data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
+			{
+					(section.title) ?  <div className={c("container", "container" + section.containerSize)} dangerouslySetInnerHTML={{__html: section.title}}></div> : ''
+			}
 			<div className={c(Styles.twoCol, "container", "container" + section.containerSize, Styles[direction])}>
 				{
 					columns.map((section, i) => (

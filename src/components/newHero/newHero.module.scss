@@ -1,0 +1,80 @@
+@import "../../../src/scss/utils/variables";
+
+.newHeroWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    margin-top: 60px;
+
+    @media(min-width: $xlg) {
+        margin-top: 0;
+    }
+
+    .newHeroMob {
+        @media(min-width: $md) {
+            display: none;
+        }
+    }
+
+    .newHeroImage {
+        display: none;
+        
+        @media(min-width: $md) {
+            display: block;
+        }
+    }
+
+    .newHeroContent,
+    .newHeroImage {
+        width: 50%;
+    }
+
+    .newHeroContentDiv {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .newHeroContent {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 100px;
+
+        h1 {
+            width: 100%;
+            max-width: 400px;
+
+            font-size: 30px;
+            line-height: 1.3;
+
+            @media(min-width: $md) {
+                font-size: 45px;
+                line-height: 1;
+            }
+
+            @media(min-width: $lg) {
+                font-size: 75px;
+            }
+
+            span {
+                color: $sec-brand-color;
+                display: block;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 1.3;
+
+                @media(min-width: $md) {
+                    font-size: 30px;
+                    line-height: 1;
+                }
+
+                @media(min-width: $lg) {
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}

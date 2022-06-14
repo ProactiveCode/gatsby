@@ -76,6 +76,33 @@
             ]
         },
         {
+            "__typename": "Testimonials",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "Testimonials",
+					"image": ""
+				}
+			],
+            "containerSize": "1000",
+            "items": [
+                {
+                    "body": "<p><em>“With a cleaner layout, the products now have space to be really showcased. Using the landing page to have their top products as the main feature. With the website now looking more high end, it represents the quality of the products better. Improved an easier checkout and with automatic upselling of other products, the user does not miss any opportunity to see the full range.”</em></p>",
+                    "person": "Mark Halford",
+                    "position": "Director",
+                    "company": "Great Green Systems"
+                },
+                {
+                    "body": "<p><em>“With a cleaner layout, the products now have space to be really showcased. Using the landing page to have their top products as the main feature. With the website now looking more high end, it represents the quality of the products better. Improved an easier checkout and with automatic upselling of other products, the user does not miss any opportunity to see the full range.”</em></p>",
+                    "person": "Julie Halford",
+                    "position": "Director",
+                    "company": "Great Green Systems"
+                }
+                
+            ]
+        },
+        {
             "__typename": "Generic",
 			"sectionInfo": [
 				{

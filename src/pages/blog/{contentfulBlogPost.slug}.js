@@ -8,6 +8,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import * as Styles from './blogPost.module.scss'
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useState, useRef, useEffect } from "react"
 
 const BlogPost = ({data}) => {
 	const blog = data.contentfulBlogPost;
@@ -44,7 +45,30 @@ const BlogPost = ({data}) => {
 			    )
 			},
 		},
-	  }
+	}
+
+
+	const prevScrollY = useRef(0);
+	const [goingUp, setGoingUp] = useState(false);
+
+	useEffect(() => {
+	  const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			prevScrollY.current = currentScrollY;
+			const footer = document.querySelectorAll(".footer")[0];
+			const header = document.querySelectorAll(".header")[0];
+
+			if((currentScrollY + footer.getBoundingClientRect().top) <= (currentScrollY + (window.innerHeight - 72)) && ((currentScrollY + footer.getBoundingClientRect().top) + footer.offsetHeight) > currentScrollY) {
+				header.classList.add('posAbs');
+			} else {
+				header.classList.remove('posAbs');
+			}
+	  };
+  
+	  window.addEventListener("scroll", handleScroll, { passive: true });
+  
+	  return () => window.removeEventListener("scroll", handleScroll);
+	}, [goingUp]);
 
 	return (
 		<main className={c('grey')}>

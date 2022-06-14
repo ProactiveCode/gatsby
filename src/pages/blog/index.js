@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Link,graphql } from 'gatsby'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
@@ -88,13 +88,34 @@ const Blog = ({data}) => {
 		document.getElementById("blogArticles").scrollIntoView({behavior: "smooth"});
 	}
 
+	const prevScrollY = useRef(0);
+	const [goingUp, setGoingUp] = useState(false);
+
+	useEffect(() => {
+	  const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			prevScrollY.current = currentScrollY;
+			const footer = document.querySelectorAll(".footer")[0];
+			const header = document.querySelectorAll(".header")[0];
+
+			if((currentScrollY + footer.getBoundingClientRect().top) <= (currentScrollY + (window.innerHeight - 72)) && ((currentScrollY + footer.getBoundingClientRect().top) + footer.offsetHeight) > currentScrollY) {
+				header.classList.add('posAbs');
+			} else {
+				header.classList.remove('posAbs');
+			}
+	  };
+  
+	  window.addEventListener("scroll", handleScroll, { passive: true });
+  
+	  return () => window.removeEventListener("scroll", handleScroll);
+	}, [goingUp]);
+
     return (
      	<main>
          	<Helmet>
 				<title>Blog</title>
-				<meta name="title" content="title"></meta>
-				<meta name="description" content="desc"></meta>
-				<meta name="keywords" content="keywords"></meta>
+				<meta name="title" content="Blog | Digital Energy"></meta>
+				<meta name="description" content="Read our latest blog articles related to web development, web design and SEO services"></meta>
 			</Helmet>
 			<Header></Header>
 			<Section identifier="test" bgcolour="grey" smaller="sectionSmall">

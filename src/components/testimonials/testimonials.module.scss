@@ -1,0 +1,64 @@
+@import "../../../src/scss/utils/variables";
+
+.testimonialsText {
+    p {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.testimonialsTouch {
+    display: flex;
+    justify-content: center;
+
+    @media(min-width: $md) {
+        justify-content: flex-end;
+    }
+}
+
+.testimonialsItem {
+    margin-bottom: 40px;
+}
+
+.testimonialsLower {
+    padding-top: 5px;
+    margin-top: 10px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20%;
+        height: 2px;
+        background-color: $sec-brand-color;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 15px;
+        color: $sec-brand-color;
+    }
+
+    .testimonialsPerson {
+        p {
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+
+    .testimonialsPosition {
+        p {
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    .testimonialsCompany {
+        p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+}

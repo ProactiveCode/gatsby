@@ -11,6 +11,9 @@ import ContactForm from '../components/contact/contact'
 import VideosSection from '../components/videosSection/videosSection'
 import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
+import NewHero from '../components/newHero/newHero'
+import MainVideo from '../components/mainVideo/mainVideo'
+import Testimonials from '../components/testimonials/testimonials'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"
 
@@ -92,8 +95,12 @@ const Page = ({ data }) => {
 
 					if(element.classList.contains('pink')) {
 						document.getElementsByClassName('contact-link')[0].classList.add("contact-white");
+						document.getElementsByClassName('headerLinksRight')[0].classList.add("hover-blue");
+						document.getElementsByClassName('headerLinksLeft')[0].classList.add("hover-blue");
 					} else {
 						document.getElementsByClassName('contact-link')[0].classList.remove("contact-white");
+						document.getElementsByClassName('headerLinksRight')[0].classList.remove("hover-blue");
+						document.getElementsByClassName('headerLinksLeft')[0].classList.remove("hover-blue");
 					}
 
 					if (current === '/') {
@@ -172,6 +179,12 @@ const Page = ({ data }) => {
 				return <RecentPosts section={val} />;
 			case "Faqs" :
 				return <Faqs section={val} />;
+			case "NewHero" :
+				return <NewHero section={val} />;
+			case "MainVideo" :
+				return <MainVideo section={val} />;
+			case "Testimonials" :
+				return <Testimonials section={val} />;
 		  default:
 			return "Block not found.";
 		}

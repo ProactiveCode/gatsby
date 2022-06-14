@@ -19,6 +19,18 @@
         }
     }
 
+    &.col30 {
+        @media(min-width: $lg) {
+            width: calc(30% - 20px);
+        }
+    }
+
+    &.col70 {
+        @media(min-width: $lg) {
+            width: calc(70% - 20px);
+        }
+    }
+
     h1 {
         margin-bottom: 25px;
 
