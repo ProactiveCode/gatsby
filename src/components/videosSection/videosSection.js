@@ -33,10 +33,10 @@ const Layout = ({ line, children, containerSize, align }) => {
 				<div className={Styles.videos}>
 					<div className={c(Styles.videosInner, 'vidInner')}>
 						<div className={c(Styles.video, 'vid1')}>
-							<video style={{height: '99%'}} id="tv-room-video1" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} src="https://www.apple.com/105/media/ww/apple-tv-4k/2021/89f305cb-74db-49e6-9745-c7ead3659151/anim/music/large_2x.mp4"></video>
+							<video style={{height: '99%'}} id="tv-room-video1" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid2')}>
-							<video id="tv-room-video2" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://www.apple.com/105/media/uk/apple-tv-4k/2021/89f305cb-74db-49e6-9745-c7ead3659151/anim/fitness/large_2x.mp4"></video>
+							<video id="tv-room-video2" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid3')}>
 							<video id="tv-room-video3" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
@@ -83,7 +83,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/77588a6b-7e3e-47cd-ac58-9b8b6db59855/anim/sizzle/large_2x.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/89f305cb-74db-49e6-9745-c7ead3659151/anim/arcade/large_2x.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
 						</div>
 					</div>
 				</div>
