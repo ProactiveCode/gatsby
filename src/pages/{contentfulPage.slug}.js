@@ -39,7 +39,7 @@ const Page = ({ data }) => {
 	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
 	let arrayAdded = [];
 	let hasGend = 0;
-	const page = window.location.pathname;
+
 	setTimeout(() => {
 		if(data.contentfulPage.slug === "index") {
 			const indi = document.getElementsByClassName('indicator')[0];
