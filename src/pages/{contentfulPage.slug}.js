@@ -41,7 +41,7 @@ const Page = ({ data }) => {
 	let hasGend = 0;
 	const page = window.location.pathname;
 	setTimeout(() => {
-		if(page === '/') {
+		if(data.contentfulPage.slug === "index") {
 			const indi = document.getElementsByClassName('indicator')[0];
 			const loadElements = document.querySelectorAll(".section");
 			let count = 0;
