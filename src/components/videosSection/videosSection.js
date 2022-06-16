@@ -57,7 +57,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/great-green-systems" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/5s7tsRQKjN3BMEcqq4knVy/8b354102a44ca60eeb119cabd7ed4bb5/ggs-vid-poster.jpg" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/4Rbmgs0Az1jhNCjM8t6d8V/20bdf483c2edd6e5d3de35e7598900f8/ggs-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/7eKDuxys29Oow5HdlnM2XZ/b1b0641f1e7e47d7a2f9a0ee7c5ff3fd/ycc-vid-poster.jpg" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -83,7 +83,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/5hgcwRqB10a5lqMWS7E0sG/28ed64fef3bf60e66e8c8da19108561c/vid-poster.png" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/77588a6b-7e3e-47cd-ac58-9b8b6db59855/anim/sizzle/large_2x.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/77588a6b-7e3e-47cd-ac58-9b8b6db59855/anim/sizzle/large_2x.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/5hgcwRqB10a5lqMWS7E0sG/28ed64fef3bf60e66e8c8da19108561c/vid-poster.png" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/89f305cb-74db-49e6-9745-c7ead3659151/anim/arcade/large_2x.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://www.apple.com/105/media/us/apple-tv-4k/2021/89f305cb-74db-49e6-9745-c7ead3659151/anim/arcade/large_2x.mp4"></video>
 						</div>
 					</div>
 				</div>

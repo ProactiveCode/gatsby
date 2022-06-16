@@ -47,7 +47,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 						<a href="https://www.makeitwild.co.uk/" target="_blank" rel="noopener noreferrer">Make It Wild</a>
 					</div>
 					<div className={Styles.footerWildLogo}>
-						<img src="https://images.ctfassets.net/74ncoczcn9dm/5LwEAUBTfyz1w7ZTFMktXS/0323e372479842cef89974aaa1426652/carbon-offset-logo.png?h=250" alt="Digital Energy logo" />
+						<img src="https://images.ctfassets.net/74ncoczcn9dm/5qySBi5kXgcAdmyfmNyDNl/337858da9182d36f8f41f57460ca29db/carbon-offset-logo-smaller.webp" alt="Make it wild logo" />
 					</div>
 				</div>
 			</div>
