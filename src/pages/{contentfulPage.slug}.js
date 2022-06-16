@@ -19,11 +19,11 @@ import { useState, useRef, useEffect } from "react"
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
-	console.log(data);
+	// console.log(data);
 	const title = data.contentfulPage.metaTitle;
 	const desc = data.contentfulPage.metaDescription;
 	const sections = pageData['sections'];
-	console.log(sections);
+	// console.log(sections);
 	let playedBC = 0;
 	let playedPhone = 0;
 	let playedPop = 0;
@@ -32,11 +32,36 @@ const Page = ({ data }) => {
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
-	console.log(data);
+	// console.log(data);
 	let volOn = 0;
 	const [volume, setVolume] = useState(false);
 	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
 	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
+	let arrayAdded = [];
+	let hasGend = 0;
+	const page = window.location.pathname;
+	setTimeout(() => {
+		if(page === '/') {
+			const indi = document.getElementsByClassName('indicator')[0];
+			const loadElements = document.querySelectorAll(".section");
+			let count = 0;
+			indi.innerHTML = '';
+			Array.from(loadElements).forEach((element, index) => {
+				var sectionID = element.dataset.id;
+				var safeSection = sectionID.replace(/\s+/g, '-').replace("'", '').toLowerCase();
+				if(!arrayAdded.includes(sectionID)) {
+					arrayAdded.push(sectionID);
+					if(count === 0) {
+						indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass is-active"><div class="scrollIndiInner"></div></a>';
+					} else {
+						indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass"><div class="scrollIndiInner"></div></a>';
+					}
+				}
+				count++;
+			});
+		}
+	}, 1);
+
 
 	const toggleVolume = () => {
 		const vol = document.querySelectorAll(".homevolume")[0];
@@ -87,9 +112,13 @@ const Page = ({ data }) => {
 				if((currentScrollY + element.getBoundingClientRect().top) <= (currentScrollY + (window.innerHeight - offset)) && ((currentScrollY + element.getBoundingClientRect().top) + element.offsetHeight) > currentScrollY) {
 					var locator = document.getElementsByClassName('page-locator')[0].textContent;
 					var sectionID = element.dataset.id;
+					var safeSection = 'indicator-' + sectionID.replace(/\s+/g, '-').replace("'", '').toLowerCase();
 					if (current === '/') {
 						if(locator !== sectionID) {
 							document.getElementsByClassName('page-locator')[0].textContent = sectionID;
+							document.querySelectorAll('.indiclass').forEach(x=>x.classList.remove("is-active"));
+							document.getElementById(safeSection).classList.add("is-active");
+							// console.log(safeSection);
 						}
 					}
 
@@ -97,10 +126,12 @@ const Page = ({ data }) => {
 						document.getElementsByClassName('contact-link')[0].classList.add("contact-white");
 						document.getElementsByClassName('headerLinksRight')[0].classList.add("hover-blue");
 						document.getElementsByClassName('headerLinksLeft')[0].classList.add("hover-blue");
+						document.getElementsByClassName('indicator')[0].classList.add("change-active");
 					} else {
 						document.getElementsByClassName('contact-link')[0].classList.remove("contact-white");
 						document.getElementsByClassName('headerLinksRight')[0].classList.remove("hover-blue");
 						document.getElementsByClassName('headerLinksLeft')[0].classList.remove("hover-blue");
+						document.getElementsByClassName('indicator')[0].classList.remove("change-active");
 					}
 
 					if (current === '/') {

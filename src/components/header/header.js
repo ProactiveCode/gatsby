@@ -74,6 +74,9 @@ const Layout = ({ pageTitle, children }) => {
 						<div className={"lowerLinksWrap"}>
 							<div className={Styles.lowerRotate}>
 								<p className="page-locator">Because We Care</p>
+								<div className={c(Styles.scrollInd, 'indicator')}>
+
+								</div>
 							</div>
 						</div>
 					</div>

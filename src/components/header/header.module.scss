@@ -50,6 +50,9 @@
     }
 
     .innerHeaderWrap {
+        position: relative;
+        z-index: 5;
+
         @media(max-height: 650px) and (min-width: $xlg) {
             width: 70%;
         }
@@ -102,6 +105,7 @@
         position: relative;
         width: 40px;
         height: 31px;
+        z-index: 5;
 
         @media(min-height: 650px) and (min-width: $xlg) {
             height: 40px;
@@ -134,9 +138,13 @@
         position: absolute;
         top: -10px;
         left: -24px;
-        font-size: 13px;
+        font-size: 16px;
         opacity: 0;
         transition: opacity 0.3s ease;
+
+        @media(min-height: 650px) and (min-width: $xlg) {
+            font-size: 13px;
+        }
 
         a {
             color: $white;
@@ -145,6 +153,12 @@
             display: block;
             transition: color 0.3s ease;
             pointer-events: none;
+            padding-top: 2.5px;
+            padding-bottom: 2.5px;
+
+            @media(min-height: 650px) and (min-width: $xlg) {
+                padding: 0;
+            }
 
             &:hover {
                 color: $sec-brand-color;
@@ -175,9 +189,26 @@
         top: auto;
         bottom: 10px;
         transform: translateY(100%);
+        padding-bottom: 5px;
 
         @media(min-height: 650px) and (min-width: $xlg) {
             bottom: 20px;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 200vw;
+            height: 100%;
+            background: $grey;
+            z-index: -1;
+            position: absolute;
+            left: -50%;
+            top: 0;
+
+            @media(min-height: 650px) and (min-width: $xlg) {
+                display: none;
+            }
         }
     }
 
@@ -280,6 +311,8 @@
                 margin-top: 0;
                 text-align: right;
                 white-space: nowrap;
+                position: relative;
+                text-align: center;
             }
         }
     }
@@ -302,5 +335,20 @@
         a {
             pointer-events: all;
         }
+    }
+}
+
+.scrollInd {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    display: none;
+    width: calc(100% - 20px);
+
+    @media(min-height: 650px) and (min-width: $xlg) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
 }

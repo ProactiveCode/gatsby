@@ -4,6 +4,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import c from 'classnames'
 
 const Layout = ({ section }) => {
+	const safeID = section.sectionInfo[0].identifier.replace(/\s+/g, '-').replace("'", '').toLowerCase();
 	return (
 		<StaticQuery
 		query={graphql`
@@ -24,7 +25,7 @@ const Layout = ({ section }) => {
 		  	}
 		`}
 		render={data => (
-			<section data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
+			<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 				<div className={c(Styles.recentPosts, 'container', 'container1000')}>
 					<div className={c(Styles.recentPostsWrap)}>
 						{data.allContentfulBlogPost.nodes.map((node) => (

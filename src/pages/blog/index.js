@@ -129,13 +129,13 @@ const Blog = ({data}) => {
 					<h2 className="small">Must Read</h2>
 					<div className={Styles.blogFeatured}>
 						<div className={Styles.blogAuthor}>
-							<img src="https://via.placeholder.com/300" alt="Author" />
-							<p className={Styles.authorName}>Adam</p>
-							<p className={Styles.authorPos}>The Developer</p>
+							<img src="https://images.ctfassets.net/74ncoczcn9dm/3MpqXb7cuAkPWNrgMVR7DU/1ddd0699725eee3616bbbacdedc7994a/Adam-Profile.png" alt="Author" />
+							<p className={Styles.authorName}>Dan</p>
+							<p className={Styles.authorPos}>Director</p>
 						</div>
 						<div className={Styles.blogInfo}>
-							<Link to={'/blog/'}><h3>Blog title</h3></Link>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dicta quasi animi iusto pariatur aliquam facere cumque enim voluptatum at fuga ipsum incidunt magnam dolores.</p>
+							<Link to={'/blog/'}><h3>How an empowered team can take the sting out of your business…</h3></Link>
+							<p>I was stung by a wasp this week. That triggered a severe infection, which got me thinking. What would happen…</p>
 						</div>
 					</div>
 					<div className={Styles.blogFilters}>

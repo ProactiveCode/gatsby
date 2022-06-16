@@ -573,3 +573,32 @@ ul, ol {
         }
     }
 }
+
+.scrollIndiInner {
+    width: 2px;
+    height: 10px;
+    background-color: $white;
+    transition: all 0.3s ease;
+}
+
+.indiclass.is-active {
+    div {
+        height: 17px;
+        background-color: $sec-brand-color;
+    }
+}
+
+.indiclass {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.indicator.change-active .indiclass.is-active {
+    div {
+        background-color: $brand-color;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

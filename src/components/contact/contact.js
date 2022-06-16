@@ -3,8 +3,9 @@ import * as Styles from './contact.module.scss'
 import c from 'classnames'
 
 const Layout = ({ section }) => {
+	const safeID = section.sectionInfo[0].identifier.replace(/\s+/g, '-').replace("'", '').toLowerCase();
 	return (
-		<section data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
+		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c('container', 'container' + section.size, section.extra_global_class, Styles[section.extra_block_class])}>
 				<form action='https://getform.io/f/48b34680-adf7-402f-bc50-f0719a1f300e' method='POST'>
