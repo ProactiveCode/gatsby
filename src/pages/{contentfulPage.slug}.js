@@ -41,24 +41,26 @@ const Page = ({ data }) => {
 	let hasGend = 0;
 
 	setTimeout(() => {
-		if(data.contentfulPage.slug === "index") {
-			const indi = document.getElementsByClassName('indicator')[0];
-			const loadElements = document.querySelectorAll(".section");
-			let count = 0;
-			indi.innerHTML = '';
-			Array.from(loadElements).forEach((element, index) => {
-				var sectionID = element.dataset.id;
-				var safeSection = sectionID.replace(/\s+/g, '-').replace("'", '').toLowerCase();
-				if(!arrayAdded.includes(sectionID)) {
-					arrayAdded.push(sectionID);
-					if(count === 0) {
-						indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass is-active"><div class="scrollIndiInner"></div></a>';
-					} else {
-						indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass"><div class="scrollIndiInner"></div></a>';
+		if (typeof window !== 'undefined') {
+			if(data.contentfulPage.slug === "index") {
+				const indi = document.getElementsByClassName('indicator')[0];
+				const loadElements = document.querySelectorAll(".section");
+				let count = 0;
+				indi.innerHTML = '';
+				Array.from(loadElements).forEach((element, index) => {
+					var sectionID = element.dataset.id;
+					var safeSection = sectionID.replace(/\s+/g, '-').replace("'", '').toLowerCase();
+					if(!arrayAdded.includes(sectionID)) {
+						arrayAdded.push(sectionID);
+						if(count === 0) {
+							indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass is-active"><div class="scrollIndiInner"></div></a>';
+						} else {
+							indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass"><div class="scrollIndiInner"></div></a>';
+						}
 					}
-				}
-				count++;
-			});
+					count++;
+				});
+			}
 		}
 	}, 1);
 
