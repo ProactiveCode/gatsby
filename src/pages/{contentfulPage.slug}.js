@@ -53,9 +53,9 @@ const Page = ({ data }) => {
 					if(!arrayAdded.includes(sectionID)) {
 						arrayAdded.push(sectionID);
 						if(count === 0) {
-							indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass is-active"><div class="scrollIndiInner"></div></a>';
+							indi.innerHTML += '<a href="/#' + safeSection +'" aria-label="Home page ' + sectionID + ' section" id="indicator-' + safeSection +'" class="indiclass is-active"><div class="scrollIndiInner"></div></a>';
 						} else {
-							indi.innerHTML += '<a href="/#' + safeSection +'" id="indicator-' + safeSection +'" class="indiclass"><div class="scrollIndiInner"></div></a>';
+							indi.innerHTML += '<a href="/#' + safeSection +'" aria-label="Home page ' + sectionID + ' section" id="indicator-' + safeSection +'" class="indiclass"><div class="scrollIndiInner"></div></a>';
 						}
 					}
 					count++;
@@ -225,7 +225,7 @@ const Page = ({ data }) => {
 
   return (
 		<main>
-			<Helmet>
+			<Helmet htmlAttributes={{lang: 'en'}}>
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>
