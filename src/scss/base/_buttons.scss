@@ -48,7 +48,7 @@
     }
 
     &--to-white {
-        color: $white;
+        color: $white !important;
         background: $btn-bg;
 
         &:hover {
@@ -58,7 +58,7 @@
     }
 
     &--alt-white {
-        color: $white;
+        color: #000;
         background: $sec-brand-color;
 
         &:hover {
