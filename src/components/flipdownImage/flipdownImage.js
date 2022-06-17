@@ -52,7 +52,7 @@ const Layout = ({ section, vol }) => {
 					))
 				}
 			</div>
-			<a href="javascript:void(0);" className={Styles.flipper} onClick={toggleFlipped}><img src='https://images.ctfassets.net/74ncoczcn9dm/4WKVCeapsdjl6kinh9LbwI/f5ad779d24d00f229e0b5a25badfc3a0/eye.svg' alt="Click to flip image"></img></a>
+			<button className={Styles.flipper} onClick={toggleFlipped}><img src='https://images.ctfassets.net/74ncoczcn9dm/4WKVCeapsdjl6kinh9LbwI/f5ad779d24d00f229e0b5a25badfc3a0/eye.svg' alt="Click to flip image"></img></button>
 		</div>
 	)
 }

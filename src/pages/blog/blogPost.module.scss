@@ -2,6 +2,8 @@
 
 .blogContent {
     padding-top: 50px;
+    margin-bottom: 40px;
+    
     ul,ol {
         margin-left: 20px;
     }
@@ -11,6 +13,43 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.backToBlog {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+
+    a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+        color: $white;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/2ZyBwL1MNPupUK61S36LmH/a57a28160fe580e7eb6685587bd87b36/left-arrow.svg');
+        background-position: center;
+        background-size: 15px;
+        background-repeat: no-repeat;
+        transition: left 0.3s ease;
+    }
+
+    &:hover {
+        a {
+            color: $sec-brand-color;
+        }
+
+        &:before {
+            left: -5px;
+        }
+    }
 }
 
 .blogContentText {

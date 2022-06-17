@@ -114,6 +114,9 @@ const BlogPost = ({data}) => {
 							</div>
 						</div>
 					</div>
+					<div className={Styles.backToBlog}>
+						<a href="/blog">Back to blog</a>
+					</div>
 				</div>
 			<Footer></Footer>
 		</main>

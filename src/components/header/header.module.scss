@@ -12,7 +12,7 @@
     pointer-events: none;
     width: 100%;
 
-    @media(min-height: 650px) and (min-width: $xlg) {
+    @media(min-height: 650px) and (min-width: 1300px) {
         // width: 100%;
     }
 
@@ -30,7 +30,7 @@
         background-color: $grey;
         padding: 10px;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             flex-direction: column;
             height: 100%;
             justify-content: center;
@@ -53,7 +53,7 @@
         position: relative;
         z-index: 5;
 
-        @media(max-height: 650px) and (min-width: $xlg) {
+        @media(max-height: 650px) and (min-width: 1300px) {
             width: 70%;
         }
 
@@ -61,11 +61,11 @@
             width: calc(70% - 100px);
         }
 
-        @media(max-height: 650px) and (min-width: $xlg) {
+        @media(max-height: 650px) and (min-width: 1300px) {
             width: calc(50% - 100px);
         }
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             flex-direction: column;
             width: auto;
             justify-content: center;
@@ -88,10 +88,10 @@
             background-color: $white;
             display: none;
 
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 right: -25px;
                 left: auto;
-                top: -10px;
+                top: -15px;
                 bottom: auto;
                 width: 1px;
                 height: calc(100% + 150px);
@@ -103,11 +103,11 @@
 
     .burgerWrap {
         position: relative;
-        width: 40px;
+        width: 35px;
         height: 31px;
         z-index: 5;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             height: 40px;
         }
     }
@@ -115,36 +115,32 @@
     .burger {
         position: relative;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             margin-bottom: 10vh;
         }
     }
     
     .burgerLeft, .burgerRight {
         position: absolute;
-        left: 4px;
+        left: 0px;
         top: 0;
         width: 50%;
         transition: transform 0.3s ease;
     }
 
     .burgerRight {
-        right: 4px;
+        right: 0px;
         left: auto;
     }
 
     .linkLeft,
     .linkRight {
         position: absolute;
-        top: -10px;
-        left: -24px;
+        top: -15px;
+        left: -34px;
         font-size: 16px;
         opacity: 0;
         transition: opacity 0.3s ease;
-
-        @media(min-height: 650px) and (min-width: $xlg) {
-            font-size: 13px;
-        }
 
         a {
             color: $white;
@@ -156,7 +152,7 @@
             padding-top: 2.5px;
             padding-bottom: 2.5px;
 
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 padding: 0;
             }
 
@@ -169,7 +165,7 @@
     .linkLeft {
         display: none;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             display: block;
         }
     }
@@ -177,7 +173,7 @@
     .mobileLink {
         display: block;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             display: none !important;
         }
     }
@@ -191,8 +187,8 @@
         transform: translateY(100%);
         padding-bottom: 5px;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
-            bottom: 20px;
+        @media(min-height: 650px) and (min-width: 1300px) {
+            bottom: 15px;
             padding-bottom: 0;
         }
 
@@ -206,7 +202,7 @@
             left: -50%;
             top: 0;
 
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 display: none;
             }
         }
@@ -215,11 +211,11 @@
     .getInTouch {
         // margin-right: 50px;
 
-        @media(max-height: 650px) and (min-width: $xlg) {
+        @media(max-height: 650px) and (min-width: 1300px) {
             margin-right: 0;
         }
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             display: table;
             height: 150px;
             margin-right: 0;
@@ -237,7 +233,7 @@
                 color: $white;
             }
 
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 transform-origin: bottom right;
                 transform: rotate(-90deg) translate(-50%);
                 margin-top: -50%;
@@ -248,7 +244,7 @@
 
     .getInTouchWrap,
     .lowerLinksWrap {
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             // height: 0;
         }
     }
@@ -256,11 +252,11 @@
     .socials {
         display: none;
 
-        @media(max-height: 650px) and (min-width: $xlg) {
+        @media(max-height: 650px) and (min-width: 1300px) {
             display: flex;
         }
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             display: block;
         }
 
@@ -268,7 +264,7 @@
             margin-right: 10px;
             display: block;
 
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 margin-bottom: 20px;
                 margin-right: 0;
             }
@@ -291,7 +287,7 @@
     .lowerLinks {
         display: none;
 
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media(min-height: 650px) and (min-width: 1300px) {
             display: block;
             min-width: 160px;
         }
@@ -305,7 +301,7 @@
         }
 
         .lowerRotate {
-            @media(min-height: 650px) and (min-width: $xlg) {
+            @media(min-height: 650px) and (min-width: 1300px) {
                 transform-origin: bottom right;
                 transform: rotate(-90deg);
                 margin-top: 0;
@@ -321,7 +317,7 @@
 
 .burgerOpen {
     .burgerRight {
-        transform: translateY(-8px);
+        transform: translateY(-10.5px);
     }
 
     .burgerLeft {
@@ -346,7 +342,7 @@
     display: none;
     width: calc(100% - 20px);
 
-    @media(min-height: 650px) and (min-width: $xlg) {
+    @media(min-height: 650px) and (min-width: 1300px) {
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;

@@ -64,7 +64,7 @@
     background-color: $sec-brand-color !important;
 
     h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
-        color: $white;
+        color: #000;
     }
 
     .faqQuestion a:after {
@@ -164,6 +164,10 @@
 
 .breakanim {
     position: relative;
+}
+
+a.no-td {
+    text-decoration: none !important;
 }
 
 .brokenPart {
