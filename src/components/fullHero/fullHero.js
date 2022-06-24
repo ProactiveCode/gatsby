@@ -3,10 +3,11 @@ import * as Styles from './fullHero.module.scss'
 import c from 'classnames'
 
 const FullHero = ({ section }) => {
-	const getCookieValue = (name) => (
-		document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
-	)
-	  
+	function getCookieValue(name) {
+		if (typeof window !== 'undefined') {
+			return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+		}
+	}
 	let checker = 0;
 
 	if(getCookieValue('homeVidPlayed')) {

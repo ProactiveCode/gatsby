@@ -47,9 +47,12 @@ const Page = ({ data }) => {
 		document.cookie = name + "=" + (value || "") + expires + "; path=/";
 	}
 
-	const getCookieValue = (name) => (
-		document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
-	)
+	function getCookieValue(name) {
+		if (typeof window !== 'undefined') {
+			return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+		}
+	}
+		
 
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
