@@ -19,11 +19,9 @@ import { useState, useRef, useEffect } from "react"
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
-	// console.log(data);
 	const title = data.contentfulPage.metaTitle;
 	const desc = data.contentfulPage.metaDescription;
 	const sections = pageData['sections'];
-	// console.log(sections);
 	let playedBC = 0;
 	let playedPhone = 0;
 	let playedPop = 0;
@@ -32,13 +30,26 @@ const Page = ({ data }) => {
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
-	// console.log(data);
 	let volOn = 0;
 	const [volume, setVolume] = useState(false);
 	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
 	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
 	let arrayAdded = [];
 	let hasGend = 0;
+
+	function setCookie(name, value, days) {
+		var expires = "";
+		if (days) {
+		  var date = new Date();
+		  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		  expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "") + expires + "; path=/";
+	}
+
+	const getCookieValue = (name) => (
+		document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+	)
 
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
@@ -60,6 +71,13 @@ const Page = ({ data }) => {
 					}
 					count++;
 				});
+
+				if(!getCookieValue('homeVidPlayed')) {
+					setTimeout(() => {
+						document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
+						setCookie('homeVidPlayed',1, 30);
+					}, 37000);
+				}
 			}
 		}
 	}, 1);
@@ -81,15 +99,20 @@ const Page = ({ data }) => {
 		}
 	}
 
+	let videoHide = 0;
+	let menuOpened = 0;
+
 	useEffect(() => {
 	  const handleScroll = () => {
 		const current = window.location.pathname;
 		let offset = 200;
 		let up = false;
-			const currentScrollY = window.scrollY;
+		const currentScrollY = window.scrollY;
+
 			if (prevScrollY.current < currentScrollY && goingUp) {
 				up = false;
 			}
+
 			if (prevScrollY.current > currentScrollY && !goingUp) {
 				up = true;
 			}
@@ -98,6 +121,18 @@ const Page = ({ data }) => {
 				offset = 400;
 			} else {
 				offset = 200;
+
+				if(videoHide === 0 && currentScrollY > 100 && !getCookieValue('homeVidPlayed')) {
+					videoHide = 1;
+					document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
+					setCookie('homeVidPlayed',1, 30);
+				}
+
+				if(menuOpened === 0 && currentScrollY > 100 && current === '/' && window.innerWidth > 1299) {
+					menuOpened = 1;
+					document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.add('header-module--burgerOpen--PxR-V');
+					document.getElementsByClassName('header-module--burger--ZYCyO')[0].classList.add('header-module--burgerOpen--PxR-V');
+				}
 			}
 			prevScrollY.current = currentScrollY;
 			const footer = document.querySelectorAll(".footer")[0];
@@ -120,7 +155,6 @@ const Page = ({ data }) => {
 							document.getElementsByClassName('page-locator')[0].textContent = sectionID;
 							document.querySelectorAll('.indiclass').forEach(x=>x.classList.remove("is-active"));
 							document.getElementById(safeSection).classList.add("is-active");
-							// console.log(safeSection);
 						}
 					}
 
@@ -223,8 +257,16 @@ const Page = ({ data }) => {
 		}
 	};
 
+	let currentPageClass = 'noneHome';
+
+	if (typeof window !== 'undefined') {
+		if(data.contentfulPage.slug === "index") {
+			currentPageClass = 'home';
+		}
+	}
+
   return (
-		<main>
+		<main className={currentPageClass}>
 			<Helmet htmlAttributes={{lang: 'en'}}>
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>

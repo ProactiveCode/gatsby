@@ -543,7 +543,7 @@ ul, ol {
     z-index: 1000000;
     filter: drop-shadow(0px 0px 2px $sec-brand-color);
 
-    @media(min-height: 650px) and (min-width: $xlg) {
+    @media(min-height: 650px) and (min-width: 1300px) {
         top: 10px;
         bottom: auto;
     }
@@ -611,4 +611,27 @@ ul, ol {
 
 html {
     scroll-behavior: smooth;
+}
+
+.home {
+    .hideOnHome {
+        display: none;
+    }
+}
+
+.noneHome {
+    .hideOnHome {
+        display: block;
+    }
+}
+
+.header-module--burgerOpen--PxR-V {
+    .hideOnHome {
+        opacity: 0;
+    }
+}
+
+.homeHeroVid.videoDone {
+    opacity: 0 !important;
+    pointer-events: none !important;
 }

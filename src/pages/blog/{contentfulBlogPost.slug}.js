@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+import RandomPosts from '../../components/randomPosts/randomPosts'
 import { Helmet } from "react-helmet"
 import c from 'classnames'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
@@ -12,7 +13,6 @@ import { useState, useRef, useEffect } from "react"
 
 const BlogPost = ({data}) => {
 	const blog = data.contentfulBlogPost;
-	console.log(data);
 	const richText = blog.Blogcontent;
 	const title = data.contentfulBlogPost.metaTitle;
 	const desc = data.contentfulBlogPost.metaDescription;
@@ -90,26 +90,26 @@ const BlogPost = ({data}) => {
 							{blog.Blogcontent ? <div>{renderRichText(richText, options)}</div> : ''}
 						</div>
 						<div className={Styles.blogContentMeta}>
+							{blog.author ? 		
+								<div className={Styles.blogContentAuthor}>
+									<img src={blog.author.authorImage ? blog.author.authorImage.url : "https://via.placeholder.com/300"} alt="Author" />
+									<p><strong>{blog.author.name}</strong></p>
+									<p><em>{blog.author.position}</em></p>
+								</div> : ''
+							}
+							<div className={Styles.blogDate}>
+								<p>{blog.createdAt}</p>
+							</div>
+							{blog.categories ? <div className={Styles.blogCats}> 	
+								{ 
+									blog.categories.map((category) => 
+									( <p>{category.name}</p> )) 
+								} 
+							</div> : ''}
 							<div className={Styles.blogContentMetaInner}>
-								{blog.author ? 		
-									<div className={Styles.blogContentAuthor}>
-										<img src={blog.author.authorImage ? blog.author.authorImage.url : "https://via.placeholder.com/300"} alt="Author" />
-										<p><strong>{blog.author.name}</strong></p>
-										<p><em>{blog.author.position}</em></p>
-									</div> : ''
-								}
-								<div className={Styles.blogDate}>
-									<p>{blog.createdAt}</p>
-								</div>
-								{blog.categories ? <div className={Styles.blogCats}> 	
-									{ 
-										blog.categories.map((category) => 
-										( <p>{category.name}</p> )) 
-									} 
-								</div> : ''}
 								<div className={Styles.blogRelated}>
 									<h5>You might be interested</h5>
-
+									<RandomPosts></RandomPosts>
 								</div>
 							</div>
 						</div>

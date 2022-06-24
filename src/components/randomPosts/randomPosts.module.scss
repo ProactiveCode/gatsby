@@ -1,0 +1,47 @@
+@import "../../../src/scss/utils/variables";
+
+
+.randomPostsWrap {
+
+    .articleWrap {
+        width: 100%;
+        text-decoration: none;
+
+        article {
+            text-decoration: none;
+            margin-bottom: 20px;
+
+            h3 {
+                color: $white;
+                transition: all 0.3s ease;
+                margin-bottom: 10px;
+                font-size:18px;
+
+                @media(min-width: $md) {
+                    font-size:18px;
+                }
+            
+                @media(min-width: $lg) {
+                    font-size:18px;
+                }
+            }
+
+            &:hover {
+
+                h3 {
+                    color: $sec-brand-color;
+                }
+            }
+
+            p {
+                position: relative;
+                color: $sec-brand-color;
+                font-weight: 200;
+                font-size: 16px;
+                font-style: italic;
+                text-decoration: underline;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -7,27 +7,43 @@ import c from 'classnames'
 
 const Layout = ({ pageTitle, children }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
+
+	const toggleHover = (elem) => {
+		if(document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.contains('header-module--burgerOpen--PxR-V')) {
+			document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.remove('header-module--burgerOpen--PxR-V');
+			document.getElementsByClassName('header-module--burger--ZYCyO')[0].classList.remove('header-module--burgerOpen--PxR-V');
+			setBurgerOpen(false);
+		} else {
+			document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.add('header-module--burgerOpen--PxR-V');
+			document.getElementsByClassName('header-module--burger--ZYCyO')[0].classList.add('header-module--burgerOpen--PxR-V');
+			setBurgerOpen(true);
+		}
+	}
+
 	return (
 		<header className={c(Styles.header, "container", "header")}>
 			<div className={Styles.headerWrap}>
-				<div className={c(Styles.burger, {[Styles.burgerOpen]:burgerOpen})}>
-					<button className={Styles.burgerWrap}  onClick={() => {setBurgerOpen(!burgerOpen);}}>
-						<div className={Styles.burgerLeft}>
-							<StaticImage width={50} alt="Menu left side" src="../../images/burger-left.webp" />
+				<div className={c(Styles.burgerOuterWrap, {[Styles.burgerOpen]:burgerOpen})}>
+					<div className={c(Styles.burger, {[Styles.burgerOpen]:burgerOpen})}>
+						<button className={Styles.burgerWrap} onClick={toggleHover}>
+							<div className={Styles.burgerLeft}>
+								<StaticImage width={50} alt="Menu left side" src="../../images/burger-left.webp" />
+							</div>
+							<div className={Styles.burgerRight}>
+								<StaticImage width={50} alt="Menu right side" src="../../images/burger-right.webp" />
+							</div>
+						</button>
+						<div className={c(Styles.link, Styles.linkLeft, 'headerLinksLeft')}>
+							<a href="/">Home</a>
 						</div>
-						<div className={Styles.burgerRight}>
-							<StaticImage width={50} alt="Menu right side" src="../../images/burger-right.webp" />
+						<div className={c(Styles.link, Styles.linkRight, 'headerLinksRight')}>
+							<a href="/" className={Styles.mobileLink}>Home</a>
+							<a href="/#caseStudies">Case Studies</a>
+							<a href="/blog">Blog</a>
+							<a href="/contact">Speak To Us</a>
 						</div>
-					</button>
-					<div className={c(Styles.link, Styles.linkLeft, 'headerLinksLeft')}>
-						<a href="/">Home</a>
 					</div>
-					<div className={c(Styles.link, Styles.linkRight, 'headerLinksRight')}>
-						<a href="/" className={Styles.mobileLink}>Home</a>
-						<a href="/#caseStudies">Case Studies</a>
-						<a href="/blog">Blog</a>
-						<a href="/contact">Speak To Us</a>
-					</div>
+					<a href="/" className={c(Styles.normalLink, 'hideOnHome')}>Home</a>
 				</div>
 				<div className={Styles.innerHeaderWrap}>
 					<div className={Styles.socials}>
