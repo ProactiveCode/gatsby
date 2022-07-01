@@ -83,7 +83,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/powher" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/110BtJBYyKA2NYdJqfVY1x/4dea683cd33f82565fdb5bc526bbcaca/powher-case-study-480.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3LKFWYUVq2AzS51Lhaya9q/bea889bb91ab5005b73ee461d0c678f3/powher-case-study-480.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/zhBptyr7ObvEoUX7NBLyN/0fc5e3d1765100c3d99d5d40e170f9e2/fgm-case-study-480.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/2M2RgqdX9i3H4QUMWERH2G/0bd7839f2164273bd3fad23e2265d736/fgm-case-study-480.mp4"></video>
 						</div>
 					</div>
 				</div>
