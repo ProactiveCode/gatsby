@@ -33,10 +33,10 @@ const Layout = ({ line, children, containerSize, align }) => {
 				<div className={Styles.videos}>
 					<div className={c(Styles.videosInner, 'vidInner')}>
 						<div className={c(Styles.video, 'vid1')}>
-							<video style={{height: '99%'}} id="tv-room-video1" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
+							<video style={{height: '99%'}} id="tv-room-video1" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} src="https://videos.ctfassets.net/74ncoczcn9dm/zhBptyr7ObvEoUX7NBLyN/0fc5e3d1765100c3d99d5d40e170f9e2/fgm-case-study-480.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid2')}>
-							<video id="tv-room-video2" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
+							<video id="tv-room-video2" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/110BtJBYyKA2NYdJqfVY1x/4dea683cd33f82565fdb5bc526bbcaca/powher-case-study-480.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid3')}>
 							<video id="tv-room-video3" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
@@ -47,7 +47,7 @@ const Layout = ({ line, children, containerSize, align }) => {
 					</div>
 				</div>
 			</div>
-			<div className={Styles.videosTexts}>
+			<div>
 				<div className={c(Styles.videoText, Styles.videoText1)}>
 					<div className={c('container', 'container800' )}>
 						<div className={Styles.videoTextWrap}>
@@ -67,23 +67,23 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<h3>Yorkshire Childrens Centre</h3>
 							<h4>On-line brand growth</h4>
 							<p>Creating opportunities for young people to have a better life. Creating a new website to harness their vision.</p>
-							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
+							<CButton link="/yorkshire-childrens-centre" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
 							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
 						</div>
 					</div>
 				</div>
-				<div className={c(Styles.videoText, Styles.grey)}>
+				<div className={c(Styles.videoText)}>
 					<div className={c('container', 'container800' )}>
 						<div className={Styles.videoTextWrap}>
 							<h3>Ultimate Life Stores</h3>
 							<h4>Multi-national e-commerce</h4>
 							<p>Providing women with health supplements designed for performance around the world.</p>
-							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
+							<CButton link="/powher" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/110BtJBYyKA2NYdJqfVY1x/4dea683cd33f82565fdb5bc526bbcaca/powher-case-study-480.mp4"></video>
 						</div>
 					</div>
 				</div>
@@ -93,10 +93,10 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<h3>Field Gibson Media</h3>
 							<h4>Video animation</h4>
 							<p>Giving the Finance industry engaging content and events. It's not all about the numbers.</p>
-							<CButton link="/coming-soon" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
+							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
+							<video preload="none" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/zhBptyr7ObvEoUX7NBLyN/0fc5e3d1765100c3d99d5d40e170f9e2/fgm-case-study-480.mp4"></video>
 						</div>
 					</div>
 				</div>

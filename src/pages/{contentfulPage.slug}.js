@@ -104,6 +104,7 @@ const Page = ({ data }) => {
 
 	let videoHide = 0;
 	let menuOpened = 0;
+	let menuClosed = 0;
 
 	useEffect(() => {
 	  const handleScroll = () => {
@@ -122,6 +123,13 @@ const Page = ({ data }) => {
 
 			if(up) {
 				offset = 400;
+
+				if(menuClosed === 0 && currentScrollY < 100 && current === '/' && window.innerWidth > 1299) {
+					menuClosed = 1;
+					document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.remove('header-module--burgerOpen--PxR-V');
+					document.getElementsByClassName('header-module--burger--ZYCyO')[0].classList.remove('header-module--burgerOpen--PxR-V');
+				}
+
 			} else {
 				offset = 200;
 

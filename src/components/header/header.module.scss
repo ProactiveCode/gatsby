@@ -122,10 +122,10 @@
     
     .burgerLeft, .burgerRight {
         position: absolute;
-        left: 0px;
+        left: 0.1px;
         top: 0;
         width: 50%;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-out;
     }
 
     .burgerRight {

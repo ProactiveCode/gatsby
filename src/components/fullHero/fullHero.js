@@ -1,8 +1,29 @@
 import * as React from 'react'
 import * as Styles from './fullHero.module.scss'
 import c from 'classnames'
+import { useState } from "react"
 
 const FullHero = ({ section }) => {
+	const [modal, setModal] = useState(false);
+	// const toggleModal = () => setModal(!modal);
+
+	const toggleModal = (elem) => {		
+		if (typeof window !== 'undefined') {
+			var vid = document.getElementById("deModalVid");
+			var modal = document.getElementsByClassName('videoModal')[0];
+
+			if(modal.classList.contains('is-open')) {
+				modal.classList.remove("is-open");
+				vid.pause();
+				setModal(false);
+			} else {
+				modal.classList.add("is-open");
+				setModal(true);
+				vid.play();
+			}
+		}
+	}
+
 	function getCookieValue(name) {
 		if (typeof window !== 'undefined') {
 			return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
@@ -20,11 +41,23 @@ const FullHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
 				{
-					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video loading="lazy" poster='https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp' src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
+					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
 				}
+				{
+					(checker === 1) ?  <div className={c(Styles.fullHeroReply, 'homeHeroReplay')}><button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button></div> : ''
+				}
+				<div className={c(Styles.deModal, 'videoModal', {['is-open']:modal})} style={{opacity: 0, zIndex: -1}}>
+					<div className={c(Styles.deModal__bg)} onClick={toggleModal}></div>
+					<div className={c(Styles.deModal__wrapper)}>
+						<div className={c(Styles.deModal__inner)}>
+							<div className={c(Styles.deModal__close)} onClick={toggleModal}></div>
+							<video id="deModalVid" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" controls={true}></video>
+						</div>
+					</div>
+				</div>
 				<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300">
 					<defs>
-					<filter id='glowHero' width='200%' height='200%' x='-50%' y='-50%' filterUnits='objectBoundingBox'> <feOffset in='SourceAlpha' result='shadowOffsetOuter1' /> <feGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='5' /> <feColorMatrix in='shadowBlurOuter1' result='shadowMatrixOuter1' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 1 0' /> <feOffset dy='1' in='SourceAlpha' result='shadowOffsetOuter2' /> <feGaussianBlur in='shadowOffsetOuter2' result='shadowBlurOuter2' stdDeviation='7' /> <feColorMatrix in='shadowBlurOuter2' result='shadowMatrixOuter2' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.9 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter3' /> <feGaussianBlur in='shadowOffsetOuter3' result='shadowBlurOuter3' stdDeviation='10' /> <feColorMatrix in='shadowBlurOuter3' result='shadowMatrixOuter3' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.8 0' /> <feOffset dx='2' dy='2' in='SourceAlpha' result='shadowOffsetOuter4' /> <feGaussianBlur in='shadowOffsetOuter4' result='shadowBlurOuter4' stdDeviation='1' /> <feColorMatrix in='shadowBlurOuter4' result='shadowMatrixOuter4' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.69678442 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter5' /> <feGaussianBlur in='shadowOffsetOuter5' result='shadowBlurOuter5' stdDeviation='8' /> <feColorMatrix in='shadowBlurOuter5' result='shadowMatrixOuter5' values='0 0 0 0 0.77 0 0 0 0 0.00 0 0 0 0 0.97 0 0 0 0.649371603 0' /> <feMerge> <feMergeNode in='shadowMatrixOuter1' /> <feMergeNode in='shadowMatrixOuter2' /></feMerge> </filter>
+					<filter id='glowHero' width='200%' height='200%' x='-50%' y='-50%' filterUnits='objectBoundingBox'> <feOffset in='SourceAlpha' result='shadowOffsetOuter1' /> <feGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='9' /> <feColorMatrix in='shadowBlurOuter1' result='shadowMatrixOuter1' values='0 0 0 0 0.77 0 0 0 0 0.20 0 0 0 0 0.97 0 0 0 1 0' /> <feOffset dy='1' in='SourceAlpha' result='shadowOffsetOuter2' /> <feGaussianBlur in='shadowOffsetOuter2' result='shadowBlurOuter2' stdDeviation='11' /> <feColorMatrix in='shadowBlurOuter2' result='shadowMatrixOuter2' values='0 0 0 0 0.77 0 0 0 0 0.20 0 0 0 0 0.97 0 0 0 0.9 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter3' /> <feGaussianBlur in='shadowOffsetOuter3' result='shadowBlurOuter3' stdDeviation='14' /> <feColorMatrix in='shadowBlurOuter3' result='shadowMatrixOuter3' values='0 0 0 0 0.77 0 0 0 0 0.20 0 0 0 0 0.97 0 0 0 0.8 0' /> <feOffset dx='2' dy='2' in='SourceAlpha' result='shadowOffsetOuter4' /> <feGaussianBlur in='shadowOffsetOuter4' result='shadowBlurOuter4' stdDeviation='5' /> <feColorMatrix in='shadowBlurOuter4' result='shadowMatrixOuter4' values='0 0 0 0 0.77 0 0 0 0 0.20 0 0 0 0 0.97 0 0 0 0.69678442 0' /> <feOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter5' /> <feGaussianBlur in='shadowOffsetOuter5' result='shadowBlurOuter5' stdDeviation='12' /> <feColorMatrix in='shadowBlurOuter5' result='shadowMatrixOuter5' values='0 0 0 0 0.77 0 0 0 0 0.20 0 0 0 0 0.97 0 0 0 0.649371603 0' /> <feMerge> <feMergeNode in='shadowMatrixOuter1' /> <feMergeNode in='shadowMatrixOuter2' /></feMerge> </filter>
 					</defs>
 				<g>
 					<g>

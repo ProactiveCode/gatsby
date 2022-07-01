@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as Styles from './randomPosts.module.scss'
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import c from 'classnames'
 
 const Layout = ({ section }) => {
@@ -22,7 +22,7 @@ const Layout = ({ section }) => {
 		`}
 		render={data => (
 			<section>
-				<div className={c(Styles.randomPosts)}>
+				<div>
 					<div className={c(Styles.randomPostsWrap)}>
 						{data.allContentfulBlogPost.nodes.map((node) => (
 							<a className={Styles.articleWrap} href={`/blog/${node.slug}`}>

@@ -1,52 +1,22 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { Helmet } from "react-helmet"
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+    <main className={'four04'}>
+      <Helmet htmlAttributes={{lang: 'en'}}>
+				<title>Page not found</title>
+				<meta name="title" content='Page not found | Digital Energy'></meta>
+				<meta name="description" content="Sorry page could not be found | Digital Energy"></meta>
+			</Helmet>
+      <div className="four04Main">
+        <img src="https://images.ctfassets.net/74ncoczcn9dm/147KDh3wE2SYfpqLq8yBSW/d819bc5eb9a05c4e5e7f661cfe04664d/digital-energy-logo-final.svg" alt="Digital Energy Logo"></img>
+        <h1>Page not found</h1>
+        <p>Sorry! we couldn’t find what you were looking for.</p>
+        <Link to="/" className="btn">Go home</Link>
+      </div>
     </main>
   )
 }

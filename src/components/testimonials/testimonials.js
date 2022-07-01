@@ -8,7 +8,7 @@ const Layout = ({ section }) => {
 	return (
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c('section', section.sectionInfo[0].bgColor, 'section_' + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url('${section.sectionInfo[0].image}')`} : {}}>
-			<div className={c(Styles.testimonials, 'container', 'container' + section.containerSize)}>
+			<div className={c('container', 'container' + section.containerSize)}>
 				<h2 className='mb-40'>{section.title ? section.title : 'FAQs'}</h2>
 				{
 					testimonials.map((section, i) => (

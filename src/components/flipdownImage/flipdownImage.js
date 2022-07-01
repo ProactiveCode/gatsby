@@ -35,7 +35,6 @@ const Layout = ({ section, vol }) => {
 					if(element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
 						element.classList.remove("flipdownItem-module--hovered--XuJQn");
 						audio.cloneNode(true).play();
-						console.log('fasel has it');
 					}
 				}, timeout);
 			});

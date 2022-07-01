@@ -7,7 +7,7 @@ const newHero = ({ section }) => {
   	return (
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
-			<div className={c(Styles.newHero)}>
+			<div>
 				<div className={c(Styles.newHeroWrap, '')}>
 					<div className={Styles.newHeroMob}>
 						<img src={section.mobileImage} alt={section.contentMobileImageAlt} loading="lazy"></img>

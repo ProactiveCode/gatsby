@@ -52,7 +52,7 @@
         background: $btn-bg;
 
         &:hover {
-            color: $brand-color;
+            color: $brand-color !important;
             background-color: $white;
         }
     }
@@ -64,6 +64,35 @@
         &:hover {
             color: $brand-color;
             background-color: $white;
+        }
+    }
+
+    &--replay {
+        padding: 7px 11px 10px 32px;
+        @include font-size(14);
+        background-color: #000;
+        color: $white;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 8px;
+            top: 6px;
+            width: 20px;
+            height: 20px;
+            background-image: url('https://images.ctfassets.net/74ncoczcn9dm/3e16EToSJjm1dcMCWqm7Dn/769f3584536f408ca63761dbac411136/352446_replay_icon.svg');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(0);
+            transition: all 0.5s ease;
+        }
+
+        &:hover {
+            &:before {
+                transform: rotate(-360deg);
+            }
         }
     }
 }
