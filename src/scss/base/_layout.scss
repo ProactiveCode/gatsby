@@ -63,6 +63,18 @@
     margin-top: 20px;
 }
 
+
+.homeHeroReplay {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+
+    @media(min-width: 1300px) {
+        left: auto;
+        right: 10px;
+    }
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
 }
