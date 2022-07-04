@@ -334,7 +334,10 @@ a.no-td {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-top: -50px;
+
+    @media(min-width: $md) {
+        margin-top: -50px;
+    }
 
     a {
         width: 100%;
@@ -465,6 +468,26 @@ a.no-td {
     @media(min-width: $md) {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    @media(min-width: $lg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media(min-width: $xlg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.sectionSmallBot,
+.section_small_bot {
+    padding-bottom: 0px;
+    
+    @media(min-width: $md) {
+        padding-top: 50px;
+        padding-bottom: 20px;
     }
 
     @media(min-width: $lg) {

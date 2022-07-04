@@ -27,6 +27,7 @@ const Page = ({ data }) => {
 	let playedPop = 0;
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1GNZNa1wH3o5VXcrHJQUQJ/5540569e06293500d02e9a3f41057abd/neon.wav'));
 	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
+	
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);

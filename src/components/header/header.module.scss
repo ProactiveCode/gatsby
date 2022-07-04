@@ -28,7 +28,7 @@
         width: 100%;
         pointer-events: all;
         background-color: $grey;
-        padding: 10px;
+        padding: 10px 20px;
 
         @media(min-height: 650px) and (min-width: 1300px) {
             flex-direction: column;

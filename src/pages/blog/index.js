@@ -177,8 +177,8 @@ const Blog = ({data}) => {
 									<Link to={`/blog/${node.slug}`}><h3>{node.blogTitle}</h3></Link>
 									<p>{node.excerpt.excerpt}</p>
 									<div className={Styles.articleInfo}>
-										{node.author ? <p><strong>{node.author.name}</strong></p> : ''}
-										{node.author ? <p><em>{node.author.position}</em></p> : ''}
+										{/* {node.author ? <p><strong>{node.author.name}</strong></p> : ''}
+										{node.author ? <p><em>{node.author.position}</em></p> : ''} */}
 										{node.createdAt ? <p><strong>{node.createdAt}</strong></p> : ''}
 										{node.categories ? <div className={Styles.articleCats}> 	
 											{ 
