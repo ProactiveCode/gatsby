@@ -1,12 +1,13 @@
 import * as React from 'react'
 import * as Styles from './flipdownImage.module.scss'
 import FlipdownItem from '../../components/flipdownItem/flipdownItem'
+import Flip from '../../images/flip.wav'
 import { useState } from "react"
 
 const Layout = ({ section, vol }) => {
 	const images = section.blockContent;
 	const [flipped, setFlipped] = useState(false);
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/7N1qebAy0OYcr41PwuM0dX/f28a9f7fcab8e5dd68f3d0e34fa1a714/FLIP.wav'));
+	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
 
 	const toggleFlipped = () => {
 		const elements = document.querySelectorAll(".flipdownItemSelector");
