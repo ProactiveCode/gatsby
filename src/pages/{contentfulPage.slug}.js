@@ -29,7 +29,7 @@ const Page = ({ data }) => {
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
 	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
 
-	const soundEffect = new Audio();
+	const soundEffect = document.createElement('audio');
 	soundEffect.autoplay = true;
 
 	// onClick of first interaction on page before I need the sounds
