@@ -41,7 +41,7 @@ const FullHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
 				{
-					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
+					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
 				}
 				{
 					(checker === 1) ?  <div className={c(Styles.fullHeroReply, 'homeHeroReplay')}><button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button></div> : ''

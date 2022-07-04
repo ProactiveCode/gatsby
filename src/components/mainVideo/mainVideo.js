@@ -9,7 +9,7 @@ const newHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.videoWrap)}>
 				<div className={c('container', 'container1000')}>
-					<video preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} controls={true} src={section.videoLink}></video>
+					<video playsInline="true" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true} controls={true} src={section.videoLink}></video>
 				</div>
 			</div>
 		</section>
