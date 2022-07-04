@@ -28,6 +28,13 @@ const Page = ({ data }) => {
 	let playedPop = 0;
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
 	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
+
+	const soundEffect = new Audio();
+	soundEffect.autoplay = true;
+
+	// onClick of first interaction on page before I need the sounds
+	// (This is a tiny MP3 file that is silent and extremely short - retrieved from https://bigsoundbank.com and then modified)
+	soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
 	
 
 	const prevScrollY = useRef(0);
@@ -187,7 +194,10 @@ const Page = ({ data }) => {
 						if(sectionID === "Our Energy") {
 							setTimeout(() => {
 								if(playedBC === 0 && volOn === 1) {
-									audio.cloneNode(true).play();
+									// audio.cloneNode(true).play();
+									soundEffect.src = Neon;
+									soundEffect.cloneNode(true).play();
+									
 								}
 								playedBC = 1;
 								document.querySelectorAll('.bcmain').forEach(x=>x.classList.add('bcmainOn'));
@@ -200,7 +210,9 @@ const Page = ({ data }) => {
 						if(sectionID === "Let's talk") {
 							setTimeout(() => {
 								if(playedPhone === 0 && volOn === 1) {
-									audio.cloneNode(true).play();
+									// audio.cloneNode(true).play();
+									soundEffect.src = Neon;
+									soundEffect.cloneNode(true).play();
 								}
 								playedPhone = 1;
 								document.querySelectorAll('.defaultflicker').forEach(x=>x.classList.add('defaultflickerOn'));
