@@ -3,15 +3,23 @@ import * as Styles from './flipdownItem.module.scss'
 import { useState } from "react"
 import Flip from '../../images/flip.wav'
 import c from 'classnames'
+import {Howl} from 'howler';
 
 
 const Layout = ({ val, vol, flipped }) => {
 	const [hovered, setHovered] = useState(false);
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
 
+	const card = new Howl({
+		src: [Flip],
+		volume: 0.2,
+		preload: true
+	});
+
 	const toggleHover = (elem) => {
 		if(vol == true) {
-			audio.cloneNode(true).play();
+			// audio.cloneNode(true).play();
+			card.play();
 		}
 		
 		if(elem.target.closest('.flipdownItemSelector').classList.contains('flipdownItem-module--hovered--XuJQn')) {

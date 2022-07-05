@@ -13,11 +13,13 @@ import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
 import MainVideo from '../components/mainVideo/mainVideo'
+import StructuredData from '../components/structuredData/structuredData'
 import Testimonials from '../components/testimonials/testimonials'
 import Neon from '../images/neon.wav'
+import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"
-import {Howl, Howler} from 'howler';
+import {Howl} from 'howler';
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
@@ -27,14 +29,20 @@ const Page = ({ data }) => {
 	let playedBC = 0;
 	let playedPhone = 0;
 	let playedPop = 0;
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
-	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
+	// const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
+	// const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
 
 	const clip = new Howl({
 		src: [Neon],
-		volume: 0.5,
+		volume: 1,
 		preload: true
-	})
+	});
+
+	const bulbpop = new Howl({
+		src: [Bulb],
+		volume: 1,
+		preload: true
+	});
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
@@ -105,8 +113,6 @@ const Page = ({ data }) => {
 			setVolume(false);
 			vol.src = off;
 			volOn = 0;
-			audio.pause();
-			audio.currentTime = 0;
 		}
 	}
 
@@ -207,7 +213,8 @@ const Page = ({ data }) => {
 						if(sectionID === "Let's talk") {
 							setTimeout(() => {
 								if(playedPhone === 0 && volOn === 1) {
-									audio.cloneNode(true).play();
+									// audio.cloneNode(true).play();
+									clip.play();
 								}
 								playedPhone = 1;
 								document.querySelectorAll('.defaultflicker').forEach(x=>x.classList.add('defaultflickerOn'));
@@ -229,7 +236,8 @@ const Page = ({ data }) => {
 								document.querySelectorAll('.timed3').forEach(x=>x.classList.remove('timed3On'));
 								document.querySelectorAll('.timed3white').forEach(x=>x.classList.remove('timed3whiteOn'));
 								if(playedPop === 0 && volOn === 1) {
-									pop.cloneNode(true).play();
+									// pop.cloneNode(true).play();
+									bulbpop.play();
 								}
 								playedPop = 1;
 								document.querySelectorAll('.willbreak')[0].classList.add('hide');
@@ -292,6 +300,69 @@ const Page = ({ data }) => {
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>
 				<meta name="keywords" content="keywords"></meta>
+				<script type="application/ld+json">
+					{JSON.stringify({ "@context": "http://www.schema.org",
+						"@type": "ProfessionalService",
+						"name": "Digital Energy Agency",
+						"url": "https://digitalenergy.agency",
+						"sameAs": [
+							"https://www.facebook.com/digitalenagency/",
+							"https://www.instagram.com/digitalenergyagency/",
+							"https://twitter.com/DigitalEnAgency",
+							"https://morley-leeds.cylex-uk.co.uk/company/digital-energy-27728222.html",
+							"https://www.acompio.co.uk/Digital-Energy-36494677.html",
+							"https://foursquare.com/v/digital-energy/61dac9e0013a301c21381104",
+							"https://www.yell.com/biz/proactive-code-leeds-10348494/"
+						],
+						"logo": "https://images.ctfassets.net/74ncoczcn9dm/BjTTMmbDsuVLBxIkwdmyH/e47fb9e2346b93ba3edd44582af80263/logo-no-text.svg",
+						"description": "Digital Energy is a Leeds based digital agency offering unique solutions across SEO (Search Engine Optimisation) & Digital Marketing, Web Development, Website Design, Web Hosting and Google Pay-Per-Click Advertising. We work with some of the regions fastest growing and most exciting brands, specialising in creating websites and web solutions tailored to meeting the unique demands of our customers, and engaging digital marketing, that's focused on driving maximum return on investment.",
+						"address": {
+							"@type": "PostalAddress",
+							"streetAddress": "Hawthorne court, Howley Park Rd E, Morley",
+							"addressLocality": "Leeds",
+							"addressRegion": "West Yorkshire",
+							"postalCode": "LS27 0FD",
+							"addressCountry": "United Kingdom"
+						},
+						"geo": {
+							"@type": "GeoCoordinates",
+							"latitude": "53.7344062",
+							"longitude": "-1.6101456"
+						},
+						"hasMap": "https://g.page/proactive-code?share",
+						"openingHours": "Mo 08:30-17:30 Tu 08:30-17:30 We 08:30-17:30 Th 08:30-17:30 Fr 08:30-17:30",
+						"telephone": "+44 01138500164"
+					})}
+				</script>
+				<script type="application/ld+json">
+					{JSON.stringify({ 
+						"@context":"https://schema.org",
+						"@type":"Product",
+						"name":"Digital Energy Services",
+						"image": {
+							"@type":"ImageObject",
+							"url":"https://images.ctfassets.net/74ncoczcn9dm/BjTTMmbDsuVLBxIkwdmyH/e47fb9e2346b93ba3edd44582af80263/logo-no-text.svg"
+						},
+						"description":"Digital Energy is a Leeds based digital agency offering unique solutions across SEO (Search Engine Optimisation) & Digital Marketing, Web Development, Website Design, Web Hosting and Google Pay-Per-Click Advertising.",
+						"brand": {
+							"@type":"Organization",
+							"name":"Digital Energy Agency"
+						},
+						"aggregateRating": {
+							"@type":"AggregateRating",
+							"ratingValue":"5.0",
+							"reviewCount":"5"
+						}
+					})}
+				</script>
+				<script type="application/ld+json">
+					{JSON.stringify({ 
+						"@context":"https://schema.org",
+						"@type":"WebSite",
+						"name":"Digital Energy Agency",
+						"url":"https://www.digitalenergy.agency"
+					})}
+				</script>
 			</Helmet>
 			<Header></Header>
 			{ data.contentfulPage.slug == "index" && <button style={{display: 'block'}} onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></button> }

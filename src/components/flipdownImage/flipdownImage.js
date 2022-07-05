@@ -2,12 +2,19 @@ import * as React from 'react'
 import * as Styles from './flipdownImage.module.scss'
 import FlipdownItem from '../../components/flipdownItem/flipdownItem'
 import Flip from '../../images/flip.wav'
+import {Howl} from 'howler';
 import { useState } from "react"
 
 const Layout = ({ section, vol }) => {
 	const images = section.blockContent;
 	const [flipped, setFlipped] = useState(false);
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
+	// const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
+
+	const card = new Howl({
+		src: [Flip],
+		volume: 0.2,
+		preload: true
+	});
 
 	const toggleFlipped = () => {
 		const elements = document.querySelectorAll(".flipdownItemSelector");
@@ -22,7 +29,8 @@ const Layout = ({ section, vol }) => {
 					setTimeout(() => {
 						if(!element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
 							element.classList.add("flipdownItem-module--hovered--XuJQn");
-							audio.cloneNode(true).play();
+							// audio.cloneNode(true).play();
+							card.play();
 						}
 					}, timeout);
 			});
@@ -35,7 +43,8 @@ const Layout = ({ section, vol }) => {
 				setTimeout(() => {
 					if(element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
 						element.classList.remove("flipdownItem-module--hovered--XuJQn");
-						audio.cloneNode(true).play();
+						// audio.cloneNode(true).play();
+						card.play();
 					}
 				}, timeout);
 			});
