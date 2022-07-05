@@ -17,6 +17,7 @@ import Testimonials from '../components/testimonials/testimonials'
 import Neon from '../images/neon.wav'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"
+import {Howl, Howler} from 'howler';
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
@@ -29,13 +30,11 @@ const Page = ({ data }) => {
 	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
 	const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
 
-	const soundEffect = document.createElement('audio');
-	soundEffect.autoplay = true;
-
-	// onClick of first interaction on page before I need the sounds
-	// (This is a tiny MP3 file that is silent and extremely short - retrieved from https://bigsoundbank.com and then modified)
-	soundEffect.src = "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
-	
+	const clip = new Howl({
+		src: [Neon],
+		volume: 0.5,
+		preload: true
+	})
 
 	const prevScrollY = useRef(0);
 	const [goingUp, setGoingUp] = useState(false);
@@ -87,7 +86,7 @@ const Page = ({ data }) => {
 				if(!getCookieValue('homeVidPlayed')) {
 					setTimeout(() => {
 						document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
-						setCookie('homeVidPlayed',1, 30);
+						setCookie('homeVidPlayed',1);
 					}, 37000);
 				}
 			}
@@ -145,7 +144,7 @@ const Page = ({ data }) => {
 				if(videoHide === 0 && currentScrollY > 100 && !getCookieValue('homeVidPlayed')) {
 					videoHide = 1;
 					document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
-					setCookie('homeVidPlayed',1, 30);
+					setCookie('homeVidPlayed',1);
 				}
 
 				if(menuOpened === 0 && currentScrollY > 100 && current === '/' && window.innerWidth > 1299) {
@@ -195,9 +194,7 @@ const Page = ({ data }) => {
 							setTimeout(() => {
 								if(playedBC === 0 && volOn === 1) {
 									// audio.cloneNode(true).play();
-									soundEffect.src = Neon;
-									soundEffect.cloneNode(true).play();
-									
+									clip.play();
 								}
 								playedBC = 1;
 								document.querySelectorAll('.bcmain').forEach(x=>x.classList.add('bcmainOn'));
@@ -210,9 +207,7 @@ const Page = ({ data }) => {
 						if(sectionID === "Let's talk") {
 							setTimeout(() => {
 								if(playedPhone === 0 && volOn === 1) {
-									// audio.cloneNode(true).play();
-									soundEffect.src = Neon;
-									soundEffect.cloneNode(true).play();
+									audio.cloneNode(true).play();
 								}
 								playedPhone = 1;
 								document.querySelectorAll('.defaultflicker').forEach(x=>x.classList.add('defaultflickerOn'));
