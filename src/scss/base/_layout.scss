@@ -692,6 +692,10 @@ html {
     pointer-events: none !important;
 }
 
+.homeHeroVid {
+    z-index: 1000000 !important;
+}
+
 .is-open {
     z-index: 1000001 !important;
     opacity: 1 !important;
