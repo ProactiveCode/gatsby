@@ -53,6 +53,8 @@ const Page = ({ data }) => {
 	let arrayAdded = [];
 	let hasGend = 0;
 
+	console.log('main ' + Cookies.get('homeVidPlayed'));
+
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
 			if(data.contentfulPage.slug === "index") {

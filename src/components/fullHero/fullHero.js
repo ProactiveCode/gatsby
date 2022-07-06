@@ -25,6 +25,8 @@ const FullHero = ({ section }) => {
 		}
 	}
 
+	console.log('fullhero ' + Cookies.get('homeVidPlayed'));
+
 	let checker = 1;
 
 	if(Cookies.get('homeVidPlayed')) {
