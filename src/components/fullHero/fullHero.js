@@ -25,20 +25,27 @@ const FullHero = ({ section }) => {
 		}
 	}
 
-	console.log('fullhero ' + Cookies.get('homeVidPlayed'));
+	setTimeout(() => {
+		if (typeof window !== 'undefined') {
+			console.log('fullhero ' + Cookies.get('homeVidPlayed'));
+			var video = document.getElementById("homeVideoMain");
+			console.log(video);
 
-	let checker = 1;
+			if(Cookies.get('homeVidPlayed')) {
+				video.classList.remove("showVid");
+			} else {
+				video.classList.add("showVid");
+			}
+		}
+	}, 1);
 
-	if(Cookies.get('homeVidPlayed')) {
-		checker = 0;
-	}
 
 	const safeID = section.sectionInfo[0].identifier.replace(/\s+/g, '-').replace("'", '').toLowerCase();
   	return (
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
-				<div className={c(Styles.fullHeroVideo, 'homeHeroVid', {['showVid']:checker})}>
+				<div id="homeVideoMain" className={c(Styles.fullHeroVideo, 'homeHeroVid')}>
 					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video>
 				</div>
 				
