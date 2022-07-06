@@ -25,10 +25,10 @@ const FullHero = ({ section }) => {
 		}
 	}
 
-	let checker = 0;
+	let checker = 1;
 
 	if(Cookies.get('homeVidPlayed')) {
-		checker = 1;
+		checker = 0;
 	}
 
 	const safeID = section.sectionInfo[0].identifier.replace(/\s+/g, '-').replace("'", '').toLowerCase();
@@ -36,7 +36,7 @@ const FullHero = ({ section }) => {
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
-				<div className={c(Styles.fullHeroVideo, 'homeHeroVid', {['hideVid']:checker})}>
+				<div className={c(Styles.fullHeroVideo, 'homeHeroVid', {['showVid']:checker})}>
 					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video>
 				</div>
 				

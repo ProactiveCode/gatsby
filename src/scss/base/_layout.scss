@@ -687,14 +687,23 @@ html {
     }
 }
 
-.homeHeroVid.videoDone, .hideVid {
+.homeHeroVid.videoDone {
     opacity: 0 !important;
     pointer-events: none !important;
     z-index: -1 !important;
 }
 
 .homeHeroVid {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+
+.showVid {
     z-index: 1000000 !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
 }
 
 .is-open {
