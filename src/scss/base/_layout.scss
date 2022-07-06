@@ -687,9 +687,10 @@ html {
     }
 }
 
-.homeHeroVid.videoDone {
+.homeHeroVid.videoDone, .hideVid {
     opacity: 0 !important;
     pointer-events: none !important;
+    z-index: -1 !important;
 }
 
 .homeHeroVid {

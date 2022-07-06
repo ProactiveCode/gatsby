@@ -36,10 +36,13 @@ const FullHero = ({ section }) => {
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
-				{
-					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
-				}
-				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}><button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button></div>
+				<div className={c(Styles.fullHeroVideo, 'homeHeroVid', {['hideVid']:checker})}>
+					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video>
+				</div>
+				
+				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}>
+					<button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button>
+				</div>
 
 				<div className={c(Styles.deModal, 'videoModal', {['is-open']:modal})} style={{opacity: 0, zIndex: -1}}>
 					<div className={c(Styles.deModal__bg)} onClick={toggleModal}></div>
