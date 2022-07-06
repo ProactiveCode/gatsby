@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as Styles from './fullHero.module.scss'
 import c from 'classnames'
 import { useState } from "react"
+import Cookies from 'js-cookie'
 
 const FullHero = ({ section }) => {
 	const [modal, setModal] = useState(false);
@@ -24,14 +25,9 @@ const FullHero = ({ section }) => {
 		}
 	}
 
-	function getCookieValue(name) {
-		if (typeof window !== 'undefined') {
-			return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
-		}
-	}
 	let checker = 0;
 
-	if(getCookieValue('homeVidPlayed')) {
+	if(Cookies.get('homeVidPlayed')) {
 		checker = 1;
 	}
 
@@ -44,7 +40,7 @@ const FullHero = ({ section }) => {
 					(checker === 0) ?  <div className={c(Styles.fullHeroVideo, 'homeHeroVid')}><video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video></div> : ''
 				}
 				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}><button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button></div>
-				
+
 				<div className={c(Styles.deModal, 'videoModal', {['is-open']:modal})} style={{opacity: 0, zIndex: -1}}>
 					<div className={c(Styles.deModal__bg)} onClick={toggleModal}></div>
 					<div className={c(Styles.deModal__wrapper)}>

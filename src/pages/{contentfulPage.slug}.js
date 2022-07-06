@@ -13,13 +13,13 @@ import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
 import MainVideo from '../components/mainVideo/mainVideo'
-import StructuredData from '../components/structuredData/structuredData'
 import Testimonials from '../components/testimonials/testimonials'
 import Neon from '../images/neon.wav'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"
 import {Howl} from 'howler';
+import Cookies from 'js-cookie'
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
@@ -53,23 +53,6 @@ const Page = ({ data }) => {
 	let arrayAdded = [];
 	let hasGend = 0;
 
-	function setCookie(name, value, days) {
-		var expires = "";
-		if (days) {
-		  var date = new Date();
-		  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		  expires = "; expires=" + date.toUTCString();
-		}
-		document.cookie = name + "=" + (value || "") + expires + "; path=/";
-	}
-
-	function getCookieValue(name) {
-		if (typeof window !== 'undefined') {
-			return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
-		}
-	}
-		
-
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
 			if(data.contentfulPage.slug === "index") {
@@ -91,10 +74,10 @@ const Page = ({ data }) => {
 					count++;
 				});
 
-				if(!getCookieValue('homeVidPlayed')) {
+				if(!Cookies.get('homeVidPlayed')) {
 					setTimeout(() => {
 						document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
-						setCookie('homeVidPlayed',1);
+						Cookies.set('homeVidPlayed', 1);
 					}, 37000);
 				}
 			}
@@ -147,10 +130,10 @@ const Page = ({ data }) => {
 			} else {
 				offset = 200;
 
-				if(videoHide === 0 && currentScrollY > 100 && !getCookieValue('homeVidPlayed')) {
+				if(videoHide === 0 && currentScrollY > 100 && !Cookies.get('homeVidPlayed')) {
 					videoHide = 1;
 					document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
-					setCookie('homeVidPlayed',1);
+					Cookies.set('homeVidPlayed', 1);
 				}
 
 				if(menuOpened === 0 && currentScrollY > 100 && current === '/' && window.innerWidth > 1299) {
