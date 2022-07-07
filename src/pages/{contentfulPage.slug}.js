@@ -14,6 +14,7 @@ import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
 import MainVideo from '../components/mainVideo/mainVideo'
 import Testimonials from '../components/testimonials/testimonials'
+import Train from '../components/train/train'
 import Neon from '../images/neon.wav'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
@@ -51,9 +52,7 @@ const Page = ({ data }) => {
 	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
 	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
 	let arrayAdded = [];
-	let hasGend = 0;
 
-	console.log('main ' + Cookies.get('homeVidPlayed'));
 
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
@@ -265,6 +264,8 @@ const Page = ({ data }) => {
 				return <MainVideo section={val} />;
 			case "Testimonials" :
 				return <Testimonials section={val} />;
+			case "Train" :
+				return <Train section={val} />;
 		  default:
 			return "Block not found.";
 		}

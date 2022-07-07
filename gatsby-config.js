@@ -91,5 +91,6 @@ module.exports = {
       path: `${__dirname}/blog/`,
     },
   },
+  "gatsby-plugin-sitemap",
   "gatsby-plugin-mdx"]
 };

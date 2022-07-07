@@ -7,6 +7,11 @@ import c from 'classnames'
 
 const Layout = ({ pageTitle, children }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
+	let current = '';
+
+	if (typeof window !== 'undefined') {
+		current = window.location.pathname;
+	}
 
 	const toggleHover = (elem) => {
 		if(document.getElementsByClassName('header-module--burgerOuterWrap--17l12')[0].classList.contains('header-module--burgerOpen--PxR-V')) {
@@ -89,7 +94,7 @@ const Layout = ({ pageTitle, children }) => {
 					<div className={Styles.lowerLinks}>
 						<div className={"lowerLinksWrap"}>
 							<div className={Styles.lowerRotate}>
-								<p className="page-locator">Because We Care</p>
+								<p className="page-locator">{(current === "/") ? 'Because We Care' : 'T: 0113 850 0164'}</p>
 								<div className={c(Styles.scrollInd, 'indicator')}>
 
 								</div>
