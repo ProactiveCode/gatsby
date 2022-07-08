@@ -13,7 +13,6 @@ const Train = ({ section }) => {
 	useEffect(() => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
-				markers: true,
 			  	trigger: ".mainTrain",
 				start: "top bottom+=200",
 			  	scrub: true,
