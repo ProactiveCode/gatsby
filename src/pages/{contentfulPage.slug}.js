@@ -273,14 +273,28 @@ const Page = ({ data }) => {
 
 	let currentPageClass = 'noneHome';
 
+	console.log(data.contentfulPage.slug);
+	console.log(currentPageClass);
+
 	if (typeof window !== 'undefined') {
+		console.log('in undefined');
 		if(data.contentfulPage.slug === "index") {
+			console.log('in if');
 			currentPageClass = 'home';
 		}
 	}
 
+	setTimeout(() => {
+		if (typeof window !== 'undefined') {
+			var element = document.getElementById("main");
+			element.className = '';
+			element.classList.add(currentPageClass);
+		}
+	}, 10);
+
+	console.log(currentPageClass);
   return (
-		<main className={currentPageClass}>
+		<main id="main" className={currentPageClass}>
 			<Helmet htmlAttributes={{lang: 'en'}}>
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
