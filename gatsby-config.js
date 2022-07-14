@@ -1,14 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `PCv3`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Digital Energy`,
+    siteUrl: `https://digitalenergy.agency/`
   },
-  plugins: ["gatsby-plugin-sass", {
-    resolve: 'gatsby-plugin-google-analytics',
+  plugins: ["gatsby-plugin-sass", 
+  {
+    resolve: `gatsby-plugin-google-gtag`,
     options: {
-      "trackingId": "123"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+      trackingIds: [
+        "295054100", // Google AnalyticsID
+      ],
+      pluginConfig: {
+        head: false,
+      },
+    },
+  }, 
+  "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"
@@ -69,12 +76,6 @@ module.exports = {
           file: "https://use.typekit.net/pgr3vtw.css",
         },
       ],
-    },
-  },
-  {
-    resolve: `gatsby-plugin-offline`,
-    options: {
-      precachePages: [`/`, `/blog/*`],
     },
   },
   {
