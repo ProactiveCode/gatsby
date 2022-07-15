@@ -12,7 +12,7 @@ const Layout = ({ section }) => {
 				<h2 className='mb-40'>{section.title ? section.title : 'FAQs'}</h2>
 				{
 					testimonials.map((section, i) => (
-						<div className={c(Styles.testimonialsItem)}>
+						<div key={i} className={c(Styles.testimonialsItem)}>
 							<div className={Styles.testimonialsText} dangerouslySetInnerHTML={{__html: section.body}}></div>
 							<div className={c(Styles.testimonialsLower)}>
 								{section.person ? <div className={c(Styles.testimonialsPerson)}><p>{section.person}</p></div> : ''}

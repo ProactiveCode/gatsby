@@ -8,7 +8,6 @@ import {Howl} from 'howler';
 
 const Layout = ({ val, vol, flipped }) => {
 	const [hovered, setHovered] = useState(false);
-	const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
 
 	const card = new Howl({
 		src: [Flip],
@@ -17,8 +16,7 @@ const Layout = ({ val, vol, flipped }) => {
 	});
 
 	const toggleHover = (elem) => {
-		if(vol == true) {
-			// audio.cloneNode(true).play();
+		if(vol === true) {
 			card.play();
 		}
 		
@@ -32,13 +30,11 @@ const Layout = ({ val, vol, flipped }) => {
 	}
 	
 	return (
-		<div className={c(Styles.flipdownItem, 'flipdownItemSelector', {[Styles.hovered]:hovered})} onMouseEnter={toggleHover}>
+		<div className={c(Styles.flipdownItem, 'flipdownItemSelector', {[Styles.hovered]:hovered})} role="switch" aria-checked="false" onMouseEnter={toggleHover} tabIndex="0">
 			<div className={Styles.flipdownItemWrap}>
 				<div className={Styles.flipdownItemFront} style={{backgroundImage: "url(" + val.flipDownFront + ")"}}>
-					{/* <img src={val.flipDownFront} alt={val.flipDownFrontAlt}></img> */}
 				</div>
 				<div className={Styles.flipdownItemBack} style={{backgroundImage: "url(" + val.flipDownBack + ")"}}>
-					{/* <img src={val.flipDownBack} alt={val.flipDownBackAlt}></img> */}
 				</div>
 			</div>
 		</div>

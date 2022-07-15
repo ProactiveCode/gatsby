@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react"
 
 
-const Layout = ({ line, children, containerSize, align }) => {
+const Layout = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
 	useEffect(() => {
@@ -57,7 +57,9 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/great-green-systems" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/4Rbmgs0Az1jhNCjM8t6d8V/20bdf483c2edd6e5d3de35e7598900f8/ggs-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/4Rbmgs0Az1jhNCjM8t6d8V/20bdf483c2edd6e5d3de35e7598900f8/ggs-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4">
+							<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
+							</video>
 						</div>
 					</div>
 				</div>
@@ -70,7 +72,9 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/yorkshire-childrens-centre" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4">
+							<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
+							</video>
 						</div>
 					</div>
 				</div>
@@ -83,7 +87,9 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/powher" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3LKFWYUVq2AzS51Lhaya9q/bea889bb91ab5005b73ee461d0c678f3/powher-case-study-480.mp4"></video>
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3LKFWYUVq2AzS51Lhaya9q/bea889bb91ab5005b73ee461d0c678f3/powher-case-study-480.mp4">
+							<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
+							</video>
 						</div>
 					</div>
 				</div>
@@ -96,7 +102,9 @@ const Layout = ({ line, children, containerSize, align }) => {
 							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/2M2RgqdX9i3H4QUMWERH2G/0bd7839f2164273bd3fad23e2265d736/fgm-case-study-480.mp4"></video>
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/2M2RgqdX9i3H4QUMWERH2G/0bd7839f2164273bd3fad23e2265d736/fgm-case-study-480.mp4">
+								<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
+							</video>
 						</div>
 					</div>
 				</div>

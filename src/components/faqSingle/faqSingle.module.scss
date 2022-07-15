@@ -5,11 +5,13 @@
     margin-bottom: 20px;
 
     &Question {
-        a {
+        button {
             display: block;
             width: 100%;
             text-decoration: none;
+            text-align: left;
             position: relative;
+            font-family: "arboria", Helvetica, Arial, sans-serif;
 
             &:after {
                 content: '';

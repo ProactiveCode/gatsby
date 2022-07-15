@@ -49,7 +49,7 @@ const BlogPost = ({data}) => {
 
 
 	const prevScrollY = useRef(0);
-	const [goingUp, setGoingUp] = useState(false);
+	const [goingUp] = useState(false);
 
 	useEffect(() => {
 	  const handleScroll = () => {

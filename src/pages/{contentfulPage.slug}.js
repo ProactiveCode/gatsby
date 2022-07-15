@@ -27,11 +27,6 @@ const Page = ({ data }) => {
 	const title = data.contentfulPage.metaTitle;
 	const desc = data.contentfulPage.metaDescription;
 	const sections = pageData['sections'];
-	let playedBC = 0;
-	let playedPhone = 0;
-	let playedPop = 0;
-	// const [audio] = useState(typeof Audio !== "undefined" && new Audio(Neon));
-	// const [pop] = useState(typeof Audio !== "undefined" && new Audio('https://assets.ctfassets.net/74ncoczcn9dm/1T4c7qvsA56hqIlsXzeKA1/c6be3206e7461b462735333a4b640d74/pop.wav'));
 
 	const clip = new Howl({
 		src: [Neon],
@@ -46,7 +41,7 @@ const Page = ({ data }) => {
 	});
 
 	const prevScrollY = useRef(0);
-	const [goingUp, setGoingUp] = useState(false);
+	const [goingUp] = useState(false);
 	let volOn = 0;
 	const [volume, setVolume] = useState(false);
 	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
@@ -89,7 +84,7 @@ const Page = ({ data }) => {
 	const toggleVolume = () => {
 		const vol = document.querySelectorAll(".homevolume")[0];
 
-		if(volOn == 0) {
+		if(volOn === 0) {
 			setVolume(true);
 			vol.src = on;
 			volOn = 1;
@@ -100,16 +95,19 @@ const Page = ({ data }) => {
 		}
 	}
 
-	let videoHide = 0;
-	let menuOpened = 0;
-	let menuClosed = 0;
-
 	useEffect(() => {
-	  const handleScroll = () => {
-		const current = window.location.pathname;
-		let offset = 200;
-		let up = false;
-		const currentScrollY = window.scrollY;
+		let videoHide = 0;
+		let menuOpened = 0;
+		let menuClosed = 0;
+		let playedBC = 0;
+		let playedPhone = 0;
+		let playedPop = 0;
+
+	  	const handleScroll = () => {
+			const current = window.location.pathname;
+			let offset = 200;
+			let up = false;
+			const currentScrollY = window.scrollY;
 
 			if (prevScrollY.current < currentScrollY && goingUp) {
 				up = false;
@@ -231,7 +229,7 @@ const Page = ({ data }) => {
 					}
 				}
 			});
-	  };
+	  	};
   
 	  window.addEventListener("scroll", handleScroll, { passive: true });
   
@@ -365,7 +363,7 @@ const Page = ({ data }) => {
 				</script>
 			</Helmet>
 			<Header></Header>
-			{ data.contentfulPage.slug == "index" && <button style={{display: 'block'}} onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></button> }
+			{ data.contentfulPage.slug === "index" && <button style={{display: 'block'}} onClick={toggleVolume}><img className="homevolume" src="https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg" alt="Turn volume on"></img></button> }
 			{
 				sections.map((section, i) => (
 					<LoadSection val={section} key={i} />

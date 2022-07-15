@@ -11,7 +11,7 @@ const Layout = ({ section }) => {
 			<div className={c('container', 'container' + section.size, Styles.logosWrap)}>
 				{
 					logos.map((section, i) => (
-						<img width={'100%'} className={Styles.logo} objectFit={'contain'} alt={section.logoAlt} src={section.logoUrl} />
+						<img width={'100%'} key={i} className={Styles.logo} objectFit={'contain'} alt={section.logoAlt} src={section.logoUrl} />
 					))
 				}
 			</div>

@@ -9,7 +9,7 @@ const Layout = ({ val }) => {
 	return (
 		<div className={c(Styles.faq, {[Styles.faqOpen]:expanded})}>
 			<div className={c(Styles.faqQuestion, 'faqQuestion')}>
-				<a href="javascript:void(0);" onClick={toggleExpand}><h3>{val.question}</h3></a>
+				<button onClick={toggleExpand}><h3>{val.question}</h3></button>
 			</div>
 			<div className={Styles.faqAnswer}>
 				<div dangerouslySetInnerHTML={{__html: val.answer}}></div>

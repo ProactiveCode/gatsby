@@ -89,7 +89,7 @@ const Blog = ({data}) => {
 	}
 
 	const prevScrollY = useRef(0);
-	const [goingUp, setGoingUp] = useState(false);
+	const [goingUp] = useState(false);
 
 	useEffect(() => {
 	  const handleScroll = () => {
@@ -118,7 +118,7 @@ const Blog = ({data}) => {
 				<meta name="description" content="Read our latest blog articles related to web development, web design and SEO services"></meta>
 			</Helmet>
 			<Header></Header>
-			<Section identifier="test" bgcolour="grey" smaller="sectionSmall">
+			<Section identifier="blog" bgcolour="grey" smaller="sectionSmall">
 				<div className={c(Styles.blogHome)}>
 					<Title section={{ "line": "pink", "content": "<h3 class='large'>Passion in<br>what we do</h3>", "alignment": "left", "__typename": "BlogTitle", "sectionInfo": [ { "size": "tiny", "image": "", "bgColor": "grey", "identifier": "Title-1" } ], "containerSize": "800" }}></Title>
 					<div className={c('container', 'container800')}>
@@ -141,7 +141,7 @@ const Blog = ({data}) => {
 					<div className={Styles.blogFilters}>
 						<h4>Helping you ﬁnd what you may be interested in</h4>
 						<div className={Styles.blogFilterWrap}>
-							<form action="javascript:void(0);">
+							<form action="return false;">
 								<div className={Styles.blogFilter}>
 									<p>Tagged Topic:</p>
 									<select name="topic" id="topic" value={selectedTopic} onChange={handleTopicChange}>

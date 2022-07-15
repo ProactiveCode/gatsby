@@ -4,18 +4,24 @@ module.exports = {
     siteUrl: `https://digitalenergy.agency/`
   },
   plugins: ["gatsby-plugin-sass", 
+  "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", 
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
       trackingIds: [
-        "295054100", // Google AnalyticsID
+        "G-1XL9ZWN67P",
       ],
+      gtagConfig: {
+        anonymize_ip: true,
+        cookie_expires: 0,
+        send_page_view: true
+      },
       pluginConfig: {
         head: false,
       },
     },
-  }, 
-  "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+  },
+  {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"
@@ -83,13 +89,6 @@ module.exports = {
     options: {
       spaceId: "74ncoczcn9dm",
       accessToken: "RaBpqvATs2YyTaae1W7nv1viNHO0c9Khww_Vl81H7_Q",
-    },
-  },
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `blog`,
-      path: `${__dirname}/blog/`,
     },
   },
   "gatsby-plugin-sitemap",

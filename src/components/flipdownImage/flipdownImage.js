@@ -8,7 +8,6 @@ import { useState } from "react"
 const Layout = ({ section, vol }) => {
 	const images = section.blockContent;
 	const [flipped, setFlipped] = useState(false);
-	// const [audio] = useState(typeof Audio !== "undefined" && new Audio(Flip));
 
 	const card = new Howl({
 		src: [Flip],
@@ -20,7 +19,7 @@ const Layout = ({ section, vol }) => {
 		const elements = document.querySelectorAll(".flipdownItemSelector");
 		let timeout = 0;
 
-		if(flipped == false) {
+		if(flipped === false) {
 			setFlipped(true);
 			Array.from(elements).forEach((element, index) => {
 				if(!element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
@@ -29,7 +28,6 @@ const Layout = ({ section, vol }) => {
 					setTimeout(() => {
 						if(!element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
 							element.classList.add("flipdownItem-module--hovered--XuJQn");
-							// audio.cloneNode(true).play();
 							card.play();
 						}
 					}, timeout);
@@ -43,7 +41,6 @@ const Layout = ({ section, vol }) => {
 				setTimeout(() => {
 					if(element.classList.contains("flipdownItem-module--hovered--XuJQn")) {
 						element.classList.remove("flipdownItem-module--hovered--XuJQn");
-						// audio.cloneNode(true).play();
 						card.play();
 					}
 				}, timeout);
@@ -61,7 +58,7 @@ const Layout = ({ section, vol }) => {
 					))
 				}
 			</div>
-			<button className={Styles.flipper} onClick={toggleFlipped}><img src='https://images.ctfassets.net/74ncoczcn9dm/4WKVCeapsdjl6kinh9LbwI/f5ad779d24d00f229e0b5a25badfc3a0/eye.svg' alt="Click to flip image"></img></button>
+			<button className={Styles.flipper} onClick={toggleFlipped}><img src='https://images.ctfassets.net/74ncoczcn9dm/4WKVCeapsdjl6kinh9LbwI/f5ad779d24d00f229e0b5a25badfc3a0/eye.svg' alt="Click to flip"></img></button>
 		</div>
 	)
 }

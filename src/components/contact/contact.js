@@ -29,7 +29,7 @@ const Layout = ({ section }) => {
 						<div className={Styles.form100}>
 							<div className={Styles.formItem}>
 								<p className={Styles.formNm}><strong>Give us your ideas, thoughts on how we can help you. </strong></p>
-								<p>We don’t need the full plan, because a conversation that follows will be when we get details we need.</p>
+								<p className={Styles.font16}>We don’t need the full plan, because a conversation that follows will be when we get details we need.</p>
 								<textarea name='message' required></textarea>
 							</div>
 						</div>

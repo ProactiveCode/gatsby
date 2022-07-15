@@ -5,10 +5,9 @@ import { useState } from "react"
 import Cookies from 'js-cookie'
 
 const FullHero = ({ section }) => {
-	const [modal, setModal] = useState(false);
-	// const toggleModal = () => setModal(!modal);
+	let [outerModal, setModal] = useState(false);
 
-	const toggleModal = (elem) => {		
+	const toggleModal = () => {		
 		if (typeof window !== 'undefined') {
 			var vid = document.getElementById("deModalVid");
 			var modal = document.getElementsByClassName('videoModal')[0];
@@ -46,19 +45,19 @@ const FullHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
 				<div id="homeVideoMain" className={c(Styles.fullHeroVideo, 'homeHeroVid')}>
-					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}></video>
+					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}><track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track></video>
 				</div>
 				
 				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}>
 					<button onClick={toggleModal} className={c('btn', 'btn--replay')}>Replay Showcase</button>
 				</div>
 
-				<div className={c(Styles.deModal, 'videoModal', {['is-open']:modal})} style={{opacity: 0, zIndex: -1}}>
-					<div className={c(Styles.deModal__bg)} onClick={toggleModal}></div>
+				<div className={c(Styles.deModal, 'videoModal')} style={{opacity: 0, zIndex: -1}}>
+					<button className={c(Styles.deModal__bg)} onClick={toggleModal} aria-label="Close modal"></button>
 					<div className={c(Styles.deModal__wrapper)}>
 						<div className={c(Styles.deModal__inner)}>
-							<div className={c(Styles.deModal__close)} onClick={toggleModal}></div>
-							<video id="deModalVid" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" controls={true}></video>
+							<button className={c(Styles.deModal__close)}  aria-label="Close modal" onClick={toggleModal}></button>
+							<video id="deModalVid" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" controls={true}><track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track></video>
 						</div>
 					</div>
 				</div>

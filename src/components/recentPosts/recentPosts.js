@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as Styles from './recentPosts.module.scss'
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import c from 'classnames'
 
 const Layout = ({ section }) => {

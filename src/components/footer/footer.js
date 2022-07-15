@@ -1,9 +1,8 @@
 import * as React from 'react'
 import * as Styles from './footer.module.scss'
 import c from 'classnames'
-import { Link } from 'gatsby'
 
-const Layout = ({ line, children, containerSize, align }) => {
+const Layout = () => {
 	return (
 		<footer className={c(Styles.footer, 'footer')}>
 			<div className={c("container", "container1200", Styles.footerWrap)}>

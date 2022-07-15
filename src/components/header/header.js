@@ -1,11 +1,10 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import * as Styles from './header.module.scss'
 import c from 'classnames'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = () => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
 	let current = '';
 
@@ -52,7 +51,7 @@ const Layout = ({ pageTitle, children }) => {
 				</div>
 				<div className={Styles.innerHeaderWrap}>
 					<div className={Styles.socials}>
-						<a href="https://www.facebook.com/digitalenagency/" aria-label="Facebook" target="_blank" className={Styles.link}>
+						<a href="https://www.facebook.com/digitalenagency/" aria-label="Facebook" rel="noreferrer" target="_blank" className={Styles.link}>
 							<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300">
 							<g>
 								<path fill="#ffffff" d="M300,150C300,67.2,232.8,0,150,0S0,67.2,0,150c0,74.9,54.9,136.9,126.6,148.2V193.4H88.5V150h38.1v-33
@@ -63,7 +62,7 @@ const Layout = ({ pageTitle, children }) => {
 							</g>
 							</svg>
 						</a>
-						<a href="https://www.instagram.com/proactive_code/" aria-label="Instagram" target="_blank" className={Styles.link}>
+						<a href="https://www.instagram.com/proactive_code/" aria-label="Instagram" rel="noreferrer" target="_blank" className={Styles.link}>
 							<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 56.7 56.7">
 							<g>
 								<path fill="#ffffff" d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
@@ -76,7 +75,7 @@ const Layout = ({ pageTitle, children }) => {
 							</g>
 							</svg>
 						</a>
-						<a href="https://www.linkedin.com/company/proactive-code/" aria-label="LinkedIn" target="_blank" className={Styles.link}>
+						<a href="https://www.linkedin.com/company/proactive-code/" aria-label="LinkedIn" rel="noreferrer" target="_blank" className={Styles.link}>
 							<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300">
 							<path fill="#ffffff" style={{fillRule: 'evenodd', clipRule: 'evenodd'}} d="M262.5,0h-225C16.8,0,0,16.8,0,37.5v225C0,283.2,16.8,300,37.5,300h225c20.7,0,37.5-16.8,37.5-37.5v-225
 								C300,16.8,283.2,0,262.5,0z M86,255.8H35.8V104.7H86V255.8z M60.9,84h-0.3c-16.9,0-27.8-11.6-27.8-26.1c0-14.8,11.2-26.1,28.4-26.1

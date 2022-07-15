@@ -3,7 +3,7 @@ import * as Styles from './randomPosts.module.scss'
 import { StaticQuery, graphql } from "gatsby"
 import c from 'classnames'
 
-const Layout = ({ section }) => {
+const Layout = () => {
 	return (
 		<StaticQuery
 		query={graphql`
