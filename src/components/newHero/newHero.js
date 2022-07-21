@@ -10,7 +10,7 @@ const newHero = ({ section }) => {
 			<div>
 				<div className={c(Styles.newHeroWrap, '')}>
 					<div className={Styles.newHeroMob}>
-						<img src={section.mobileImage} alt={section.contentMobileImageAlt} loading="lazy"></img>
+						<img src={section.mobileImage} alt={section.contentMobileImageAlt}></img>
 					</div>
 					<div className={c(Styles.newHeroContent)}>
 						{
@@ -18,7 +18,7 @@ const newHero = ({ section }) => {
 						}
 					</div>
 					<div className={Styles.newHeroImage}>
-						<img src={section.contentImage} alt={section.contentImageAlt} loading="lazy"></img>
+						<img src={section.contentImage} alt={section.contentImageAlt}></img>
 					</div>
 				</div>
 			</div>

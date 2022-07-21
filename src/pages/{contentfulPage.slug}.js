@@ -15,7 +15,7 @@ import NewHero from '../components/newHero/newHero'
 import MainVideo from '../components/mainVideo/mainVideo'
 import Testimonials from '../components/testimonials/testimonials'
 import Train from '../components/train/train'
-import Neon from '../images/neon.wav'
+import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"

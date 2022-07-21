@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as Styles from './flipdownImage.module.scss'
 import FlipdownItem from '../../components/flipdownItem/flipdownItem'
-import Flip from '../../images/flip.wav'
+import Flip from '../../images/new-flip.m4a'
 import {Howl} from 'howler';
 import { useState } from "react"
 
