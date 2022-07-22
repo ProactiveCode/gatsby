@@ -26,9 +26,7 @@ const FullHero = ({ section }) => {
 
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
-			console.log('fullhero ' + Cookies.get('homeVidPlayed'));
 			var video = document.getElementById("homeVideoMain");
-			console.log(video);
 
 			if(Cookies.get('homeVidPlayed')) {
 				video.classList.remove("showVid");
@@ -45,7 +43,7 @@ const FullHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
 				<div id="homeVideoMain" className={c(Styles.fullHeroVideo, 'homeHeroVid')}>
-					<video playsInline="true" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" autoPlay={true} muted={true}><track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track></video>
+					<video playsInline="true" loading="lazy" src={section.contentVideo} autoPlay={true} muted={true}></video>
 				</div>
 				
 				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}>
@@ -56,8 +54,8 @@ const FullHero = ({ section }) => {
 					<button className={c(Styles.deModal__bg)} onClick={toggleModal} aria-label="Close modal"></button>
 					<div className={c(Styles.deModal__wrapper)}>
 						<div className={c(Styles.deModal__inner)}>
-							<button className={c(Styles.deModal__close)}  aria-label="Close modal" onClick={toggleModal}></button>
-							<video id="deModalVid" loading="lazy" src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4" controls={true}><track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track></video>
+							<button className={c(Styles.deModal__close)} aria-label="Close modal" onClick={toggleModal}></button>
+							<video id="deModalVid" loading="lazy" src={section.contentVideo} controls={true}></video>
 						</div>
 					</div>
 				</div>

@@ -31,10 +31,10 @@ const Layout = () => {
 					<div className={c(Styles.burger, {[Styles.burgerOpen]:burgerOpen})}>
 						<button className={Styles.burgerWrap} onClick={toggleHover}>
 							<div className={Styles.burgerLeft}>
-								<StaticImage width={50} alt="Menu left side" src="../../images/burger-left.webp" />
+								<img width="50" alt="Menu left side" src="https://images.ctfassets.net/74ncoczcn9dm/FybEk8OG1Hl8Ey53F7owj/c2ad11c52a1c2526e3618db08d0892a0/burger-left.webp" />
 							</div>
 							<div className={Styles.burgerRight}>
-								<StaticImage width={50} alt="Menu right side" src="../../images/burger-right.webp" />
+								<img width="50" alt="Menu right side" src="https://images.ctfassets.net/74ncoczcn9dm/4eGaTvP7AU7tP6PXUl7UPv/c7d96422e423534974dc75005da32983/burger-right.webp" />
 							</div>
 						</button>
 						<div className={c(Styles.link, Styles.linkLeft, 'headerLinksLeft')}>

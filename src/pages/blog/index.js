@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useRef, useEffect } from "react"
-import { Link,graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import Section from '../../components/section/section'
@@ -76,7 +76,6 @@ const Blog = ({data}) => {
 	
 	const handleSearchChange = (event) => {
 		setSelectedSearch(event.target.value);
-		console.log(event.target.value);
         let filteredData = FilterByTopic(posts, selectedTopic);
 		filteredData = searchTopic(filteredData, event.target.value);
         filteredData = orderItems(filteredData, selectedOrder);
@@ -129,12 +128,12 @@ const Blog = ({data}) => {
 					<h2 className="small">Must Read</h2>
 					<div className={Styles.blogFeatured}>
 						<div className={Styles.blogAuthor}>
-							<img src="https://images.ctfassets.net/74ncoczcn9dm/3MpqXb7cuAkPWNrgMVR7DU/1ddd0699725eee3616bbbacdedc7994a/Adam-Profile.png" alt="Author" />
+							<img src="https://images.ctfassets.net/74ncoczcn9dm/1i1ABws94A29jGIFm06SsF/4e1d9c93aea3eae2d8e20777d0b379cc/Dan-_-Betty.png" alt="Author" />
 							<p className={Styles.authorName}>Dan</p>
 							<p className={Styles.authorPos}>Director</p>
 						</div>
 						<div className={Styles.blogInfo}>
-							<Link to={'/blog/'}><h3>How an empowered team can take the sting out of your business…</h3></Link>
+							<a href='/blog/how-an-empowered-team-can-take-the-sting-out-of-your-business'><h3>How an empowered team can take the sting out of your business…</h3></a>
 							<p>I was stung by a wasp this week. That triggered a severe infection, which got me thinking. What would happen…</p>
 						</div>
 					</div>
@@ -174,7 +173,7 @@ const Blog = ({data}) => {
 						{
 							filteredPosts.map((node) => (
 								<article key={node.id}>
-									<Link to={`/blog/${node.slug}`}><h3>{node.blogTitle}</h3></Link>
+									<a href={`/blog/${node.slug}`}><h3>{node.blogTitle}</h3></a>
 									<p>{node.excerpt.excerpt}</p>
 									<div className={Styles.articleInfo}>
 										{/* {node.author ? <p><strong>{node.author.name}</strong></p> : ''}

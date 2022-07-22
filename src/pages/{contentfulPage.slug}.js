@@ -74,7 +74,7 @@ const Page = ({ data }) => {
 					setTimeout(() => {
 						document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
 						Cookies.set('homeVidPlayed', 1);
-					}, 37000);
+					}, 35500);
 				}
 			}
 		}
@@ -271,13 +271,8 @@ const Page = ({ data }) => {
 
 	let currentPageClass = 'noneHome';
 
-	console.log(data.contentfulPage.slug);
-	console.log(currentPageClass);
-
 	if (typeof window !== 'undefined') {
-		console.log('in undefined');
 		if(data.contentfulPage.slug === "index") {
-			console.log('in if');
 			currentPageClass = 'home';
 		}
 	}
@@ -289,8 +284,6 @@ const Page = ({ data }) => {
 			element.classList.add(currentPageClass);
 		}
 	}, 10);
-
-	console.log(currentPageClass);
   return (
 		<main id="main" className={currentPageClass}>
 			<Helmet htmlAttributes={{lang: 'en'}}>

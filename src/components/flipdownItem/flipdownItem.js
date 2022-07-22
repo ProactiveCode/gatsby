@@ -30,7 +30,7 @@ const Layout = ({ val, vol, flipped }) => {
 	}
 	
 	return (
-		<div className={c(Styles.flipdownItem, 'flipdownItemSelector', {[Styles.hovered]:hovered})} role="switch" aria-checked="false" onMouseEnter={toggleHover} tabIndex="0">
+		<div className={c(Styles.flipdownItem, 'flipdownItemSelector', {[Styles.hovered]:hovered})} role="switch" aria-checked="false" aria-label="Flipping image" onMouseEnter={toggleHover} tabIndex="0">
 			<div className={Styles.flipdownItemWrap}>
 				<div className={Styles.flipdownItemFront} style={{backgroundImage: "url(" + val.flipDownFront + ")"}}>
 				</div>

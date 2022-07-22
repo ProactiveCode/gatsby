@@ -23,7 +23,6 @@ const BlogPost = ({data}) => {
 		},
 		renderNode: {
 		  [INLINES.HYPERLINK]: (node, children) => {
-			  console.log(node);
 			const { uri } = node.data
 			return (
 			  <a href={uri} className="underline">
