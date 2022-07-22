@@ -4,11 +4,22 @@ import c from 'classnames'
 
 const Layout = ({ section }) => {
 	const safeID = section.sectionInfo[0].identifier.replace(/\s+/g, '-').replace("'", '').toLowerCase();
+
+	function submitForm() {
+		var frm = document.getElementById('contact_form');
+		frm.submit(); // Submit the form
+		setTimeout(() => {
+			frm.reset();  // Reset all form data
+		}, 1000);
+		
+		return false; // Prevent page refresh
+	 }
+
 	return (
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c('container', 'container' + section.size, section.extra_global_class, Styles[section.extra_block_class])}>
-				<form action='https://getform.io/f/48b34680-adf7-402f-bc50-f0719a1f300e' method='POST'>
+				<form id="contact_form" action='https://getform.io/f/48b34680-adf7-402f-bc50-f0719a1f300e' method='POST'>
 					<div className={Styles.formWrap}>
 						<div className={Styles.form50}>
 							<div className={Styles.formItem}>
@@ -35,7 +46,7 @@ const Layout = ({ section }) => {
 						</div>
 					</div>
 					<div className={Styles.formSubmit}>
-						<button type='submit' className='btn'>Send it over</button>
+						<button type='submit' className='btn' onClick={submitForm}>Send it over</button>
 					</div>
 				</form>
 			</div>

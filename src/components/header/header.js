@@ -62,7 +62,7 @@ const Layout = () => {
 							</g>
 							</svg>
 						</a>
-						<a href="https://www.instagram.com/proactive_code/" aria-label="Instagram" rel="noreferrer" target="_blank" className={Styles.link}>
+						<a href="https://www.instagram.com/digitalenergyagency/" aria-label="Instagram" rel="noreferrer" target="_blank" className={Styles.link}>
 							<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 56.7 56.7">
 							<g>
 								<path fill="#ffffff" d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7

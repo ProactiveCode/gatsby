@@ -126,23 +126,29 @@
 
 .blogArticles {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 60px;
     position: relative;
     z-index: 2;
     background-color: $grey;
 
+    @media(min-width: $md) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
     article {
         width: 100%;
         margin-bottom: 40px;
 
         @media(min-width: $md) {
-            width: calc(50% - 20px);
+            width: calc(50% - 40px);
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         @media(min-width: $lg) {
-            width: calc(33.33333% - 20px);
+            width: calc(33.33333% - 40px);
         }
 
         // @media(min-width: $xlg) {
@@ -265,6 +271,7 @@
         font-weight: 700;
         font-size: 16px;
         margin: 0 auto;
+        display: none;
     }
 }
 

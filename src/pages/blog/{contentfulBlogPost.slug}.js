@@ -75,7 +75,6 @@ const BlogPost = ({data}) => {
 				<title>{title ? title : 'Blog | Digital Energy'}</title>
 				<meta name="title" content={title ? title : 'Blog | Digital Energy'}></meta>
 				<meta name="description" content={desc ? desc : 'Blog | Digital Energy'}></meta>
-				<meta name="keywords" content="keywords"></meta>
 			</Helmet>
 			<Header></Header>
 				<div className={Styles.blogContentTitle}>
