@@ -87,7 +87,7 @@ const Layout = () => {
 							<CButton link="/powher" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3LKFWYUVq2AzS51Lhaya9q/bea889bb91ab5005b73ee461d0c678f3/powher-case-study-480.mp4">
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/nkq66kG6Ywr6PPyQPoS3z/5b94ee865dee80e47d5f6606991d8a97/powher-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3LKFWYUVq2AzS51Lhaya9q/bea889bb91ab5005b73ee461d0c678f3/powher-case-study-480.mp4">
 							<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
 							</video>
 						</div>
@@ -102,7 +102,7 @@ const Layout = () => {
 							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/2M2RgqdX9i3H4QUMWERH2G/0bd7839f2164273bd3fad23e2265d736/fgm-case-study-480.mp4">
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/12G0lCWaVWCnHKhAIbWBDe/389d493988e4059cfed6692877352e54/fgm-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/2M2RgqdX9i3H4QUMWERH2G/0bd7839f2164273bd3fad23e2265d736/fgm-case-study-480.mp4">
 								<track label="English" kind="captions" srclang="en" src="https://assets.ctfassets.net/74ncoczcn9dm/5b0V8HWuaKpjO3WVSrbKwt/34ef3e6e34cde5aceec88b5356764673/noAudio.vtt" default></track>
 							</video>
 						</div>

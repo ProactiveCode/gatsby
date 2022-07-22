@@ -4,8 +4,13 @@ import c from 'classnames'
 import { useState } from "react"
 import Cookies from 'js-cookie'
 
-const FullHero = ({ section }) => {
+const FullHero = ({ section, vol }) => {
 	let [outerModal, setModal] = useState(false);
+	let play = true;
+
+	if(vol === true) {
+		play = false;
+	}
 
 	const toggleModal = () => {		
 		if (typeof window !== 'undefined') {
@@ -27,11 +32,13 @@ const FullHero = ({ section }) => {
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
 			var video = document.getElementById("homeVideoMain");
+			const videoMain = document.getElementById("homeVideoVid");
 
 			if(Cookies.get('homeVidPlayed')) {
 				video.classList.remove("showVid");
 			} else {
 				video.classList.add("showVid");
+				videoMain.play();
 			}
 		}
 	}, 1);
@@ -43,7 +50,7 @@ const FullHero = ({ section }) => {
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.fullHero)}>
 				<div id="homeVideoMain" className={c(Styles.fullHeroVideo, 'homeHeroVid')}>
-					<video playsInline="true" loading="lazy" src={section.contentVideo} autoPlay={true} muted={true}></video>
+					<video id="homeVideoVid" playsInline="true" loading="lazy" src={section.contentVideo} autoPlay={false} muted={play}></video>
 				</div>
 				
 				<div className={c(Styles.fullHeroReply, 'homeHeroReplay')}>

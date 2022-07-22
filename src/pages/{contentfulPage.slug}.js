@@ -133,6 +133,7 @@ const Page = ({ data }) => {
 					videoHide = 1;
 					document.getElementsByClassName('homeHeroVid')[0].classList.add("videoDone");
 					Cookies.set('homeVidPlayed', 1);
+					document.getElementById("homeVideoVid").pause();
 				}
 
 				if(menuOpened === 0 && currentScrollY > 100 && current === '/' && window.innerWidth > 1299) {
@@ -241,7 +242,7 @@ const Page = ({ data }) => {
 			case "TitleBlock" :
 				return <Title section={val} />;
 			case "FullHero" :
-				return <FullHero section={val} />;
+				return <FullHero section={val} vol={volume} />;
 			case "MultiColumns" :
 				return <TwoCol section={val} vol={volume} />;
 			case "Generic" :
@@ -290,7 +291,6 @@ const Page = ({ data }) => {
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>
-				<meta name="keywords" content="keywords"></meta>
 				<script type="application/ld+json">
 					{JSON.stringify({ "@context": "http://www.schema.org",
 						"@type": "ProfessionalService",
