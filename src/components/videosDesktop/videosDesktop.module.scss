@@ -1,0 +1,125 @@
+@import "../../../src/scss/utils/variables";
+
+.videoText {
+    // height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media(min-width: $md) {
+        height: 60vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media(min-width: $lg) {
+        height: 100vh;
+    }
+
+    &.pink {
+        background-color: $sec-brand-color;
+    }
+
+    &.blue {
+        background-color: $brand-color;
+    }
+
+    &.videoText1 {
+        // height: calc(100vh - 100px);
+
+        @media(min-width: $md) {
+            height: calc(60vh - 100px);
+        }
+    
+        @media(min-width: $lg) {
+            height: calc(100vh - 100px);
+        }
+
+        .videoTextWrap {
+            @media(min-width: $md) {
+                margin-top: -50px;
+            }
+        }
+    }
+}
+
+.videoTextWrap {
+    max-width: 350px;
+
+    h1,h2,h3,h4,h5,h6,p,li,span {
+        color: $white;
+    }
+
+    h3 {
+        margin-bottom: 25px;
+        @media(min-width: $lg) {
+            font-size: 50px;
+            line-height: 1;
+        }
+    }
+}
+
+.videosWrap {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.videos {
+    right:0;
+    top: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    max-width: 50%;
+    // overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    display: none;
+
+    @media(min-width: $md) {
+        height: 60vh;
+        display: flex;
+    }
+
+    @media(min-width: $lg) {
+        height: 100vh;
+    }
+    
+}
+
+.videosInner {
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -100px;
+
+    .video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 0;
+        border-top-left-radius: 40px;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        transform-origin: bottom;
+        margin-top: 30px;
+    }
+}
