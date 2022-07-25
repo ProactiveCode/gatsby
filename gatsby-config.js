@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: `https://digitalenergy.agency/`
   },
   plugins: ["gatsby-plugin-sass", 
-  "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", 
+  "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap","gatsby-plugin-loadable-components-ssr", 
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
