@@ -1,6 +1,9 @@
 import * as React from 'react'
-import VideosDesktop from '../../components/videosDesktop/videosDesktop'
-import VideosMobile from '../../components/videosMobile/videosMobile'
+
+import loadable from '@loadable/component'
+
+const VideosDesktop = loadable(() => import('../../components/videosDesktop/videosDesktop'));
+const VideosMobile = loadable(() => import('../../components/videosMobile/videosMobile'));
 
 
 const Layout = () => {

@@ -8,19 +8,21 @@ import Logos from '../components/logos/logos'
 import RecentPosts from '../components/recentPosts/recentPosts'
 import Title from '../components/title/title'
 import ContactForm from '../components/contact/contact'
-import VideosSection from '../components/videosSection/videosSection'
 import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
 import MainVideo from '../components/mainVideo/mainVideo'
 import Testimonials from '../components/testimonials/testimonials'
-import Train from '../components/train/train'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
 import { useState, useRef, useEffect } from "react"
 import {Howl} from 'howler';
 import Cookies from 'js-cookie'
+import loadable from '@loadable/component'
+
+const VideosSection = loadable(() => import('../components/videosSection/videosSection'));
+const Train = loadable(() => import('../components/train/train'));
 
 const Page = ({ data }) => {
 	const pageData = JSON.parse(data.contentfulPage.mainContent.internal.content);
