@@ -17,7 +17,7 @@ module.exports = {
         send_page_view: true
       },
       pluginConfig: {
-        head: false,
+        head: true,
       },
     },
   },
