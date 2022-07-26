@@ -53,7 +53,7 @@ const Layout = () => {
 						<div className={Styles.videoTextWrap}>
 							<h3>Great Green Systems</h3>
 							<h4>E-commerce website</h4>
-							<p>Moving towards a greener and more sustainable world to live. Something we are passionate about.</p>
+							<p>Moving towards a greener and more sustainable world. Something we are passionate about.</p>
 							<CButton link="/great-green-systems" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 					</div>
@@ -63,7 +63,7 @@ const Layout = () => {
 						<div className={Styles.videoTextWrap}>
 							<h3>Yorkshire Childrens Centre</h3>
 							<h4>On-line brand growth</h4>
-							<p>Creating opportunities for young people to have a better life. Creating a new website to harness their vision.</p>
+							<p>Creating new opportunities for young people to have a better life. Deploying a new brand to harness the charities vision.</p>
 							<CButton link="/yorkshire-childrens-centre" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
 						</div>
 					</div>
@@ -73,7 +73,7 @@ const Layout = () => {
 						<div className={Styles.videoTextWrap}>
 							<h3>Ultimate Life Stores</h3>
 							<h4>Multi-national e-commerce</h4>
-							<p>Providing women with health supplements designed for performance around the world.</p>
+							<p>Pre-workout and dietary health supplements, specifically tailored for women</p>
 							<CButton link="/powher" text="Take a peek" hoverText="Sneaky Peek" classes="btn"></CButton>
 						</div>
 					</div>
