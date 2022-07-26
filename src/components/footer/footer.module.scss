@@ -21,6 +21,7 @@
     width: 100%;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 
     @media(min-width: 400px) {
         justify-content: center;
@@ -35,6 +36,11 @@
 .footerLogo {
     margin-right: 10px;
     margin-top: 15px;
+    margin-bottom: 20px;
+
+    @media(min-width: 400px) {
+        margin-bottom: 0;
+    }
 
     img {
         width: 100%;
@@ -43,6 +49,12 @@
 }
 
 .footerInfo {
+    width: 100%;
+
+    @media(min-width: 400px) {
+        width: auto;
+    }
+    
     p {
         color: $white;
         font-size: 12px;
@@ -80,6 +92,14 @@
     }
 }
 
+.footerPages {
+    margin-bottom: 20px;
+
+    @media(min-width: 400px) {
+        margin-bottom: 0;
+    }
+}
+
 .footerServices {
     width: 100%;
 
@@ -96,7 +116,7 @@
 }
 
 .footerCase {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
 
     @media(min-width: 400px) {
@@ -114,8 +134,11 @@
 .footerWild {
     display: flex;
     width: 100%;
-    justify-content: center;
     margin-top: 40px;
+
+    @media(min-width: 400px) {
+        justify-content: center;
+    }
 
     @media(min-width: $lg) {
         width: auto;
