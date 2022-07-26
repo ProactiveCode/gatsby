@@ -78,6 +78,16 @@ const Page = ({ data }) => {
 						Cookies.set('homeVidPlayed', 1);
 					}, 35500);
 				}
+
+				setTimeout(() => {
+					if(window.location.hash.substr(1)) {
+						let urlID = window.location.hash.substr(1);
+						document.getElementById(urlID).scrollIntoView({
+							behavior: 'smooth'
+						  });
+					}
+				}, 500);
+				
 			}
 		}
 	}, 1);
