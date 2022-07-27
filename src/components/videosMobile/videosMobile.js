@@ -26,13 +26,13 @@ const Layout = () => {
 				<div className={c(Styles.videoText, Styles.blue)}>
 					<div className={c('container', 'container800' )}>
 						<div className={Styles.videoTextWrap}>
-							<h3>Yorkshire Childrens Centre</h3>
+							<h3>Yorkshire Children's Centre</h3>
 							<h4>On-line brand growth</h4>
 							<p>Creating new opportunities for young people to have a better life. Deploying a new brand to harness the charities vision.</p>
 							<CButton link="/yorkshire-childrens-centre" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>
-							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4">
+							<video preload="none" playsInline="true" aria-hidden="true" poster="https://images.ctfassets.net/74ncoczcn9dm/52EK8CA5JrbJ4iBCQmqSu2/9db07c0b9352eecd7ddbca739d342972/ycc-vid-poster.webp" controls={true} src="https://videos.ctfassets.net/74ncoczcn9dm/3kbduoYnppDIS9p3Z2lM4Z/34a9a4e6b788b305a7e3997635adbef4/ycc-case-study-video-420-compressed.mp4">
 							</video>
 						</div>
 					</div>
@@ -56,7 +56,7 @@ const Layout = () => {
 						<div className={Styles.videoTextWrap}>
 							<h3>Field Gibson Media</h3>
 							<h4>Video animation</h4>
-							<p>Giving the Finance industry engaging content and events. It's not all about the numbers.</p>
+							<p>Giving the finance industry engaging content and events. It's not all about the numbers.</p>
 							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 						<div className={Styles.videoMobile}>

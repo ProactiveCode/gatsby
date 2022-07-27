@@ -39,7 +39,7 @@ const Layout = () => {
 							<video id="tv-room-video2" playsInline="true" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/110BtJBYyKA2NYdJqfVY1x/4dea683cd33f82565fdb5bc526bbcaca/powher-case-study-480.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid3')}>
-							<video id="tv-room-video3" playsInline="true" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1qg9mkU5JIDcBTJRLFrgO3/2f44c0b6bf19816115d6dbc2cb2554f7/ycc-case-study-video-420.mp4"></video>
+							<video id="tv-room-video3" playsInline="true" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/3kbduoYnppDIS9p3Z2lM4Z/34a9a4e6b788b305a7e3997635adbef4/ycc-case-study-video-420-compressed.mp4"></video>
 						</div>
 						<div className={c(Styles.video, 'vid4')}>
 							<video id="tv-room-video4" playsInline="true" preload="none" loop={true} aria-hidden="true" autoPlay={true} muted={true}  src="https://videos.ctfassets.net/74ncoczcn9dm/1b6fauTPmGucGUnob1qc0m/333550a77a8ebdfd3088e7fa02c160f5/ggs-case-study-video-420.mp4"></video>
@@ -61,7 +61,7 @@ const Layout = () => {
 				<div className={c(Styles.videoText, Styles.blue)}>
 					<div className={c('container', 'container800' )}>
 						<div className={Styles.videoTextWrap}>
-							<h3>Yorkshire Childrens Centre</h3>
+							<h3>Yorkshire Children's Centre</h3>
 							<h4>On-line brand growth</h4>
 							<p>Creating new opportunities for young people to have a better life. Deploying a new brand to harness the charities vision.</p>
 							<CButton link="/yorkshire-childrens-centre" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--alt-white"></CButton>
@@ -83,7 +83,7 @@ const Layout = () => {
 						<div className={Styles.videoTextWrap}>
 							<h3>Field Gibson Media</h3>
 							<h4>Video animation</h4>
-							<p>Giving the Finance industry engaging content and events. It's not all about the numbers.</p>
+							<p>Giving the finance industry engaging content and events. It's not all about the numbers.</p>
 							<CButton link="/field-gibson-media" text="Take a peek" hoverText="Sneaky Peek" classes="btn btn--to-white"></CButton>
 						</div>
 					</div>

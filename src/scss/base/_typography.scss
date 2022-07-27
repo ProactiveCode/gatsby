@@ -120,6 +120,7 @@ h3 {
 
     &.large {
         @include font-size(40);
+        line-height: 1;
 
         @media(min-width: $md) {
             @include font-size(45);
