@@ -96,7 +96,7 @@ const BlogPost = ({data}) => {
 								</div> : ''
 							}
 							<div className={Styles.blogDate}>
-								<p>{blog.createdAt}</p>
+								<p>{blog.publishedDate}</p>
 							</div>
 							{blog.categories ? <div className={Styles.blogCats}> 	
 								{ 
@@ -151,6 +151,7 @@ export const data = graphql`
 					}
 				}
 			}
+			publishedDate(formatString: "DD MMMM, YYYY")
 			createdAt(formatString: "DD MMMM, YYYY")
 			categories {
 				name

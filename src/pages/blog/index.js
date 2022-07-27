@@ -36,11 +36,11 @@ function searchTopic(filteredData, term) {
 function orderItems(filteredData, order) {
 	if (order === "asc") {
 		filteredData.sort(function(a,b){
-			return new Date(b.createdAt) - new Date(a.createdAt);
+			return new Date(b.publishedDate) - new Date(a.publishedDate);
 		});
 	} else {
 		filteredData.sort(function(a,b){
-			return new Date(a.createdAt) - new Date(b.createdAt);
+			return new Date(a.publishedDate) - new Date(b.publishedDate);
 		});
 	}
 	const ordered = filteredData;
@@ -178,7 +178,7 @@ const Blog = ({data}) => {
 									<div className={Styles.articleInfo}>
 										{/* {node.author ? <p><strong>{node.author.name}</strong></p> : ''}
 										{node.author ? <p><em>{node.author.position}</em></p> : ''} */}
-										{node.createdAt ? <p><strong>{node.createdAt}</strong></p> : ''}
+										{node.publishedDate ? <p><strong>{node.publishedDate}</strong></p> : ''}
 										{node.categories ? <div className={Styles.articleCats}> 	
 											{ 
 												node.categories.map((category) => 
@@ -202,7 +202,7 @@ const Blog = ({data}) => {
 
 export const query = graphql`
 query {
-	allContentfulBlogPost( sort: {fields: Blogcontent___references___createdAt, order: ASC}) {
+	allContentfulBlogPost( sort: {fields: publishedDate, order: DESC}) {
 		nodes {
 			blogTitle
 			id
@@ -218,6 +218,7 @@ query {
 			categories {
 				name
 			}
+			publishedDate(formatString: "DD MMMM, YYYY")
 		}
 	}
 }
