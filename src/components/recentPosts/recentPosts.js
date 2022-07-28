@@ -10,7 +10,7 @@ const Layout = ({ section }) => {
 		query={graphql`
 		  	query HeadingQuery {
 				allContentfulBlogPost(
-					sort: {fields: Blogcontent___references___createdAt, order: ASC}
+					sort: {fields: publishedDate, order: DESC}
 					limit: 3
 				) {
 					nodes {
