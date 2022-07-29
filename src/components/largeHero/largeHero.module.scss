@@ -1,0 +1,58 @@
+@import "../../../src/scss/utils/variables";
+
+.largeHeroContent {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    @media(min-width: $md) {
+        height: 100vh;
+    }
+
+    div {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 1000px;
+        position: relative;
+        z-index: 2;
+    }
+
+    svg {
+        overflow: visible;
+    }
+}
+
+.largeHeroBGVid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: black;
+        opacity: 0.4;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.homeRel {
+    position: relative;
+}

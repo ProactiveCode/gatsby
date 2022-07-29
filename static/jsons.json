@@ -30,6 +30,39 @@
 			"contentVideo": "https://www.w3schools.com/html/mov_bbb.mp4"
         },
         {
+            "__typename": "LargeHero",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "home-hero",
+					"image": ""
+				}
+			],
+            "contentImage": "https://images.ctfassets.net/74ncoczcn9dm/3LYB2S8NlLhjJp110D1mcu/5507de18d1df1eeb2f538bde026ccb0b/ADB92565A3DBDFD4.png",
+			"contentImageAlt": "Alt text",
+			"contentVideo": "https://www.w3schools.com/html/mov_bbb.mp4",
+            "content": "<p>content</p>"
+        },
+        {
+            "__typename": "Service",
+			"sectionInfo": [
+				{
+					"size": "small",
+					"bgColor": "grey",
+					"identifier": "home-hero",
+					"image": ""
+				}
+			],
+            "extra_class": "test two",
+            "title": "Web Development",
+			"contentVideo": "https://www.w3schools.com/html/mov_bbb.mp4",
+            "leftColumn": "<p>content 1</p>",
+            "rightColumn": "<p>content 2</p>",
+			"containerSize": "800",
+			"titleAlign": "right"
+        },
+        {
             "__typename": "MultiColumns",
 			"sectionInfo": [
 				{

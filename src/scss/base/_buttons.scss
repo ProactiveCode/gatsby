@@ -26,6 +26,11 @@
         @include font-size(14);
     }
 
+    &--larger {
+        padding: 9px 30px 15px;
+        @include font-size(21);
+    }
+
     &--ghost {
         background-color: transparent;
         border: 3px solid $brand-color;

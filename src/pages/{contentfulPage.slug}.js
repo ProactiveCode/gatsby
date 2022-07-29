@@ -11,7 +11,9 @@ import ContactForm from '../components/contact/contact'
 import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
+import LargeHero from '../components/largeHero/largeHero'
 import MainVideo from '../components/mainVideo/mainVideo'
+import ServicesBlock from '../components/servicesBlock/servicesBlock'
 import Testimonials from '../components/testimonials/testimonials'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
@@ -114,6 +116,10 @@ const Page = ({ data }) => {
 		let playedBC = 0;
 		let playedPhone = 0;
 		let playedPop = 0;
+		let devDone = 0;
+		let designDone = 0;
+		let seoDone = 0;
+		let hostDone = 0;
 
 	  	const handleScroll = () => {
 			const current = window.location.pathname;
@@ -240,6 +246,45 @@ const Page = ({ data }) => {
 							}, 14500);
 						}
 					}
+
+					if (current === '/services/') {
+						if(sectionID === "serviceDev") {
+							setTimeout(() => {
+								if(devDone === 0) {
+									devDone = 1;
+									document.getElementById('servicedev').classList.add('showItem');
+								}
+							}, 1000);
+						}
+
+						if(sectionID === "serviceDesign") {
+							setTimeout(() => {
+								if(designDone === 0) {
+									designDone = 1;
+									document.getElementById('servicedesign').classList.add('showItem');
+								}
+							}, 1000);
+						}
+
+						if(sectionID === "serviceSEO") {
+							setTimeout(() => {
+								if(seoDone === 0) {
+									seoDone = 1;
+									document.getElementById('serviceseo').classList.add('showItem');
+								}
+							}, 1000);
+						}
+
+						if(sectionID === "serviceHosting") {
+							setTimeout(() => {
+								if(hostDone === 0) {
+									hostDone = 1;
+									document.getElementById('servicehosting').classList.add('showItem');
+								}
+							}, 1000);
+						}
+						// console.log(sectionID);
+					}
 				}
 			});
 	  	};
@@ -277,6 +322,10 @@ const Page = ({ data }) => {
 				return <Testimonials section={val} />;
 			case "Train" :
 				return <Train section={val} />;
+			case "LargeHero" :
+				return <LargeHero section={val} />;
+			case "Service" :
+				return <ServicesBlock section={val} />;
 		  default:
 			return "Block not found.";
 		}

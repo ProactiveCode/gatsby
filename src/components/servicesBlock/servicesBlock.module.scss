@@ -1,0 +1,119 @@
+@import "../../../src/scss/utils/variables";
+
+.servicesBlockVideo {
+    width: 100%;
+
+    video {
+        width: 100%;
+        display: block;
+    }
+}
+
+.servicesBlockTitle {
+    margin-bottom: 40px;
+
+    &.right {
+        @media(min-width: $md) {
+            text-align: right;
+        }
+    }
+}
+
+.servicesBlockWrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceBlockFlex {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    @media(min-width: $md) {
+        position: absolute;
+        max-height: 0;
+        transition: max-height 1s ease-in-out 0.5s;
+    }
+}
+
+.serviceBlockCol {
+    width: 100%;
+
+    @media(min-width: $md) {
+        width: calc(50% - 20px);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin: 0;
+            list-style-type: none;
+            font-weight: 700;
+            margin-bottom: 3px;
+            font-size: 16px;
+        }
+    }
+
+    a {
+        &:first-of-type {
+            display: block;
+            font-weight: 400;
+        }
+
+        &:last-of-type {
+            margin-top: 30px;
+        }
+    }
+
+    &.serviceBlockColRight {
+        padding: 20px;
+        padding-top: 0;
+
+        @media(min-width: $md) {
+            padding: 30px;
+        }
+
+        @media(min-width: $lg) {
+            width: calc(33% - 20px);
+        }
+
+        a {    
+            &:last-of-type {
+                @media(min-width: $md) {
+                    transform: translateX(400px);
+                    transition: transform 0.5s ease-in-out 1.6s;
+                }
+            }
+        }
+    }
+
+    &.serviceBlockColLeft {
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-bottom: 0;
+
+        a {    
+            &:last-of-type {
+                @media(min-width: $md) {
+                    transform: translateX(-400px);
+                    transition: transform 0.5s ease-in-out 1.6s;
+                }
+            }
+        }
+
+        @media(min-width: $md) {
+            margin-bottom: 0;
+            padding: 30px;
+        }
+        
+        @media(min-width: $lg) {
+            width: calc(50% - 20px);
+        }
+    }
+}
