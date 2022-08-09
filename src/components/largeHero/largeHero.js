@@ -9,7 +9,7 @@ const FullHero = ({ section, vol }) => {
 		<section id={safeID} data-id={section.sectionInfo[0].identifier} className={c("section", section.sectionInfo[0].bgColor, "section_" + section.sectionInfo[0].size, Styles.homeRel)} 
 		style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}}>
 			<div className={c(Styles.largeHeroBGVid)}>
-				<video playsInline="true" loading="lazy" src={section.contentVideo} autoPlay={true} muted={true}></video>
+				<video playsInline="true" loading="lazy" src={section.contentVideo} autoPlay={true} muted={true} loop={true}></video>
 			</div>
 			<div className={c(Styles.largeHeroContent)}>		
 				{

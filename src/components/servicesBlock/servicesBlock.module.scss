@@ -36,7 +36,7 @@
     @media(min-width: $md) {
         position: absolute;
         max-height: 0;
-        transition: max-height 1s ease-in-out 0.5s;
+        transition: max-height 1s ease-out 0.5s;
     }
 }
 
@@ -87,7 +87,7 @@
             &:last-of-type {
                 @media(min-width: $md) {
                     transform: translateX(400px);
-                    transition: transform 0.5s ease-in-out 1.6s;
+                    transition: transform 0.7s ease-out 0.8s;
                 }
             }
         }
@@ -102,7 +102,7 @@
             &:last-of-type {
                 @media(min-width: $md) {
                     transform: translateX(-400px);
-                    transition: transform 0.5s ease-in-out 1.6s;
+                    transition: transform 0.7s ease-out 0.8s;
                 }
             }
         }

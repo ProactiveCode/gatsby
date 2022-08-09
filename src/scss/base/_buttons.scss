@@ -22,7 +22,7 @@
     }
 
     &--smaller {
-        padding: 7px 11px;
+        padding: 7px 11px 10px;
         @include font-size(14);
     }
 
@@ -69,6 +69,16 @@
         &:hover {
             color: $brand-color;
             background-color: $white;
+        }
+    }
+
+    &--white {
+        color: #000;
+        background: $white;
+
+        &:hover {
+            color: #000;
+            background-color: $sec-brand-color;
         }
     }
 

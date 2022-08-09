@@ -809,7 +809,7 @@ html {
 
 .showItem {
     .serviceBlockBG {
-        max-height: 600px;
+        max-height: 350px;
     }
 
     .servicesBlock-module--serviceBlockColLeft--xUY65,
@@ -822,4 +822,8 @@ html {
             }
         }
     }
+}
+
+.showBar {
+    display: flex !important;
 }

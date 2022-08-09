@@ -28,6 +28,7 @@ const Layout = () => {
 				</div>
 				<div className={Styles.footerServices}>
 					<p>Services</p>
+					<a href="/services">Overview</a>
 					<a href="/web-development">Web Development</a>
 					<a href="/seo">SEO</a>
 					<a href="/web-design">Design</a>

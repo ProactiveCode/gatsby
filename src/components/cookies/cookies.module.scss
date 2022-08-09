@@ -1,0 +1,47 @@
+@import "../../../src/scss/utils/variables";
+
+.cookieBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $brand-color;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    display: none;
+    z-index: 100;
+
+    @media(min-width: $md) {
+        justify-content: space-between;
+    }
+
+    &Text {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media(min-width: $md) {
+            width: calc(100% - 200px);
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        p {
+            color: $white;
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    &Buttons {
+        button {
+            &:first-of-type {
+                margin-right: 15px;
+            }
+        }
+    }
+}

@@ -15,6 +15,7 @@ import LargeHero from '../components/largeHero/largeHero'
 import MainVideo from '../components/mainVideo/mainVideo'
 import ServicesBlock from '../components/servicesBlock/servicesBlock'
 import Testimonials from '../components/testimonials/testimonials'
+import CookiesBar from '../components/cookies/cookies'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
@@ -424,6 +425,7 @@ const Page = ({ data }) => {
 				))
 			}
 			<Footer></Footer>
+			<CookiesBar></CookiesBar>
 		</main>
   	)
 };
