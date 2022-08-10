@@ -12,7 +12,7 @@
     align-items: center;
     padding: 15px;
     display: none;
-    z-index: 100;
+    z-index: 999999!important;
 
     @media(min-width: $md) {
         justify-content: space-between;

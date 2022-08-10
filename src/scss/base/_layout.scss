@@ -809,7 +809,7 @@ html {
 
 .showItem {
     .serviceBlockBG {
-        max-height: 350px;
+        transform: translateY(0%) !important;
     }
 
     .servicesBlock-module--serviceBlockColLeft--xUY65,
