@@ -2,12 +2,13 @@
 
 .floatingBtn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     opacity: 0;
     z-index: -1;
-    transition: opacity 0.3s ease, z-index 0s ease 0.3s;
+    transition: opacity 0.3s ease, z-index 0s ease 0.3s, transform 0.3s ease;
     display: none;
+    transform: translateY(-10px);
 
     @media(min-width: $md) {
         display: block;
