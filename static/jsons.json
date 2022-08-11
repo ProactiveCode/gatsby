@@ -63,6 +63,19 @@
 			"titleAlign": "right"
         },
         {
+            "__typename": "Floating",
+			"sectionInfo": [
+				{
+					"size": "small",
+					"bgColor": "grey",
+					"identifier": "floating-btn",
+					"image": ""
+				}
+			],
+            "link": "Web Development",
+			"btnText": "https://www.w3schools.com/html/mov_bbb.mp4",
+        },
+        {
             "__typename": "MultiColumns",
 			"sectionInfo": [
 				{

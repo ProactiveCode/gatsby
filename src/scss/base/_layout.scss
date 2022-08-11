@@ -815,7 +815,7 @@ html {
     .servicesBlock-module--serviceBlockColLeft--xUY65,
     .servicesBlock-module--serviceBlockColRight--JYm05 {
         a {    
-            &:last-of-type {
+            &:first-of-type {
                 @media(min-width: $md) {
                     transform: translateX(0px) !important;
                 }
@@ -826,4 +826,10 @@ html {
 
 .showBar {
     display: flex !important;
+}
+
+.showFloating { 
+    opacity: 1 !important;
+    z-index: 99999999 !important;
+    transition: opacity 0.3s ease, z-index 0s ease !important;
 }

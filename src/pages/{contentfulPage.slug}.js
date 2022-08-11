@@ -16,6 +16,7 @@ import MainVideo from '../components/mainVideo/mainVideo'
 import ServicesBlock from '../components/servicesBlock/servicesBlock'
 import Testimonials from '../components/testimonials/testimonials'
 import CookiesBar from '../components/cookies/cookies'
+import Floating from '../components/floating/floating'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
@@ -248,6 +249,18 @@ const Page = ({ data }) => {
 						}
 					}
 
+					if (current === '/web-development/' || current === '/seo/' || current === '/web-design/' || current === '/web-hosting/') {
+						if(currentScrollY > 100) {
+							setTimeout(() => {
+								document.getElementById('floatingContact').classList.add('showFloating');
+							}, 10);
+						} else {
+							setTimeout(() => {
+								document.getElementById('floatingContact').classList.remove('showFloating');
+							}, 10);
+						}
+					}
+
 					if (current === '/services/') {
 						if(sectionID === "serviceDev") {
 							setTimeout(() => {
@@ -284,7 +297,6 @@ const Page = ({ data }) => {
 								}
 							}, 1000);
 						}
-						// console.log(sectionID);
 					}
 				}
 			});
@@ -327,6 +339,8 @@ const Page = ({ data }) => {
 				return <LargeHero section={val} />;
 			case "Service" :
 				return <ServicesBlock section={val} />;
+			case "Floating" :
+				return <Floating section={val} />;
 		  default:
 			return "Block not found.";
 		}

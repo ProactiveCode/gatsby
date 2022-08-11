@@ -30,7 +30,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
     flex-wrap: wrap;
 
     @media(min-width: $md) {
@@ -62,13 +62,10 @@
     }
 
     a {
-        &:first-of-type {
-            display: block;
-            font-weight: 400;
-        }
-
         &:last-of-type {
             margin-top: 30px;
+            display: block;
+            font-weight: 400;
         }
     }
 
@@ -85,7 +82,7 @@
         }
 
         a {    
-            &:last-of-type {
+            &:first-of-type {
                 @media(min-width: $md) {
                     transform: translateX(400px);
                     transition: transform 0.7s ease-out 0.8s;
@@ -100,7 +97,7 @@
         padding-bottom: 0;
 
         a {    
-            &:last-of-type {
+            &:first-of-type {
                 @media(min-width: $md) {
                     transform: translateX(-400px);
                     transition: transform 0.7s ease-out 0.8s;

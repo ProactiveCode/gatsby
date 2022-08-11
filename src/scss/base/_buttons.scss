@@ -82,6 +82,16 @@
         }
     }
 
+    &--pink-glow {
+        background-color: $sec-brand-color;
+        font-style: italic;
+        filter: drop-shadow(0px 0px 3px $brand-color);
+
+        &:hover {
+            background-color: $brand-color;
+        }
+    }
+
     &--replay {
         padding: 7px 11px 10px 32px;
         @include font-size(14);
