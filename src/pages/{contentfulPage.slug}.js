@@ -188,11 +188,13 @@ const Page = ({ data }) => {
 
 					if(element.classList.contains('pink')) {
 						document.getElementsByClassName('contact-link')[0].classList.add("contact-white");
+						document.getElementsByClassName('page-locator')[0].classList.add("contact-white");
 						document.getElementsByClassName('headerLinksRight')[0].classList.add("hover-blue");
 						document.getElementsByClassName('headerLinksLeft')[0].classList.add("hover-blue");
 						document.getElementsByClassName('indicator')[0].classList.add("change-active");
 					} else {
 						document.getElementsByClassName('contact-link')[0].classList.remove("contact-white");
+						document.getElementsByClassName('page-locator')[0].classList.remove("contact-white");
 						document.getElementsByClassName('headerLinksRight')[0].classList.remove("hover-blue");
 						document.getElementsByClassName('headerLinksLeft')[0].classList.remove("hover-blue");
 						document.getElementsByClassName('indicator')[0].classList.remove("change-active");
@@ -363,7 +365,7 @@ const Page = ({ data }) => {
 	}, 10);
   return (
 		<main id="main" className={currentPageClass}>
-			<Helmet htmlAttributes={{lang: 'en'}}>
+			<Helmet htmlAttributes={{lang: 'en', style: 'background-color: #2E2D2C;'}} >
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>

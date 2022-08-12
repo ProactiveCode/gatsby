@@ -65,7 +65,7 @@ module.exports = {
     options: {
   
       /* Font loading mode */
-      mode: "async",
+      mode: "render-blocking",
   
       /* Enable font loading listener to handle FOUT */
       enableListener: true,
