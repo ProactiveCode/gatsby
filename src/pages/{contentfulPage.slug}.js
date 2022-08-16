@@ -378,7 +378,7 @@ const Page = ({ data }) => {
 	}, 10);
   return (
 		<main id="main" className={currentPageClass}>
-			<Helmet htmlAttributes={{lang: 'en', style: 'background-color: #2E2D2C;'}} >
+			<Helmet htmlAttributes={{lang: 'en'}} >
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>
