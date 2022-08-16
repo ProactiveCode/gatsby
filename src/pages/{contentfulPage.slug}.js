@@ -53,6 +53,7 @@ const Page = ({ data }) => {
 	const off = 'https://images.ctfassets.net/74ncoczcn9dm/4sGcdhMmgkrpRoy3Tt55Vo/29294a8b83887e95ac2815ce9e82db34/volumeoff.svg';
 	const on = 'https://images.ctfassets.net/74ncoczcn9dm/WcpUD1LGczvC9XIEWLd2U/becf8f460f27dc206e331e466fe483ee/volumeon.svg';
 	let arrayAdded = [];
+	let isBot = 0;
 
 
 	setTimeout(() => {
@@ -75,6 +76,18 @@ const Page = ({ data }) => {
 					}
 					count++;
 				});
+
+				var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
+				var re = new RegExp(botPattern, 'i');
+				var userAgent = navigator.userAgent; 
+
+				if (re.test(userAgent)) {
+					console.log('the user agent is a crawler!');
+					isBot = 1;
+				} else {
+					console.log('not a bot');
+					isBot = 0;
+				}
 
 				if(!Cookies.get('homeVidPlayed')) {
 					setTimeout(() => {
@@ -203,7 +216,7 @@ const Page = ({ data }) => {
 					if (current === '/') {
 						if(sectionID === "Our Energy") {
 							setTimeout(() => {
-								if(playedBC === 0 && volOn === 1) {
+								if(playedBC === 0 && volOn === 1 && isBot === 0) {
 									// audio.cloneNode(true).play();
 									clip.play();
 								}
@@ -217,7 +230,7 @@ const Page = ({ data }) => {
 
 						if(sectionID === "Let's talk") {
 							setTimeout(() => {
-								if(playedPhone === 0 && volOn === 1) {
+								if(playedPhone === 0 && volOn === 1 && isBot === 0) {
 									// audio.cloneNode(true).play();
 									clip.play();
 								}
@@ -240,7 +253,7 @@ const Page = ({ data }) => {
 								document.querySelectorAll('.timed2white').forEach(x=>x.classList.remove('timed2whiteOn'));
 								document.querySelectorAll('.timed3').forEach(x=>x.classList.remove('timed3On'));
 								document.querySelectorAll('.timed3white').forEach(x=>x.classList.remove('timed3whiteOn'));
-								if(playedPop === 0 && volOn === 1) {
+								if(playedPop === 0 && volOn === 1 && isBot === 0) {
 									// pop.cloneNode(true).play();
 									bulbpop.play();
 								}
@@ -365,7 +378,7 @@ const Page = ({ data }) => {
 	}, 10);
   return (
 		<main id="main" className={currentPageClass}>
-			<Helmet htmlAttributes={{lang: 'en'}} >
+			<Helmet htmlAttributes={{lang: 'en', style: 'background-color: #2E2D2C;'}} >
 				<title>{title}</title>
 				<meta name="title" content={title}></meta>
 				<meta name="description" content={desc}></meta>
