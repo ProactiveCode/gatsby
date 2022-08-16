@@ -37,13 +37,13 @@ const Page = ({ data }) => {
 	const clip = new Howl({
 		src: [Neon],
 		volume: 1,
-		preload: true
+		preload: false
 	});
 
 	const bulbpop = new Howl({
 		src: [Bulb],
 		volume: 1,
-		preload: true
+		preload: false
 	});
 
 	const prevScrollY = useRef(0);
