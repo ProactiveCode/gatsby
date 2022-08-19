@@ -1,0 +1,131 @@
+@import "../../../src/scss/utils/variables";
+
+.pillarColWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+}
+
+.overallWrapper {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media(max-width: $md) {
+        background: none !important;
+    }
+}
+
+.pillarCol {
+    width: calc(60% - 20px);
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @media(min-width: 400px) {
+        width: calc(50% - 20px);
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        line-height: 0.9;
+        padding-bottom: 10px;
+
+        @media(max-width: $md) {
+           font-size: 25px;
+        }
+
+        br {
+            @media(max-width: $md) {
+                display: none !important;
+            }
+        }
+    }
+
+    h2,p,a {
+        @media(min-width: $xlg) {
+            background: linear-gradient(90deg, rgba(255,0,247,1) 0%, rgba(255,0,247,0) 22%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+    }
+
+    a {
+        font-style: italic;
+        font-weight: 400;
+        position: relative;
+        color: $sec-brand-color;
+
+        &:before {
+            @media(min-width: $xlg) {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(255,0,247,1) 0%, rgba(255,0,247,0) 22%);
+            }
+        }
+    }
+
+    &:hover {
+        h2,p {
+            @media(min-width: $xlg) {
+                background: $white !important;
+                -webkit-background-clip: text !important;
+                -webkit-text-fill-color: transparent !important;
+                transition: all 0.3s ease !important;
+            }
+        }
+
+        a {
+            @media(min-width: $xlg) {
+                background: $sec-brand-color !important;
+                -webkit-background-clip: text !important;
+                -webkit-text-fill-color: transparent !important;
+                transition: all 0.3s ease !important;
+            }
+
+            &:before {
+                background: $sec-brand-color;
+            }
+        }
+    }
+}
+
+.mobileNum,
+.mobileBorder {
+    display: block;
+
+    @media(min-width: $md) {
+        display: none;
+    }
+}
+
+.mobileNum {
+    img {
+        max-height: 190px;
+    }
+}
+
+.mobileBorder {
+    transform: translateY(80px);
+    img {
+        max-width: 170px;
+    }
+}
+
+.pillarColMob {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: calc(40% - 20px);
+
+    @media(min-width: 400px) {
+        width: calc(50% - 20px);
+    }
+}

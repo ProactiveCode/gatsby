@@ -163,6 +163,22 @@
             "content": "<svg viewBox='0 0 365 365'> <g id='H-letter'> <line class='st0' x1='17' y1='0' x2='17' y2='124'/> <line class='st0' x1='33' y1='62' x2='68' y2='62'/> <line class='st0' x1='84' y1='0' x2='84' y2='124'/> </g> <g id='E-letter'> <line class='st0' x1='138' y1='0' x2='138' y2='124'/> <line class='st0' x1='154' y1='17' x2='201' y2='17'/> <line class='st0' x1='154' y1='62' x2='196' y2='62'/> <line class='st0' x1='154' y1='107' x2='201' y2='107'/> </g> <g id='L-one-letter'> <line class='st0' x1='243' y1='0' x2='243' y2='124'/> <line class='st0' x1='237' y1='107' x2='281' y2='107'/> </g> <g id='L-two-letter'> <line class='st0' x1='319' y1='-1' x2='319' y2='123'/> <line class='st0' x1='310' y1='107' x2='354' y2='107'/> </g> <g id='O-letter'> <circle class='st1' cx='183' cy='246.9' r='48'/> </g> </svg>"
         },
         {
+            "__typename": "Pillar",
+			"sectionInfo": [
+				{
+					"size": "",
+					"bgColor": "grey",
+					"identifier": "pillar",
+					"image": ""
+				}
+			],
+            "size": "1000",
+            "extra_class": "",
+            "content": "",
+            "bgImage": "",
+            "lineImage": ""
+        },
+        {
             "__typename": "Videos",
 			"sectionInfo": [
 				{

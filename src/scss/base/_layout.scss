@@ -422,6 +422,17 @@ a.no-td {
     100%  { opacity: 1; }
   }
 
+  @keyframes defaultanim0{
+    0%    { opacity: 1; }
+    10%    { opacity: 0; }
+    17%    { opacity: 1; }
+    20%    { opacity: 0; }
+    23%   { opacity: 1; }
+    36%    { opacity: 0; }
+    40%    { opacity: 1; }
+    100%  { opacity: 1; }
+  }
+
   @keyframes defaultwhite{
     0%    { opacity: 1;
     fill: white; }
@@ -839,5 +850,175 @@ html {
 .loaded {
     .contact-link {
         color: $sec-brand-color !important;
+    }
+}
+
+.pillars-upper {
+    position: relative;
+
+    &-pink {
+        position: absolute;
+        left: 1.3%;
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        opacity: 0;
+        animation: defaultanim0 4s forwards step-end 1s; 
+    }
+}
+
+.colDirRight {
+    flex-direction: row-reverse;
+
+    .mobileBorderOverride {
+        img {
+            transform: scaleX(-1);
+        }
+    }
+
+    .pillarColMobOverride {
+        align-items: baseline;
+    }
+}
+
+.colDirLeft {
+    h2,p,a {
+        @media(min-width: $xlg) {
+            background: linear-gradient(90deg, rgba(255,0,247,0) 70%, rgba(255,0,247,1) 78%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            transition: all 0.3s ease;
+        }
+    }
+
+    a {
+        &:before {
+            background: linear-gradient(90deg, rgba(255,0,247,0) 70%, rgba(255,0,247,1) 78%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.pillarDiscovery {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: -5%;
+        bottom: -25%;
+        width: 60%;
+        height: 100%;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/1LlhBaJ0zjeEO2Q4sivMuK/92aa5ee68bb5ffdd69ccaf7b1a9b75c5/b1-better.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: none;
+        pointer-events:none;
+
+        @media(min-width: $xlg) {
+            right: -7%;
+            display: block;
+        }
+    }
+}
+
+.pillarRoadmap {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 25%;
+        width: 40%;
+        height: 100%;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: none;
+        pointer-events:none;
+
+        @media(min-width: $xlg) {
+            display: block;
+            bottom: -60%;
+        }
+    }
+}
+
+.pillarDesign {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 2%;
+        width: 20%;
+        height: 100%;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/1LY7YY5g8k0m5FO5Z1I3AY/c902e0b01257c81426a773ba2a0772c9/Neon_Borders-14.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: none;
+        pointer-events:none;
+
+        @media(min-width: $xlg) {
+            display: block;
+            right: -9%;
+        }
+    }
+}
+
+.pillarDevelopment {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 25%;
+        width: 40%;
+        height: 100%;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transform: scaleX(-1);
+        display: none;
+        pointer-events:none;
+
+        @media(min-width: $xlg) {
+            display: block;
+            bottom: -70%;
+        }
+    }
+}
+
+.pillarTD {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: -5%;
+        bottom: -25%;
+        width: 95%;
+        height: 100%;
+        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/7v2fTu22h6XCUxcFHvLrSu/44daddfd4b251e0aceea1fb919fb1a7c/b5.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: none;
+        pointer-events:none;
+
+        @media(min-width: $xlg) {
+            display: block;
+            right: -7%;
+            bottom: -45%;
+        }
     }
 }

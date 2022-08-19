@@ -17,6 +17,7 @@ import ServicesBlock from '../components/servicesBlock/servicesBlock'
 import Testimonials from '../components/testimonials/testimonials'
 import CookiesBar from '../components/cookies/cookies'
 import Floating from '../components/floating/floating'
+import Pillar from '../components/pillar/pillar'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
@@ -82,10 +83,8 @@ const Page = ({ data }) => {
 				var userAgent = navigator.userAgent; 
 
 				if (re.test(userAgent)) {
-					console.log('the user agent is a crawler!');
 					isBot = 1;
 				} else {
-					console.log('not a bot');
 					isBot = 0;
 				}
 
@@ -356,6 +355,8 @@ const Page = ({ data }) => {
 				return <ServicesBlock section={val} />;
 			case "Floating" :
 				return <Floating section={val} />;
+			case "Pillar" :
+				return <Pillar section={val} />;
 		  default:
 			return "Block not found.";
 		}
