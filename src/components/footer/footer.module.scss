@@ -8,6 +8,10 @@
     padding-bottom: 40px;
     position: relative;
     z-index: 100001;
+
+    @media(min-width: $md) {
+        padding-top: 60px;
+    }
 }
 
 .footerWrap {
@@ -35,12 +39,18 @@
 
 .footerLogo {
     margin-right: 10px;
-    margin-top: 15px;
+    margin-top: -50px;
     margin-bottom: 20px;
 
     @media(min-width: 400px) {
         margin-bottom: 0;
+        margin-top: -60px;
     }
+
+    @media(min-width: 450px) {
+        margin-top: 15px;
+    }
+
 
     img {
         width: 100%;
@@ -129,6 +139,40 @@
         width: 180px;
     }
 
+}
+
+.footerSocials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media(min-width: $lg) {
+       display: none;
+    }
+
+    a {
+        margin-right: 10px;
+        display: block;
+
+        @media(min-height: 650px) and (min-width: 1300px) {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        img,svg {
+            width: 20px;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 6px transparent);
+            transition: filter 0.3s ease;
+        }
+
+        &:hover {
+            img,svg {
+                filter: drop-shadow(0 0 6px $sec-brand-color) drop-shadow(0 0 6px $sec-brand-color);
+            }
+        }
+    }
 }
 
 .footerWild {

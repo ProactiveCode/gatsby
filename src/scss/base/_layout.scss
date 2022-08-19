@@ -855,6 +855,11 @@ html {
 
 .pillars-upper {
     position: relative;
+    transform: translateX(-10px);
+
+    @media(min-width: $xlg) {
+        transform: translateX(0px);
+    }
 
     &-pink {
         position: absolute;
@@ -1020,5 +1025,19 @@ html {
             right: -7%;
             bottom: -45%;
         }
+    }
+}
+
+.pillarsDots {
+    display: flex;
+    justify-content: center;
+    
+    @media(min-width: $md) {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
     }
 }
