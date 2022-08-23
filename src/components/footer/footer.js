@@ -60,6 +60,7 @@ const Layout = () => {
 				<div className={Styles.footerPages}>
 					<a href="/contact">Contact Us</a>
 					<a href="/blog">Blog</a>
+					<a href="/our-6-pillars">Our 6 Pillars</a>
 				</div>
 				<div className={Styles.footerServices}>
 					<p>Services</p>

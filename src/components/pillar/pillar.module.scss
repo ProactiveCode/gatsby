@@ -67,6 +67,9 @@
                 height: 1px;
                 background: linear-gradient(90deg, rgba(255,0,247,1) 0%, rgba(255,0,247,0) 22%);
             }
+            -webkit-background-clip: unset !important;
+            background-clip: unset !important;
+
         }
     }
 
@@ -89,7 +92,7 @@
             }
 
             &:before {
-                background: $sec-brand-color;
+                background: $sec-brand-color !important;
             }
         }
     }
