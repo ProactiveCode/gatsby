@@ -1,0 +1,112 @@
+@import "../../../src/scss/utils/variables";
+
+.slider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0%;
+    position: relative;
+
+    @media(max-width: $md) {
+        animation: bg 7s linear forwards;
+    }
+
+    @media(min-width: $md) {
+        background-position: center;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $sec-brand-color;
+        transition: all 0.3s ease;
+        display: none;
+
+        @media(min-width: $md) {
+            display: block;
+        }
+    }
+
+    &:hover {
+        &:after {
+            width: 50%;
+        }
+
+        .sliderLeft {
+            @media(min-width: $md) {
+                transform: translateX(100%);
+            }
+        }
+
+        .sliderRight {
+            @media(min-width: $md) {
+                animation: defaultanim2 4s forwards step-end;
+            }
+        }
+    }
+}
+
+@keyframes bg{
+    0%    { background-position: 0%; }
+    100%    { background-position: 100%; }
+}
+
+@keyframes defaultanim2{
+    0%    { opacity: 1; }
+    10%    { opacity: 0; }
+    17%    { opacity: 1; }
+    20%    { opacity: 0; }
+    23%   { opacity: 1; }
+    36%    { opacity: 0; }
+    40%    { opacity: 1; }
+    100%  { opacity: 1; }
+  }
+
+.sliderWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.sliderLeft {
+    width: 100%;
+    transition: all 0.3s ease;
+    padding: 20px;
+
+    @media(min-width: $md) {
+        width: 50%;
+        padding: 40px;
+    }
+}
+
+.sliderRight {
+    width: 100%;
+    transition: all 0.3s ease;
+    padding: 20px;
+    display: none;
+
+    @media(min-width: $md) {
+        display: block;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+
+
+    img {
+        @media(min-width: $md) {
+            transform: rotate(-5deg);
+        }
+    }
+}

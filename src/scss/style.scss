@@ -16,3 +16,8 @@
 @import 'base/tables';
 @import 'base/typography';
 @import 'base/blocks';
+
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";

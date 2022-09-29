@@ -1,0 +1,180 @@
+@import "../../../src/scss/utils/variables";
+
+.spinWrap {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-position: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px 20px;
+    display: none;
+    position: relative;
+
+    @media(min-width: $md) {
+        display: flex;
+    }
+
+    @media(min-width: $lg) {
+        padding: 80px 20px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 48%;
+        top: 0%;
+        width: 52%;
+        height: 100%;
+        background-color: rgba($color: $brand-color, $alpha: 0.6);
+        z-index: 1;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transition: all 0.3s ease;
+    }    
+}
+
+.spinWrapMobile {
+    display: block;
+    text-align: center;
+
+    @media(min-width: $md) {
+        display: none;
+    }
+}
+
+.spinMobDown {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    opacity: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    div {
+        position: relative;
+        z-index: 2;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-color;
+        z-index: 1;
+    }
+}
+
+.spinMobUp {
+    padding-top: 50px;
+    position: relative;
+
+    div,button {
+        position: relative;
+        z-index: 2;
+    }
+
+    button {
+        transform: translateY(50%);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $brand-color, $alpha: 0.7);
+        z-index: 1;
+    }
+
+    h2 {
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.spinVid {
+    @media(max-width: $md) {
+       display: none;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+
+
+.col1 {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.spinBG {
+    @media(max-width: $md) {
+        padding: 0;
+        background-position: 0%;
+    }
+
+    @media(min-width: $md) {
+        padding: 0 !important;
+        background-position: 0% center;
+        transition: all 1s linear;
+    }
+
+    &:hover {
+        @media(min-width: $md) {
+            background-position: 50% center;
+        }
+
+        .spinWrap:before {
+            left: 0%;
+            clip-path: polygon(0 0, 85% 0%, 100% 100%, 0% 100%);
+        }
+
+        .col1 {
+            opacity: 1;
+        }
+    }
+}
+
+
+.spinCol {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    @media(min-width: $md) {
+        width: calc(50% - 20px);
+    }
+
+    @media(min-width: $lg) {
+        width: calc(50% - 50px);
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 0;
+
+        @media(min-width: $md) {
+            font-size: 30px;
+        }
+
+        @media(min-width: $lg) {
+            font-size: 50px;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}

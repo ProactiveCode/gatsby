@@ -11,13 +11,18 @@ import ContactForm from '../components/contact/contact'
 import Generic from '../components/generic/generic'
 import Faqs from '../components/faqs/faqs'
 import NewHero from '../components/newHero/newHero'
+import Slider from '../components/slider/slider'
 import LargeHero from '../components/largeHero/largeHero'
+import ServiceHero from '../components/serviceHero/serviceHero'
 import MainVideo from '../components/mainVideo/mainVideo'
 import ServicesBlock from '../components/servicesBlock/servicesBlock'
 import Testimonials from '../components/testimonials/testimonials'
+import SmallSlider from '../components/smallSlider/smallSlider'
 import CookiesBar from '../components/cookies/cookies'
 import Floating from '../components/floating/floating'
+import Spin from '../components/spin/spin'
 import Pillar from '../components/pillar/pillar'
+import NeonItems from '../components/neonItems/neonItems'
 import Neon from '../images/neon-compressed.m4a'
 import Bulb from '../images/pop.wav'
 import { Helmet } from "react-helmet"
@@ -59,6 +64,11 @@ const Page = ({ data }) => {
 
 	setTimeout(() => {
 		if (typeof window !== 'undefined') {
+			//redirects add to 404.js as well.
+			if(window.location.pathname === "/test-page" || window.location.pathname === "/test-page/") {
+				window.location.href = '/web-development-leeds/';
+			}
+			
 			if(data.contentfulPage.slug === "index") {
 				const indi = document.getElementsByClassName('indicator')[0];
 				const loadElements = document.querySelectorAll(".section");
@@ -263,7 +273,7 @@ const Page = ({ data }) => {
 						}
 					}
 
-					if (current === '/web-development/' || current === '/seo/' || current === '/web-design/' || current === '/web-hosting/') {
+					if (current === '/web-development/' || current === '/seo/' || current === '/web-design/' || current === '/web-hosting/' || current === '/web-development-leeds/' || current === '/seo-leeds/' || current === '/web-design-leeds/' || current === '/web-hosting-leeds/') {
 						if(currentScrollY > 100) {
 							setTimeout(() => {
 								document.getElementById('floatingContact').classList.add('showFloating');
@@ -357,6 +367,16 @@ const Page = ({ data }) => {
 				return <Floating section={val} />;
 			case "Pillar" :
 				return <Pillar section={val} />;
+			case "Spin" :
+				return <Spin section={val} />;
+			case "NeonItems" :
+				return <NeonItems section={val} />;
+			case "ServiceHero" :
+				return <ServiceHero section={val} />;
+			case "Slider" :
+				return <Slider section={val} />;
+			case "SmallSlider" :
+				return <SmallSlider section={val} />;
 		  default:
 			return "Block not found.";
 		}

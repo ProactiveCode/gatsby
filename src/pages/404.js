@@ -4,6 +4,12 @@ import { Helmet } from "react-helmet"
 
 // markup
 const NotFoundPage = () => {
+	//redirects add to {contentfulPage.slug}.js as well.
+	if (typeof window !== 'undefined') {
+		if(window.location.pathname === "/test-page" || window.location.pathname === "/test-page/") {
+			window.location.href = '/web-development-leeds/';
+		}
+	}
   return (
     <main className={'four04'}>
       <Helmet htmlAttributes={{lang: 'en'}}>

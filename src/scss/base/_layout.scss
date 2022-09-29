@@ -219,6 +219,26 @@ a.no-td {
     }
 }
 
+.desktopOnly,
+.only-desktop,
+.desktop-only {
+    display: none;
+
+    @media(min-width: $md) {
+        display: block;
+    }
+}
+
+.mobileOnly,
+.only-mobile,
+.mobile-only {
+    display: block;
+
+    @media(min-width: $md) {
+        display: none;
+    }
+}
+
 .hide {
     display: none;
 }
@@ -1039,5 +1059,104 @@ html {
     img {
         width: 100%;
         max-width: 200px;
+    }
+}
+
+.mw-500 {
+    max-width: 500px;
+}
+
+#noalign {
+    .container {
+        align-items: unset;
+
+        div div {
+            height: 100%;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .colChat {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+}
+
+.neonItemsOuter {
+    @media(max-width: $md) {
+        background-image: none !important;
+    }
+
+    @media(min-width: $md) {
+        position: relative;
+    }
+
+    video {
+        display: none;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        left: 0;
+        top: 0;
+
+        @media(min-width: $md) {
+            display: block;
+        }
+    }
+}
+
+.glide__arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+
+    @media(min-width: $md) {
+        display: none;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 96 96' style='enable-background:new 0 0 96 96;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23707070;%7D%0A%3C/style%3E%3Cpath class='st0' d='M39.4,48l30.5-25.4c2.5-2.1,2.9-5.9,0.7-8.5c-2.1-2.5-5.9-2.9-8.4-0.8l-36,30c-2.5,2.1-2.9,5.9-0.8,8.5 c0.2,0.3,0.5,0.5,0.8,0.8l36,30c2.5,2.1,6.3,1.8,8.5-0.8c2.1-2.5,1.8-6.3-0.8-8.4L39.4,48z'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &.btnRight {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.hidebg {
+    opacity: 0 !important;
+}
+
+.glideTrack {
+    overflow: hidden;
+}
+
+.flipItem {
+    .spin-module--spinMobUp--gvQmA {
+        div {
+            opacity: 0;
+        }
+
+        &:before {
+            opacity: 0;
+        }
+    }
+
+    .spin-module--spinMobDown--OiCgp {
+        opacity: 1;
     }
 }

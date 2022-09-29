@@ -85,13 +85,6 @@ module.exports = {
     },
   },
   {
-    resolve: `gatsby-plugin-htaccess-redirects`,
-    options: {
-      prefix: "<IfModule mod_rewrite.c>\nRewriteEngine On",
-      suffix: "</IfModule>",
-    },
-  },
-  {
     resolve: "gatsby-source-contentful",
     options: {
       spaceId: "74ncoczcn9dm",

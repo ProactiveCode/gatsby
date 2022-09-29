@@ -1,0 +1,229 @@
+@import "../../../src/scss/utils/variables";
+
+.smallSlider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @media(min-width: $md) {
+        background-position: center;
+        margin-bottom: 40px;
+    }
+}
+
+.blue,
+.pink {
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes bg{
+    0%    { background-position: 0%; }
+    100%    { background-position: 100%; }
+}
+
+.smallSliderWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $brand-color, $alpha: 0.8);
+        transition: all 0.3s ease;
+        z-index: -1;
+
+        @media(min-width: $md) {
+            width: 40%;
+        }
+    }
+
+    &:hover {
+        &:after {
+            @media(min-width: $md) {
+                width: 100%;
+                background-color: rgba($color: $brand-color, $alpha: 1);
+            }
+        }
+
+        .smallSliderContentWrapLeft {
+            @media(min-width: $md) {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.clicked {
+        &:after {
+            background-color: rgba($color: $brand-color, $alpha: 1);
+        }
+
+        .smallSliderLeft {
+            max-height: 450px;
+        }
+    }
+}
+
+.smallSliderContentWrapLeft,
+.smallSliderContentWrapRight {
+    @media(max-width: $md) {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        @media(max-width: $md) {
+            text-decoration: underline;
+        }
+    }
+}
+
+.smallSliderLeft {
+    width: 100%;
+    transition: all 0.3s ease;
+    padding: 0px;
+
+    @media(min-width: $md) {
+        width: 60%;
+        padding: 40px;
+    }
+
+    p:last-of-type {
+        margin: 0;
+    }
+}
+
+.smallSliderRight {
+    width: 100%;
+    transition: all 0.3s ease;
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+
+    @media(min-width: $md) {
+        padding: 40px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        max-height: none;
+    }
+
+    p:last-of-type {
+        margin: 0;
+    }
+}
+
+.smallSliderContentWrapLeft {
+    padding-top: 0;
+
+    @media(min-width: $md) {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+.blue {
+    .smallSliderWrap {
+        @media(max-width: $md) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .smallSliderRight {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .smallSliderLeft {
+        @media(max-width: $md) {
+            max-height: 0px;
+            overflow: hidden;
+        }
+    }
+}
+
+.pink {
+    .smallSliderWrap {
+        &:after {
+            right: auto;
+            left: 0;
+            width: 100%;
+            background-color: rgba($color: $sec-brand-color, $alpha: 0.8);
+
+            @media(min-width: $md) {
+                width: 40%;
+            }
+        }
+
+        &:hover {
+            &:after {
+                @media(min-width: $md) {
+                    width: 100%;
+                    background-color: rgba($color: $sec-brand-color, $alpha: 1);
+                }
+            }
+
+            .smallSliderContentWrapRight {
+                @media(min-width: $md) {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.clicked {
+            &:after {
+                background-color: rgba($color: $sec-brand-color, $alpha: 1);
+            }
+
+            .smallSliderRight {
+                max-height: 450px;
+            }
+        }
+    }
+    
+    .smallSliderLeft {
+        @media(min-width: $md) {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    .smallSliderRight {    
+        @media(min-width: $md) {
+            width: 60%;
+            display: block;
+        }
+    }
+
+    .smallSliderContentWrapLeft {
+        padding-top: 20px;
+        @media(min-width: $md) {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .smallSliderContentWrapRight {
+        padding-top: 0;
+
+        @media(min-width: $md) {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
