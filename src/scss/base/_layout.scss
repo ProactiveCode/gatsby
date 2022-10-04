@@ -1111,6 +1111,17 @@ html {
     }
 }
 
+.spaceItems50 {
+    @media(min-width: $lg) {
+        padding-bottom: 350px;
+    }
+    .neonItem {
+        @media(min-width: $lg) {
+            width: calc(50% - 40px);
+        }
+    }
+}
+
 .glide__arrows {
     display: flex;
     justify-content: space-between;
