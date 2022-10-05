@@ -16,7 +16,7 @@
 
 2.  **Start developing.**
 
-    Once you have learnt the basics you can work on the site. Open the files in VSCode & open terminal. Then you can run a number of commands:
+    Once you have learnt the basics you can work on the site. Open the files in VSCode & open terminal. If it's your first time running this you will need to run npm install. Then you can run a number of commands:
       <br><br>
       **Develop locally (static)**
       
