@@ -27,6 +27,9 @@ const Layout = ({ section }) => {
 			<div className={c(Styles.smallSlider)}>
 				<div className={c('container', 'container' + section.size, Styles[section.colour])}  style={ section.sectionInfo[0].image ? { backgroundImage:  `url("${section.sectionInfo[0].image}")`} : {}} >
 					<div className={c(Styles.smallSliderWrap,'smallSliderClicker')} onClick={toggleClick}>
+						{
+							(section.contentVideo) ?  <video playsInline="true" loading="lazy" src={section.contentVideo} loop={true} aria-hidden="true" autoPlay={true} muted={true}></video> : ''
+						}
 						<div className={Styles.smallSliderLeft}>
 							<div className={Styles.smallSliderContentWrapLeft} dangerouslySetInnerHTML={{__html: section.col1}}></div>
 						</div>

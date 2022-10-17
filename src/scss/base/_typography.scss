@@ -56,6 +56,18 @@ h1 {
             @include font-size(30);
         }
     }
+
+    &.h3-large {
+        @include font-size(40);
+
+        @media(min-width: $md) {
+            @include font-size(45);
+        }
+    
+        @media(min-width: $lg) {
+            @include font-size(60);
+        }
+    }
 }
 
 h2 {

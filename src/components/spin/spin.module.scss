@@ -144,6 +144,10 @@
         .col1 {
             opacity: 1;
         }
+
+        h2 {
+            opacity: 0;
+        }
     }
 }
 
@@ -164,6 +168,8 @@
     h2 {
         font-size: 25px;
         margin: 0;
+        transition: all 0.3s ease;
+        opacity: 1;
 
         @media(min-width: $md) {
             font-size: 30px;

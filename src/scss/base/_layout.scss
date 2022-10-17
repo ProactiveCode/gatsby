@@ -1066,6 +1066,43 @@ html {
     max-width: 500px;
 }
 
+#noalignnormal {
+    .container {
+        @media(min-width: $md) {
+            align-items: unset;
+        }
+
+        div >div {
+            @media(min-width: $md) {
+                height: 100%;
+            }
+        }
+
+        .hover-anim-normal,
+        .hover-anim-hover {
+            @media(min-width: $md) {
+                height: auto;
+            }
+        }
+    }
+
+    .twoCol-module--twoCol--MWQ9O {
+        &:hover {
+            .hover-anim-hover {
+                @media(min-width: $md) {
+                    opacity: 1;
+                }
+            }
+
+            .hover-anim-normal {
+                @media(min-width: $md) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
 #noalign {
     .container {
         align-items: unset;
@@ -1169,5 +1206,25 @@ html {
 
     .spin-module--spinMobDown--OiCgp {
         opacity: 1;
+    }
+}
+
+.hover-anim {
+    @media(min-width: $md) {
+        position: relative;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+
+    &-hover {
+        @media(min-width: $md) {
+            opacity: 0;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
     }
 }
