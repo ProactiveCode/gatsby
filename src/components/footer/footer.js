@@ -68,7 +68,7 @@ const Layout = () => {
 					<a href="/web-development">Web Development</a>
 					<a href="/seo">SEO</a>
 					<a href="/web-design">Design</a>
-					<a href="/web-hosting">Hosting</a>
+					<a href="/web-hosting-agency-leeds/">Hosting</a>
 				</div>
 				<div className={Styles.footerCase}>
 					<p>Case Studies</p>

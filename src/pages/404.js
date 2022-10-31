@@ -9,6 +9,10 @@ const NotFoundPage = () => {
 		if(window.location.pathname === "/test-page" || window.location.pathname === "/test-page/") {
 			window.location.href = '/web-development-leeds/';
 		}
+    
+    if(window.location.pathname === "/web-hosting" || window.location.pathname === "/web-hosting/") {
+      window.location.href = '/web-hosting-agency-leeds/';
+    }
 	}
   return (
     <main className={'four04'}>

@@ -22,6 +22,15 @@ module.exports = {
     },
   },
   {
+    resolve: "gatsby-plugin-google-tagmanager",
+    options: {
+      id: "GTM-W3T239P",
+      includeInDevelopment: true,
+      defaultDataLayer: { platform: "gatsby" },
+      enableWebVitalsTracking: true,
+    },
+  },
+  {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"

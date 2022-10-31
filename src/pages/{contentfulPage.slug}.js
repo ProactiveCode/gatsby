@@ -68,6 +68,10 @@ const Page = ({ data }) => {
 			if(window.location.pathname === "/test-page" || window.location.pathname === "/test-page/") {
 				window.location.href = '/web-development-leeds/';
 			}
+
+			if(window.location.pathname === "/web-hosting" || window.location.pathname === "/web-hosting/") {
+				window.location.href = '/web-hosting-agency-leeds/';
+			}
 			
 			if(data.contentfulPage.slug === "index") {
 				const indi = document.getElementsByClassName('indicator')[0];
@@ -273,7 +277,7 @@ const Page = ({ data }) => {
 						}
 					}
 
-					if (current === '/web-development/' || current === '/seo/' || current === '/web-design/' || current === '/web-hosting/' || current === '/web-development-leeds/' || current === '/seo-leeds/' || current === '/web-design-leeds/' || current === '/web-hosting-leeds/') {
+					if (current === '/web-development/' || current === '/seo/' || current === '/web-design/' || current === '/web-hosting/' || current === '/web-development-leeds/' || current === '/seo-leeds/' || current === '/web-design-leeds/' || current === '/web-hosting-agency-leeds/') {
 						if(currentScrollY > 100) {
 							setTimeout(() => {
 								document.getElementById('floatingContact').classList.add('showFloating');
