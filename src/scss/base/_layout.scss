@@ -1,8 +1,8 @@
 .container {
     width: 100%;
     max-width: 1400px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 20px;
 
     &Hidden {
@@ -16,7 +16,7 @@
     &1000 {
         max-width: 1000px !important;
     }
-    
+
     &1200 {
         max-width: 1200px !important;
     }
@@ -63,13 +63,12 @@
     margin-top: 20px;
 }
 
-
 .homeHeroReplay {
     position: absolute;
     left: 10px;
     bottom: 10px;
 
-    @media(min-width: 1300px) {
+    @media (min-width: 1300px) {
         left: auto;
         right: 10px;
     }
@@ -84,11 +83,20 @@
     margin-bottom: 40px;
 }
 
-
 .pink {
     background-color: $sec-brand-color !important;
 
-    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    ul,
+    ol,
+    a {
         color: #000;
     }
 
@@ -99,7 +107,15 @@
 
 .pink .videosDesktop-module--videoTextWrap--AyDgF,
 .pink .videosMobile-module--videoTextWrap--EKfxP {
-    h1,h2,h3,h4,h5,h6,p,li,span {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    span {
         color: #000 !important;
     }
 }
@@ -107,7 +123,17 @@
 .grey {
     background-color: $grey;
 
-    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    ul,
+    ol,
+    a {
         color: $white;
     }
 
@@ -119,7 +145,17 @@
 .black {
     background-color: #000;
 
-    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    ul,
+    ol,
+    a {
         color: $white;
     }
 
@@ -131,7 +167,17 @@
 .blue {
     background-color: $brand-color;
 
-    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    ul,
+    ol,
+    a {
         color: $white;
     }
 
@@ -145,7 +191,7 @@
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
@@ -155,7 +201,17 @@
         background-color: $grey;
     }
 
-    h1,h2,h3,h4,h5,h6,p,li,ul,ol,a {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    ul,
+    ol,
+    a {
         color: $white;
     }
 
@@ -174,7 +230,7 @@
         padding-bottom: 10px;
 
         &:before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             bottom: -10px;
@@ -210,11 +266,11 @@ a.no-td {
     transform: rotate(2deg);
     display: none;
 
-    @media(min-width: 500px) {
+    @media (min-width: 500px) {
         right: 32px;
     }
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         right: 52px;
     }
 }
@@ -224,7 +280,7 @@ a.no-td {
 .desktop-only {
     display: none;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         display: block;
     }
 }
@@ -234,7 +290,7 @@ a.no-td {
 .mobile-only {
     display: block;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         display: none;
     }
 }
@@ -253,14 +309,13 @@ a.no-td {
     overflow-y: scroll;
     margin-top: 40px;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         margin-top: 0;
     }
 
-
     &::-webkit-scrollbar {
         background-color: $grey;
-        height:5px;
+        height: 5px;
     }
 
     &::-webkit-scrollbar-track {
@@ -273,8 +328,8 @@ a.no-td {
 
     &::-webkit-scrollbar-thumb {
         background-color: darken($color: $grey, $amount: 5);
-        border-radius:16px;
-        border:5px solid $grey;
+        border-radius: 16px;
+        border: 5px solid $grey;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -282,7 +337,7 @@ a.no-td {
     }
 
     &::-webkit-scrollbar-button {
-        display:none
+        display: none;
     }
 
     img {
@@ -314,29 +369,29 @@ a.no-td {
 
 .blogsvg,
 .contactsvg {
-    animation: defaultanim 4s forwards step-end 1s; 
+    animation: defaultanim 4s forwards step-end 1s;
 }
 
 .blogsvgwhite,
 .contactsvgwhite {
     opacity: 0.2;
-    animation: defaultwhite 4s forwards step-end 1s; 
+    animation: defaultwhite 4s forwards step-end 1s;
 }
 
 .bcmainOn {
-    animation: defaultanim 4s forwards step-end; 
+    animation: defaultanim 4s forwards step-end;
 }
 
 .bcmainwhiteOn {
-    animation: defaultwhite 4s forwards step-end; 
+    animation: defaultwhite 4s forwards step-end;
 }
 
 .defaultflickerOn {
-    animation: defaultanim 2s forwards step-end; 
+    animation: defaultanim 2s forwards step-end;
 }
 
 .defaultflickerwhiteOn {
-    animation: defaultwhite 2s forwards step-end; 
+    animation: defaultwhite 2s forwards step-end;
 }
 
 .center {
@@ -344,11 +399,11 @@ a.no-td {
 }
 
 .seemoreOn {
-    animation: defaultanim 2s forwards step-end 4.5s; 
+    animation: defaultanim 2s forwards step-end 4.5s;
 }
 
 .seemorewhiteOn {
-    animation: defaultwhite 2s forwards step-end 4.5s; 
+    animation: defaultwhite 2s forwards step-end 4.5s;
 }
 
 .seemorelink {
@@ -356,7 +411,7 @@ a.no-td {
     justify-content: flex-end;
     width: 100%;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         margin-top: -50px;
     }
 
@@ -377,100 +432,177 @@ a.no-td {
 
 .homelogosvg {
     opacity: 0;
-    // animation: defaultanim 4s forwards step-end; 
+    // animation: defaultanim 4s forwards step-end;
 }
 
-
 .phoneOn {
-    animation: defaultanim 2s forwards step-end 2.5s; 
+    animation: defaultanim 2s forwards step-end 2.5s;
 }
 
 .phonewhiteOn {
-    animation: defaultwhite 2s forwards step-end 2.5s; 
+    animation: defaultwhite 2s forwards step-end 2.5s;
 }
 
 .timedOn {
-    animation: timed 6s forwards step-end 4.5s; 
+    animation: timed 6s forwards step-end 4.5s;
 }
 
 .timed2On {
-    animation: timed 6s forwards step-end 5s; 
+    animation: timed 6s forwards step-end 5s;
 }
 
 .timed3On {
-    animation: timed 6s forwards step-end 5.5s; 
+    animation: timed 6s forwards step-end 5.5s;
 }
 
 .timedwhiteOn {
-    animation: timedwhite 6s forwards step-end 4.5s; 
+    animation: timedwhite 6s forwards step-end 4.5s;
 }
 
 .timed2whiteOn {
-    animation: timedwhite 6s forwards step-end 5s; 
+    animation: timedwhite 6s forwards step-end 5s;
 }
 
 .timed3whiteOn {
-    animation: timedwhite 6s forwards step-end 5.5s; 
+    animation: timedwhite 6s forwards step-end 5.5s;
 }
 
-@keyframes timed{
-    0%    { opacity: 0; }
-    20%    { opacity: 1; }
-    40%    { opacity: 0; }
-    60%    { opacity: 1; }
-    80%    { opacity: 0; }
-    100%    { opacity: 1; }
+@keyframes timed {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes timedwhite {
-    0%    { opacity: 0;fill: white; }
-    20%    { opacity: 1;fill: white; }
-    40%    { opacity: 0;fill: white; }
-    60%    { opacity: 1;fill: white; }
-    80%    { opacity: 0;fill: white; }
-    100%    { opacity: 1;fill: white; }
+    0% {
+        opacity: 0;
+        fill: white;
+    }
+    20% {
+        opacity: 1;
+        fill: white;
+    }
+    40% {
+        opacity: 0;
+        fill: white;
+    }
+    60% {
+        opacity: 1;
+        fill: white;
+    }
+    80% {
+        opacity: 0;
+        fill: white;
+    }
+    100% {
+        opacity: 1;
+        fill: white;
+    }
 }
 
-@keyframes defaultanim{
-    0%    { opacity: 1; }
-    10%    { opacity: 0.5; }
-    17%    { opacity: 1; }
-    20%    { opacity: 0.5; }
-    23%   { opacity: 1; }
-    36%    { opacity: 0.5; }
-    40%    { opacity: 1; }
-    100%  { opacity: 1; }
-  }
+@keyframes defaultanim {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    17% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    23% {
+        opacity: 1;
+    }
+    36% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-  @keyframes defaultanim0{
-    0%    { opacity: 1; }
-    10%    { opacity: 0; }
-    17%    { opacity: 1; }
-    20%    { opacity: 0; }
-    23%   { opacity: 1; }
-    36%    { opacity: 0; }
-    40%    { opacity: 1; }
-    100%  { opacity: 1; }
-  }
+@keyframes defaultanim0 {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    17% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    23% {
+        opacity: 1;
+    }
+    36% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-  @keyframes defaultwhite{
-    0%    { opacity: 1;
-    fill: white; }
-    10%    { opacity: 0.5;
-    fill: white; }
-    17%    { opacity: 1;
-    fill: white; }
-    20%    { opacity: 0.5;
-    fill: white; }
-    23%   { opacity: 1;
-    fill: white; }
-    36%    { opacity: 0.5;
-    fill: white; }
-    40%    { opacity: 1;
-    fill: white; }
-    100%  { opacity: 1;
-    fill: white; }
-  }
+@keyframes defaultwhite {
+    0% {
+        opacity: 1;
+        fill: white;
+    }
+    10% {
+        opacity: 0.5;
+        fill: white;
+    }
+    17% {
+        opacity: 1;
+        fill: white;
+    }
+    20% {
+        opacity: 0.5;
+        fill: white;
+    }
+    23% {
+        opacity: 1;
+        fill: white;
+    }
+    36% {
+        opacity: 0.5;
+        fill: white;
+    }
+    40% {
+        opacity: 1;
+        fill: white;
+    }
+    100% {
+        opacity: 1;
+        fill: white;
+    }
+}
 
 .section {
     padding-top: 50px;
@@ -479,17 +611,17 @@ a.no-td {
     background-size: cover;
     background-position: center;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         padding-top: 100px;
         padding-bottom: 100px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 150px;
         padding-bottom: 150px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 200px;
         padding-bottom: 200px;
     }
@@ -497,17 +629,17 @@ a.no-td {
 
 .sectionSmall,
 .section_small {
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -516,18 +648,18 @@ a.no-td {
 .sectionSmallBot,
 .section_small_bot {
     padding-bottom: 0px;
-    
-    @media(min-width: $md) {
+
+    @media (min-width: $md) {
         padding-top: 50px;
         padding-bottom: 20px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -538,17 +670,17 @@ a.no-td {
     padding-top: 25px;
     padding-bottom: 25px;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         padding-top: 25px;
         padding-bottom: 25px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 25px;
         padding-bottom: 25px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 25px;
         padding-bottom: 25px;
     }
@@ -559,17 +691,17 @@ a.no-td {
     padding-top: 0px;
     padding-bottom: 0px;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         padding-top: 0px;
         padding-bottom: 0px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 0px;
         padding-bottom: 0px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 0px;
         padding-bottom: 0px;
     }
@@ -577,17 +709,17 @@ a.no-td {
 
 .sectionMedium,
 .section_medium {
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-top: 100px;
         padding-bottom: 100px;
     }
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -595,13 +727,13 @@ a.no-td {
 
 .header {
     &.posAbs {
-        @media(min-height: 650px) and (min-width: $xlg) {
+        @media (min-height: 650px) and (min-width: $xlg) {
             position: absolute;
             bottom: 320px;
             top: auto;
         }
 
-        @media(min-height: 750px) and (min-width: $xlg) {
+        @media (min-height: 750px) and (min-width: $xlg) {
             position: absolute;
             bottom: 250px;
             top: auto;
@@ -613,7 +745,8 @@ a.no-td {
     transform: rotate(-5deg);
 }
 
-ul, ol {
+ul,
+ol {
     &.no-icon {
         list-style-type: none;
         li {
@@ -631,14 +764,14 @@ ul, ol {
     z-index: 10000001;
     filter: drop-shadow(0px 0px 2px $sec-brand-color);
 
-    @media(min-height: 650px) and (min-width: 1300px) {
+    @media (min-height: 650px) and (min-width: 1300px) {
         top: 10px;
         bottom: auto;
     }
 }
 
 .image-right {
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         display: flex;
         justify-content: flex-end;
     }
@@ -647,15 +780,15 @@ ul, ol {
 .csLogoDesktop {
     display: none;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         display: block;
     }
 }
 
 .csLogoMobile {
     display: block;
-    
-    @media(min-width: $md) {
+
+    @media (min-width: $md) {
         display: none;
     }
 }
@@ -728,28 +861,35 @@ html {
     opacity: 0 !important;
     pointer-events: none !important;
     z-index: -1 !important;
-    transition: opacity 0.3s ease, z-index 0s ease 0.3s !important;
+    transition:
+        opacity 0.3s ease,
+        z-index 0s ease 0.3s !important;
 }
 
 .homeHeroVid {
     opacity: 0 !important;
     pointer-events: none !important;
     z-index: -1 !important;
-    transition: opacity 0.3s ease, z-index 0s ease 0.3s !important;
+    transition:
+        opacity 0.3s ease,
+        z-index 0s ease 0.3s !important;
 }
-
 
 .showVid {
     z-index: 1000000 !important;
     opacity: 1 !important;
     pointer-events: all !important;
-    transition: opacity 0.3s ease, z-index 0s ease !important;
+    transition:
+        opacity 0.3s ease,
+        z-index 0s ease !important;
 }
 
 .is-open {
     z-index: 1000001 !important;
     opacity: 1 !important;
-    transition: opacity 0.3s ease, z-index 0s ease !important;
+    transition:
+        opacity 0.3s ease,
+        z-index 0s ease !important;
     pointer-events: all !important;
 }
 
@@ -759,7 +899,8 @@ html {
     background-color: $grey;
     text-align: center;
 
-    h1,p {
+    h1,
+    p {
         color: $white !important;
         margin-bottom: 25px;
     }
@@ -781,7 +922,6 @@ html {
     }
 }
 
-
 .vid4 {
     height: calc(100% + 10px);
 
@@ -802,13 +942,13 @@ html {
     }
 
     .servicesBlock-module--serviceBlockColRight--JYm05 {
-        @media(min-width: $lg) {
+        @media (min-width: $lg) {
             width: calc(50% - 20px) !important;
         }
     }
 
     .servicesBlock-module--serviceBlockColLeft--xUY65 {
-        @media(min-width: $lg) {
+        @media (min-width: $lg) {
             width: calc(30% - 20px) !important;
         }
     }
@@ -816,7 +956,7 @@ html {
 
 .mobile-flip {
     .serviceBlockBG {
-        @media(max-width: $md) {
+        @media (max-width: $md) {
             flex-direction: column-reverse;
         }
     }
@@ -824,14 +964,14 @@ html {
     .servicesBlock-module--serviceBlockColLeft--xUY65 {
         margin-bottom: 0 !important;
 
-        @media(max-width: $md) {
+        @media (max-width: $md) {
             padding-bottom: 20px !important;
             padding-top: 0 !important;
         }
     }
 
     .servicesBlock-module--serviceBlockColRight--JYm05 {
-        @media(max-width: $md) {
+        @media (max-width: $md) {
             margin-bottom: 20px;
             padding-bottom: 0px !important;
             padding-top: 20px !important;
@@ -846,9 +986,9 @@ html {
 
     .servicesBlock-module--serviceBlockColLeft--xUY65,
     .servicesBlock-module--serviceBlockColRight--JYm05 {
-        a {    
+        a {
             &:first-of-type {
-                @media(min-width: $md) {
+                @media (min-width: $md) {
                     transform: translateX(0px) !important;
                 }
             }
@@ -860,10 +1000,13 @@ html {
     display: flex !important;
 }
 
-.showFloating { 
+.showFloating {
     opacity: 1 !important;
     z-index: 999998 !important;
-    transition: opacity 0.3s ease, z-index 0s ease, transform 0.3s ease !important;
+    transition:
+        opacity 0.3s ease,
+        z-index 0s ease,
+        transform 0.3s ease !important;
     transform: translateY(0px) !important;
 }
 
@@ -877,7 +1020,7 @@ html {
     position: relative;
     transform: translateX(-10px);
 
-    @media(min-width: $xlg) {
+    @media (min-width: $xlg) {
         transform: translateX(0px);
     }
 
@@ -888,7 +1031,7 @@ html {
         z-index: 5;
         width: 100%;
         opacity: 0;
-        animation: defaultanim0 4s forwards step-end 1s; 
+        animation: defaultanim0 4s forwards step-end 1s;
     }
 }
 
@@ -907,9 +1050,11 @@ html {
 }
 
 .colDirLeft {
-    h2,p,a {
-        @media(min-width: $xlg) {
-            background: linear-gradient(90deg, rgba(255,0,247,0) 70%, rgba(255,0,247,1) 78%) !important;
+    h2,
+    p,
+    a {
+        @media (min-width: $xlg) {
+            background: linear-gradient(90deg, rgba(255, 0, 247, 0) 70%, rgba(255, 0, 247, 1) 78%) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             transition: all 0.3s ease;
@@ -918,7 +1063,7 @@ html {
 
     a {
         &:before {
-            background: linear-gradient(90deg, rgba(255,0,247,0) 70%, rgba(255,0,247,1) 78%) !important;
+            background: linear-gradient(90deg, rgba(255, 0, 247, 0) 70%, rgba(255, 0, 247, 1) 78%) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             transition: all 0.3s ease;
@@ -930,20 +1075,20 @@ html {
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         right: -5%;
         bottom: -25%;
         width: 60%;
         height: 100%;
-        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/1LlhBaJ0zjeEO2Q4sivMuK/92aa5ee68bb5ffdd69ccaf7b1a9b75c5/b1-better.png');
+        background-image: url("https://images.ctfassets.net/74ncoczcn9dm/1LlhBaJ0zjeEO2Q4sivMuK/92aa5ee68bb5ffdd69ccaf7b1a9b75c5/b1-better.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         display: none;
-        pointer-events:none;
+        pointer-events: none;
 
-        @media(min-width: $xlg) {
+        @media (min-width: $xlg) {
             right: -7%;
             display: block;
         }
@@ -954,20 +1099,20 @@ html {
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 25%;
         width: 40%;
         height: 100%;
-        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png');
+        background-image: url("https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         display: none;
-        pointer-events:none;
+        pointer-events: none;
 
-        @media(min-width: $xlg) {
+        @media (min-width: $xlg) {
             display: block;
             bottom: -60%;
         }
@@ -978,20 +1123,20 @@ html {
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: 2%;
         width: 20%;
         height: 100%;
-        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/1LY7YY5g8k0m5FO5Z1I3AY/c902e0b01257c81426a773ba2a0772c9/Neon_Borders-14.png');
+        background-image: url("https://images.ctfassets.net/74ncoczcn9dm/1LY7YY5g8k0m5FO5Z1I3AY/c902e0b01257c81426a773ba2a0772c9/Neon_Borders-14.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         display: none;
-        pointer-events:none;
+        pointer-events: none;
 
-        @media(min-width: $xlg) {
+        @media (min-width: $xlg) {
             display: block;
             right: -9%;
         }
@@ -1002,21 +1147,21 @@ html {
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 25%;
         width: 40%;
         height: 100%;
-        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png');
+        background-image: url("https://images.ctfassets.net/74ncoczcn9dm/3tNh1ZlHiRurW0QqLktz9J/5f66fa60ed834168f86a3c35f5f8f27b/b2.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         transform: scaleX(-1);
         display: none;
-        pointer-events:none;
+        pointer-events: none;
 
-        @media(min-width: $xlg) {
+        @media (min-width: $xlg) {
             display: block;
             bottom: -70%;
         }
@@ -1027,20 +1172,20 @@ html {
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         right: -5%;
         bottom: -25%;
         width: 95%;
         height: 100%;
-        background-image: url('https://images.ctfassets.net/74ncoczcn9dm/7v2fTu22h6XCUxcFHvLrSu/44daddfd4b251e0aceea1fb919fb1a7c/b5.png');
+        background-image: url("https://images.ctfassets.net/74ncoczcn9dm/7v2fTu22h6XCUxcFHvLrSu/44daddfd4b251e0aceea1fb919fb1a7c/b5.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         display: none;
-        pointer-events:none;
+        pointer-events: none;
 
-        @media(min-width: $xlg) {
+        @media (min-width: $xlg) {
             display: block;
             right: -7%;
             bottom: -45%;
@@ -1051,8 +1196,8 @@ html {
 .pillarsDots {
     display: flex;
     justify-content: center;
-    
-    @media(min-width: $md) {
+
+    @media (min-width: $md) {
         display: none;
     }
 
@@ -1068,19 +1213,19 @@ html {
 
 #noalignnormal {
     .container {
-        @media(min-width: $md) {
+        @media (min-width: $md) {
             align-items: unset;
         }
 
-        div >div {
-            @media(min-width: $md) {
+        div > div {
+            @media (min-width: $md) {
                 height: 100%;
             }
         }
 
         .hover-anim-normal,
         .hover-anim-hover {
-            @media(min-width: $md) {
+            @media (min-width: $md) {
                 height: auto;
             }
         }
@@ -1089,13 +1234,13 @@ html {
     .twoCol-module--twoCol--MWQ9O {
         &:hover {
             .hover-anim-hover {
-                @media(min-width: $md) {
+                @media (min-width: $md) {
                     opacity: 1;
                 }
             }
 
             .hover-anim-normal {
-                @media(min-width: $md) {
+                @media (min-width: $md) {
                     opacity: 0;
                 }
             }
@@ -1124,11 +1269,11 @@ html {
 }
 
 .neonItemsOuter {
-    @media(max-width: $md) {
+    @media (max-width: $md) {
         background-image: none !important;
     }
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         position: relative;
     }
 
@@ -1142,18 +1287,18 @@ html {
         left: 0;
         top: 0;
 
-        @media(min-width: $md) {
+        @media (min-width: $md) {
             display: block;
         }
     }
 }
 
 .spaceItems50 {
-    @media(min-width: $lg) {
+    @media (min-width: $lg) {
         padding-bottom: 350px;
     }
     .neonItem {
-        @media(min-width: $lg) {
+        @media (min-width: $lg) {
             width: calc(50% - 40px);
         }
     }
@@ -1167,7 +1312,7 @@ html {
     top: -40px;
     width: 100%;
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         display: none;
     }
 
@@ -1210,7 +1355,7 @@ html {
 }
 
 .hover-anim {
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         position: relative;
         display: flex;
         justify-self: center;
@@ -1218,7 +1363,7 @@ html {
     }
 
     &-hover {
-        @media(min-width: $md) {
+        @media (min-width: $md) {
             opacity: 0;
             transition: all 0.3s ease;
             position: absolute;
@@ -1227,4 +1372,8 @@ html {
             left: 0;
         }
     }
+}
+
+video {
+    width: 100%;
 }
