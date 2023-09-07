@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Header from "../components/header/header";
 import FullHero from "../components/fullHero/fullHero";
 import Footer from "../components/footer/footer";
+import MediaSplash from "../components/mediaSplash/mediaSplash";
 import TwoCol from "../components/twoCol/twoCol";
 import Logos from "../components/logos/logos";
 import RecentPosts from "../components/recentPosts/recentPosts";
@@ -129,14 +130,14 @@ const Page = ({ data }) => {
           isBot = 0;
         }
 
-        if (!Cookies.get("homeVidPlayed")) {
-          setTimeout(() => {
-            document
-              .getElementsByClassName("homeHeroVid")[0]
-              .classList.add("videoDone");
-            Cookies.set("homeVidPlayed", 1);
-          }, 35500);
-        }
+        // if (!Cookies.get("homeVidPlayed")) {
+        //   setTimeout(() => {
+        //     document
+        //       .getElementsByClassName("homeHeroVid")[0]
+        //       .classList.add("videoDone");
+        //     Cookies.set("homeVidPlayed", 1);
+        //   }, 35500);
+        // }
 
         setTimeout(() => {
           if (window.location.hash.substr(1)) {
@@ -530,6 +531,8 @@ const Page = ({ data }) => {
         return <Slider section={val} />;
       case "SmallSlider":
         return <SmallSlider section={val} />;
+      case "MediaSplash":
+        return <MediaSplash section={val} />;
       default:
         return "Block not found.";
     }
